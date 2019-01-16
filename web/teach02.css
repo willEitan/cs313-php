@@ -1,0 +1,23 @@
+body {
+	background-color: lightblue;
+	font-size: 10;
+}
+div {
+	padding: 25px;
+}
+#d1 {
+	background-color:red;
+	font-size: 15;
+}
+#d2 {
+	background-color:yellow;
+	font-size: 20;
+}
+#d3 {
+	background-color:green;
+	font-size: 35;
+}
+
+.buttonForm {
+	padding: 25px;
+}
