@@ -2,6 +2,10 @@ function clicked() {
 	alert("Clicked!");
 }
 function cc() {
+	var color = document.getElementById("_theirColor");
+	document.getElementById("d1").innerHTML.style.color = color;
+}
+/function cc() {
 	var xhttp = new XMLHttpRequest();
 	xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -12,6 +16,5 @@ function cc() {
 	};
 	xhttp.open("POST", "/", true);
 	xhttp.send();
-	var color = document.getElementById("_theirColor");
 	document.getElementById("d1").style.color = color;
 }
