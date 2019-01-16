@@ -3,7 +3,7 @@ function clicked() {
 }
 function cc() {
 	var color = document.getElementById("_theirColor");
-	document.getElementById("d1").innerHTML.style.color = color;
+	document.getElementById("d1").style.color = color;
 }
 /function cc() {
 	var xhttp = new XMLHttpRequest();
