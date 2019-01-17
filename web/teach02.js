@@ -3,5 +3,5 @@ function clicked() {
 }
 function cc() {
 	var color = document.getElementById("_theirColor").value;
-	document.getElementById("d1").style.backgroundcolor = color;
+	document.getElementById("d1").style.background-color = color;
 }
