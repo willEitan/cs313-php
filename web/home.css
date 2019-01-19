@@ -1,0 +1,16 @@
+body {
+	background-color: lightgray;
+}
+img {
+	align-self: center;
+	border: blue
+}
+.about {
+	padding: 20px;
+	opacity: .25;
+	background-color: transparent;
+}
+.about:hover {
+	opacity: 1;
+	background-color: lightblue;
+}
