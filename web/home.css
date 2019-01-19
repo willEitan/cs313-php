@@ -4,20 +4,20 @@ body {
 img {
 	padding: 5px;
 	width: 800px;
-	height: 400px;
+	height: 600px;
 }
 h1, h3, em {
 	color:darkgray;
 	font-family: Verdana;
 }
 p, em {
-	font-size: 30;
+	font-size: 40;
 }
 #_head {
 	padding:10px;
 }
 .about {
-	padding: 20px;
+	padding: 15px;
 	opacity: .5;
 	background-color: grey;
 }
