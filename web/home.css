@@ -3,11 +3,11 @@ body {
 }
 img {
 	padding: 5px;
-	width: 800px;
-	height: 600px;
+	width: 750px;
+	height: 500px;
 }
 h1, h3, em {
-	color:darkgray;
+	color:darkblue;
 	font-family: Verdana;
 }
 p, em {
