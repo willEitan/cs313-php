@@ -19,9 +19,11 @@ p, em {
 .about {
 	padding: 15px;
 	opacity: .5;
-	background-color: grey;
+	background-color: transparent;
 }
 .about:hover {
 	opacity: 1;
 	background-color: lightblue;
+	font-size: 30;
+	font-style: bold;
 }
