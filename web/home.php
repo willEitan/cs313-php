@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,14 +7,16 @@
 	<link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
-	<h1>CS Home</h1><br>
-	<h3>By Ethan Williams</h3><br>
-	<em>"Truth is truth! It is not divisible, and any part of it cannot be set aside." ~Russell M. Nelson</em><br>
+	<div id="_head">
+		<h1>CS Home</h1>
+		<h3>By Ethan Williams</h3>
+		<em>"Truth is truth! It is not divisible, and any part of it cannot be set aside." ~Russell M. Nelson</em><br><br>
+	</div>
 	<img src="pics/portfollio.jpg" alt="Ethan">
 	<div class="about">
-		<hr class="about">
-		<p class="about">   This is my cs313 home page. A bit about my: I am awesome. I am cool. I am slick. I am a thug. I like cheesey bread.</p>
-		<hr class="about">
+		<hr>
+		<p class="about">   This is my cs313 home page. A bit about me: I am a senior at BYU-Idaho, going into software engineering. <em> I enjoy coding! </em> I hope to learn a lot in this course and get an A! Some of my hobbies include basketball and auto. Looking for an internship... peace out for now</p>
+		<hr>
 	</div><br>
 	<a href="assignments.php">View assignments page</a><br>
 </body>
