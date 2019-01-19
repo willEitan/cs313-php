@@ -3,12 +3,24 @@ body {
 }
 img {
 	align-self: center;
-	border: blue
+	width: auto;
+	height: auto;
+}
+h1, h3, em {
+	color:white;
+	font-family: Verdana;
+}
+p, em {
+	font-size: 25;
+}
+#_head {
+	padding:10px;
+	color:black;
 }
 .about {
 	padding: 20px;
-	opacity: .25;
-	background-color: transparent;
+	opacity: .5;
+	background-color: grey;
 }
 .about:hover {
 	opacity: 1;
