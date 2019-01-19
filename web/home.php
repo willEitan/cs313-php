@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
-	<div id="_head">
+	<div id="_head" style="color:black">
 		<h1>CS Home</h1>
 		<h3>By Ethan Williams</h3>
 		<em>"Truth is truth! It is not divisible, and any part of it cannot be set aside." ~Russell M. Nelson</em><br><br>
@@ -15,7 +15,7 @@
 	<img src="pics/portfollio.jpg" alt="Ethan">
 	<div class="about">
 		<hr>
-		<p class="about">   This is my cs313 home page. A bit about me: I am a senior at BYU-Idaho, going into software engineering. <em> I enjoy coding! </em> I hope to learn a lot in this course and get an A! Some of my hobbies include basketball and auto. Looking for an internship... peace out for now</p>
+		<p>   This is my cs313 home page. A bit about me: I am a senior at BYU-Idaho, going into software engineering. <em> I enjoy coding! </em> I hope to learn a lot in this course and get an A! Some of my hobbies include basketball and auto. Looking for an internship... peace out for now</p>
 		<hr>
 	</div><br>
 	<a href="assignments.php">View assignments page</a><br>
@@ -25,7 +25,7 @@
 	<?php
 		$created = 2019;
 		$current = date('Y');
-		echo created . (($created != current) ? '-' . $current : '') . " Copyright";
+		echo $created. (($created != $current) ? '-' . $current : '') . " Copyright";
 	?>
 </footer>
 </html>
