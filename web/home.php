@@ -7,17 +7,16 @@
 	<link rel="stylesheet" type="text/css" href="home.css">
 </head>
 <body>
-	<div id="_head" style="color:black">
+	<div id="_head">
 		<h1>CS Home</h1>
 		<h3>By Ethan Williams</h3>
 		<em>"Truth is truth! It is not divisible, and any part of it cannot be set aside." ~Russell M. Nelson</em><br><br>
 	</div>
 	<img src="pics/portfollio.jpg" alt="Ethan">
+	<hr>
 	<div class="about">
-		<hr>
 		<p>   This is my cs313 home page. A bit about me: I am a senior at BYU-Idaho, going into software engineering. <em> I enjoy coding! </em> I hope to learn a lot in this course and get an A! Some of my hobbies include basketball and auto. Looking for an internship... peace out for now</p>
-		<hr>
-	</div><br>
+	</div><hr><br>
 	<a href="assignments.php">View assignments page</a><br>
 </body>
 <footer>
