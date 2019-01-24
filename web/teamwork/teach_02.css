@@ -1,0 +1,28 @@
+div {
+	padding: 25px;
+	font-weight: normal;
+}
+div:hover {
+	font-weight: bold;
+}
+#d1 {
+	background-color:white;
+	font-size: 15;
+}
+#d2 {
+	background-color:yellow;
+	font-size: 20;
+}
+#d3 {
+	background-color:purple;
+	font-size: 35;
+}
+.colorChanger {
+	background-color: transparent;
+}
+form {
+	padding: 25px;
+}
+body {
+	background-color: lightblue;
+}
