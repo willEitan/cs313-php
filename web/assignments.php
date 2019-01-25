@@ -8,7 +8,8 @@
 </head>
 <body>
 	<em font-size="30">Coming soon! </em>
-	<a href="home.php">Go Back...</a>
+	<a href="home.php">Go Back...</a><br>
+	<a href="browse.php">Browse my ecommerce site</a>
 </body>
 <footer>
 	&copy; 
