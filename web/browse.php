@@ -1,26 +1,26 @@
 <?php
 	session_start();
-$artwork = [	'a1' => [ 	'id' => 'al',
-							'value' => 'Emma',
-							'src' => 'pics/emma.jpg',
-							'data-price' => '50' ],
-				'a2' => [ 	'id' => 'a2',
-							'value' => 'Oil Landscape',
-							'src' => 'pics/oil_landscape.jpg',
-							'data-price' => '$50.00'],	
-				'a3' => [ 	'id' => 'a3',
-							'value' => 'Miss Artist',
-							'src' => 'pics/sarah.jpg',
-							'data-price' => '$70.00'],
-				'a4' => [ 	'id' => 'a4',
-							'value' => 'House in the Woods',
-							'src' => 'pics/hitw.jpg',
-							'data-price' => '$40.00'],	
-				'a5' => [ 	'id' => 'a5',
-							'value' => 'Unseen Protection',
-							'src' => 'pics/unseen_protection.jpg',
-							'data-price' => '$60.00']					
-					];
+	$artwork = [	'a1' => [ 	'id' => 'al',
+								'value' => 'Emma',
+								'src' => 'pics/emma.jpg',
+								'data-price' => '50' ],
+					'a2' => [ 	'id' => 'a2',
+								'value' => 'Oil Landscape',
+								'src' => 'pics/oil_landscape.jpg',
+								'data-price' => '$50.00'],	
+					'a3' => [ 	'id' => 'a3',
+								'value' => 'Miss Artist',
+								'src' => 'pics/sarah.jpg',
+								'data-price' => '$70.00'],
+					'a4' => [ 	'id' => 'a4',
+								'value' => 'House in the Woods',
+								'src' => 'pics/hitw.jpg',
+								'data-price' => '$40.00'],	
+					'a5' => [ 	'id' => 'a5',
+								'value' => 'Unseen Protection',
+								'src' => 'pics/unseen_protection.jpg',
+								'data-price' => '$60.00']					
+						];
 	$cart = [];
 ?>
 <!DOCTYPE html>
@@ -47,12 +47,12 @@ $artwork = [	'a1' => [ 	'id' => 'al',
 	<div class="item-browse">
 		<ul class="items">
 			<div class="product-details">
-				<?php
+				<!-- <?php
 					foreach($artwork as $art) {
 						echo "<div class='product'> <li class='featured'> <img src='$art['src']' alt='$art['value']'> </li>" . $art['data-price'] . "<div class='add-to-cart'><button value='Add to Cart'></button></div></div>";
 					}
 					
-				?>
+				?> -->
 			</div>
 			<hr>
 		</ul>		
