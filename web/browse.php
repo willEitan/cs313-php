@@ -52,7 +52,8 @@
 				 		<?php
 				 			$src = $_SESSION['artwork']['a1']['src'];
 				 			$alt = $_SESSION['artwork']['a1']['value'];
-					 		echo "<img src='$src' alt='$alt'><br>";
+				 			$price = $_SESSION['artwork']['a1']['data-price'];
+					 		echo "<img src='$src' alt='$alt'><br>" . $price . "<br><div class='add-to-cart'><button value='Add to Cart'></button></div>";
 				 		?>
 				 	</li>
 				 </div>
