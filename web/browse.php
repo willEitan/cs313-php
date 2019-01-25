@@ -60,12 +60,11 @@
 		 				$src = $art['src'];
 		 				$alt = $art['value'];
 		 				$price = $art['data-price'];
-		 				echo "<div class='product'><li class='featured'>" . "<img src='$src' alt='$alt'><br>" . $price . "</li></div><br>" . "<div class='add-to-cart'><form method='post'><input type='button' id='click' value='Add to Cart' /></form>";
-		 				if(array_key_exists('click', $_POST)){
+		 				echo "<div class='product'><li class='featured'>" . "<img src='$src' alt='$alt'><br>" . $price . "</li></div><br>" . "<div class='add-to-cart'><form method='post'><input type='button' id='click' value='Add to Cart' /></form></div><br>";
+		 			}
+		 			if(array_key_exists('click', $_POST)){
 		 					array_push($toAdd, $art);
 		 				}
-		 				echo "</div><br>";
-		 			}
 		 			$_SESSION['cart'] = $toAdd;
 		 		?>
 			</div> 
