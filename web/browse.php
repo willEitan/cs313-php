@@ -26,7 +26,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>ecommerce</title>
+	<title>Shop Art</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -36,7 +36,7 @@
 <body>
  	<header>
 		<div class="top">
-			<h1>Sarah's artwork</h1>
+			<h1>Sarah's Artwork</h1>
 			<div>
 				<form action="cart.php" method="post">
 					<input type="submit" name="cart button">
@@ -49,7 +49,9 @@
 			<div class="product-details">
 				 <div class="product">
 				 	<li class="featured">
-				 		<img src="<?php echo $_SESSION['artwork']['a1']['src']?>" alt="img">
+				 		<?php
+				 		 echo "<img src='$_SESSION['artwork']['a1']['src'] alt='$_SESSION['artwork']['a1']['value']'><br>" . $_SESSION['artwork']['a1']['data-price'] . "<div class='add-to-cart'><button value='Add to Cart'></button></div>";
+				 		?>
 				 	</li>
 				 </div>
 			</div> 
