@@ -60,7 +60,7 @@
 		 				$src = $art['src'];
 		 				$alt = $art['value'];
 		 				$price = $art['data-price'];
-
+		 				echo $art;
 		 				echo "<div class='product'><li class='featured'>" . "<img src='$src' alt='$alt'><br>" . $price . "</li></div><br>" . "<div class='add-to-cart'><button onclick()='array_push($toAdd, $art);'>Add to Cart</button></div><br>";
 		 			}
 		 			$_SESSION['cart'] = $toAdd;
