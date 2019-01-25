@@ -34,7 +34,7 @@ $artwork = [	'a1' => [ 	'id' => 'al',
 	<script type="text/javascript" src="myscript_03.js"></script>
 </head>
 <body>
-<!-- 	<header>
+ 	<header>
 		<div class="top">
 			<h1>Sarah's artwork</h1>
 			<div>
@@ -48,14 +48,15 @@ $artwork = [	'a1' => [ 	'id' => 'al',
 		<ul class="items">
 			<div class="product-details">
 				<?php
-					//foreach($_SESSION["artwork"] as $art) 
-						//echo "<div class='product'> <li class='featured'> <img src='$art['src']' alt='$art['value']'> </li>" . $art['data-price'] . "<div class='add-to-cart'><button value='Add to Cart'></button></div></div>";
+					foreach($_SESSION["artwork"] as $art) {
+						echo "<div class='product'> <li class='featured'> <img src='$art['src']' alt='$art['value']'> </li>" . $art['data-price'] . "<div class='add-to-cart'><button value='Add to Cart'></button></div></div>";
+					}
 					
 				?>
 			</div>
 			<hr>
 		</ul>		
-	</div> -->
+	</div>
 </body>
 <footer>
 	&copy; 
