@@ -34,11 +34,11 @@
 	<script type="text/javascript" src="myscript_03.js"></script>
 </head>
 <body>
-	<header>
+	<!-- <header>
 		<div class="top">
 			<h1>Sarah's artwork</h1>
 			<div>
-				<form action="cart.php" method="post">
+				<form action="/cart.php" method="post">
 					<input type="submit" name="cart button">
 				</form>
 			</div>
@@ -55,7 +55,7 @@
 			</div>
 			<hr>
 		</ul>		
-	</div>
+	</div> -->
 </body>
 <footer>
 <!-- 	&copy; 
