@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 	//session_start();
 	/*$_SESSION["artwork"] = [ 'a1' => [ 	'id' = 'al'
 										'value' = 'Emma'
@@ -22,7 +22,7 @@
 										'data-price' = '$60.00']					
 							];
 	$_SESSION["cart"] = [];*/
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
