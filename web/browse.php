@@ -47,7 +47,11 @@
 	<div class="item-browse">
 		<ul class="items">
 			<div class="product-details">
-				 
+				 <div class="product">
+				 	<li class="featured">
+				 		<img src="<?php $_SESSION['artwork']['a1'].src?>" alt="img">
+				 	</li>
+				 </div>
 			</div>
 			<hr>
 		</ul>		
