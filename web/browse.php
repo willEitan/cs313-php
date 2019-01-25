@@ -1,5 +1,5 @@
 <!-- <?php
-	session_start();
+	//session_start();
 	/*$_SESSION["artwork"] = [ 'a1' => [ 	'id' = 'al'
 										'value' = 'Emma'
 										'src' = 'pics/emma.jpg'
@@ -48,8 +48,8 @@
 		<ul class="items">
 			<div class="product-details">
 				<?php
-					foreach($_SESSION["artwork"] as $art){
-						echo "<div class='product'> <li class='featured'> <img src='$art['src']' alt='$art['value']'> </li>" . $art['data-price'] . "<div class='add-to-cart'><button value='Add to Cart'></button></div></div>";
+					//foreach($_SESSION["artwork"] as $art){
+						//echo "<div class='product'> <li class='featured'> <img src='$art['src']' alt='$art['value']'> </li>" . $art['data-price'] . "<div class='add-to-cart'><button value='Add to Cart'></button></div></div>";
 					}
 				?>
 			</div>
