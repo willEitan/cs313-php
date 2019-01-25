@@ -48,9 +48,9 @@
 		<ul class="items">
 			<div class="product-details">
 				<?php
-					//foreach($_SESSION["artwork"] as $art){
+					//foreach($_SESSION["artwork"] as $art) 
 						//echo "<div class='product'> <li class='featured'> <img src='$art['src']' alt='$art['value']'> </li>" . $art['data-price'] . "<div class='add-to-cart'><button value='Add to Cart'></button></div></div>";
-					}
+					
 				?>
 			</div>
 			<hr>
