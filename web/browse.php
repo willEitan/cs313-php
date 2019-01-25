@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$artwork = [	'a1' => [ 	'id' => 'al',
+	$_SESSION['artwork'] = [	'a1' => [ 	'id' => 'al',
 								'value' => 'Emma',
 								'src' => 'pics/emma.jpg',
 								'data-price' => '50' ],
@@ -21,7 +21,7 @@
 								'src' => 'pics/unseen_protection.jpg',
 								'data-price' => '$60.00']					
 						];
-	$cart = [];
+	$_SESSION['cart'] = [];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,12 +47,7 @@
 	<div class="item-browse">
 		<ul class="items">
 			<div class="product-details">
-				 <?php
-					foreach($artwork as $art) {
-				//		echo "<div class='product'> <li class='featured'> <img src='$art['src']' alt='$art['value']'> </li>" . $art['data-price'] . "<div class='add-to-cart'><button value='Add to Cart'></button></div></div>";
-					}
-					
-				?>
+				 
 			</div>
 			<hr>
 		</ul>		
