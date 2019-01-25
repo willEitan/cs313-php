@@ -49,10 +49,10 @@
 			<div class="product-details">
 				 <div class="product">
 				 	<li class="featured">
-				 		<img src="<?php $_SESSION['artwork']['a1']['src']?>" alt="img">
+				 		<img src="<?php echo $_SESSION['artwork']['a1']['src']?>" alt="img">
 				 	</li>
 				 </div>
-			</div> <?php echo $_SESSION['artwork']['a1']['src']?>
+			</div> 
 			<hr>
 		</ul>		
 	</div>
