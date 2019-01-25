@@ -1,27 +1,33 @@
 <?php
 	session_start();
-	$_SESSION['artwork'] = [	'a1' => [ 	'id' => 'al',
-								'value' => 'Emma',
-								'src' => 'pics/emma.jpg',
-								'data-price' => '50' ],
-					'a2' => [ 	'id' => 'a2',
-								'value' => 'Oil Landscape',
-								'src' => 'pics/oil_landscape.jpg',
-								'data-price' => '$50.00'],	
-					'a3' => [ 	'id' => 'a3',
-								'value' => 'Miss Artist',
-								'src' => 'pics/sarah.jpg',
-								'data-price' => '$70.00'],
-					'a4' => [ 	'id' => 'a4',
-								'value' => 'House in the Woods',
-								'src' => 'pics/hitw.jpg',
-								'data-price' => '$40.00'],	
-					'a5' => [ 	'id' => 'a5',
-								'value' => 'Unseen Protection',
-								'src' => 'pics/unseen_protection.jpg',
-								'data-price' => '$60.00']					
-						];
+
 	$_SESSION['cart'] = [];
+	$_SESSION['artwork'] = [	'a1' => [ 	'id' => 'al',
+											'value' => 'Emma',
+											'src' => 'pics/emma.jpg',
+											'data-price' => '50',
+											'data-description' => "" ],
+								'a2' => [ 	'id' => 'a2',
+											'value' => 'Oil Landscape',
+											'src' => 'pics/oil_landscape.jpg',
+											'data-price' => '$50.00',
+											'data-description' => "" ],	
+								'a3' => [ 	'id' => 'a3',
+											'value' => 'Miss Artist',
+											'src' => 'pics/sarah.jpg',
+											'data-price' => '$70.00',
+											'data-description' => "" ],
+								'a4' => [ 	'id' => 'a4',
+											'value' => 'House in the Woods',
+											'src' => 'pics/hitw.jpg',
+											'data-price' => '$40.00',
+											'data-description' => "" ],	
+								'a5' => [ 	'id' => 'a5',
+											'value' => 'Unseen Protection',
+											'src' => 'pics/unseen_protection.jpg',
+											'data-price' => '$60.00',
+											'data-description' => "" ]					
+						];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,23 +53,16 @@
 	<div class="item-browse">
 		<ul class="items">
 			<div class="product-details">
-				 <div class="product">
-				 	<li class="featured">
-				 		<?php
-				 			$artwork = $_SESSION['artwork'];
-				 			foreach ($artwork as $art) {
-				 				$src = $art['src'];
-				 				$alt = $art['vale'];
-				 				$price = $art['data-price'];
-				 				echo "<img src='$src' alt='$alt'><br>" . $price . "<br><div class='add-to-cart'><button>Add to Cart</button></div><br>";
-				 			}
-				 			/*$src = $_SESSION['artwork']['a1']['src'];
-				 			$alt = $_SESSION['artwork']['a1']['value'];
-				 			$price = $_SESSION['artwork']['a1']['data-price'];*/
-					 		
-				 		?>
-				 	</li>
-				 </div>
+		 		<?php
+		 			$artwork = $_SESSION['artwork'];
+		 			foreach ($artwork as $art) {
+		 				$src = $art['src'];
+		 				$alt = $art['value'];
+		 				$price = $art['data-price'];
+		 				$toAdd = [];
+		 				echo "<div class='product'><li class='featured'>" . "<img src='$src' alt='$alt'><br>" . $price . "</li></div><br>" . "<div class='add-to-cart'><button>Add to Cart</button></div><br>";
+		 			}
+		 		?>
 			</div> 
 			<hr>
 		</ul>		
