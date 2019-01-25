@@ -1,5 +1,5 @@
 <!-- <?php
-	//session_start();
+	session_start();
 	/*$_SESSION["artwork"] = [ 'a1' => [ 	'id' = 'al'
 										'value' = 'Emma'
 										'src' = 'pics/emma.jpg'
@@ -34,11 +34,11 @@
 	<script type="text/javascript" src="myscript_03.js"></script>
 </head>
 <body>
-	<!-- <header>
+<!-- 	<header>
 		<div class="top">
 			<h1>Sarah's artwork</h1>
 			<div>
-				<form action="/cart.php" method="post">
+				<form action="cart.php" method="post">
 					<input type="submit" name="cart button">
 				</form>
 			</div>
@@ -47,16 +47,16 @@
 	<div class="item-browse">
 		<ul class="items">
 			<div class="product-details">
-				<!-- <?php
+				<?php
 					foreach($_SESSION["artwork"] as $art){
 						echo "<div class='product'> <li class='featured'> <img src='$art['src']' alt='$art['value']'> </li>" . $art['data-price'] . "<div class='add-to-cart'><button value='Add to Cart'></button></div></div>";
 					}
-				?> -->
+				?>
 			</div>
 			<hr>
 		</ul>		
-	</div> -->
-</body>
+	</div>
+</body> -->
 <footer>
 <!-- 	&copy; 
 	<?php
