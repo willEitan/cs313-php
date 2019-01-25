@@ -60,9 +60,9 @@
 <footer>
 <!-- 	&copy; 
 	<?php
-		$created = 2019;
+		/*$created = 2019;
 		$current = date('Y');
-		echo $created . (($created != $current) ? '-' . $current : '') . " Copyright";
+		echo $created . (($created != $current) ? '-' . $current : '') . " Copyright";*/
 	?> -->
 </footer>
 </html>
