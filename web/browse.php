@@ -50,7 +50,7 @@
 				 <div class="product">
 				 	<li class="featured">
 				 		<?php
-				 		 echo "<img src='$_SESSION['artwork']['a1']['src'] alt='$_SESSION['artwork']['a1']['value']'><br>";
+					 		 echo "<img src='$_SESSION['artwork']['a1']['src']' alt='$_SESSION['artwork']['a1']['value']'><br>";
 				 		?>
 				 	</li>
 				 </div>
