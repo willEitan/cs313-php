@@ -55,13 +55,15 @@
 			<div class="product-details">
 		 		<?php
 		 			$artwork = $_SESSION['artwork'];
+		 			$toAdd = [];
 		 			foreach ($artwork as $art) {
 		 				$src = $art['src'];
 		 				$alt = $art['value'];
 		 				$price = $art['data-price'];
-		 				$toAdd = [];
-		 				echo "<div class='product'><li class='featured'>" . "<img src='$src' alt='$alt'><br>" . $price . "</li></div><br>" . "<div class='add-to-cart'><button>Add to Cart</button></div><br>";
+
+		 				echo "<div class='product'><li class='featured'>" . "<img src='$src' alt='$alt'><br>" . $price . "</li></div><br>" . "<div class='add-to-cart'><button onclick()='array_push($toAdd, $art);'>Add to Cart</button></div><br>";
 		 			}
+		 			$_SESSION['cart'] = $toAdd;
 		 		?>
 			</div> 
 			<hr>
