@@ -50,7 +50,7 @@
 				 <div class="product">
 				 	<li class="featured">
 				 		<?php
-				 		 echo "<img src='$_SESSION['artwork']['a1']['src'] alt='$_SESSION['artwork']['a1']['value']'><br>" . $_SESSION['artwork']['a1']['data-price'] . "<div class='add-to-cart'><button value='Add to Cart'></button></div>";
+				 		 echo "<img src='$_SESSION['artwork']['a1']['src'] alt='$_SESSION['artwork']['a1']['value']'><br>" . $_SESSION['artwork']['a1']['data-price'];
 				 		?>
 				 	</li>
 				 </div>
