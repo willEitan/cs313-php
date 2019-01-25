@@ -1,6 +1,6 @@
-<!-- <?php
-	//session_start();
-	/*$_SESSION["artwork"] = [ 'a1' => [ 	'id' = 'al'
+<?php
+	session_start();
+	$_SESSION["artwork"] = [ 'a1' => [ 	'id' = 'al'
 										'value' = 'Emma'
 										'src' = 'pics/emma.jpg'
 										'data-price' = '50']
@@ -21,15 +21,15 @@
 										'src' = 'pics/unseen_protection.jpg'
 										'data-price' = '$60.00']					
 							];
-	$_SESSION["cart"] = [];*/
-?> -->
+	$_SESSION["cart"] = [];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>ecommerce</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="style_03.css">
 	<script type="text/javascript" src="myscript_03.js"></script>
 </head>
@@ -55,14 +55,14 @@
 			</div>
 			<hr>
 		</ul>		
-	</div>
-</body> -->
+	</div> -->
+</body>
 <footer>
-<!-- 	&copy; 
+	&copy; 
 	<?php
-		/*$created = 2019;
+		$created = 2019;
 		$current = date('Y');
-		echo $created . (($created != $current) ? '-' . $current : '') . " Copyright";*/
-	?> -->
+		echo $created . (($created != $current) ? '-' . $current : '') . " Copyright";
+	?> 
 </footer>
 </html>
