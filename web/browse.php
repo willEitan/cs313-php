@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	//session_start();
 	/*$_SESSION["artwork"] = [ 'a1' => [ 	'id' = 'al'
 										'value' = 'Emma'
 										'src' = 'pics/emma.jpg'
