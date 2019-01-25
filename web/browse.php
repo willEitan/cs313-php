@@ -47,12 +47,12 @@
 	<div class="item-browse">
 		<ul class="items">
 			<div class="product-details">
-				<!-- <?php
+				 <?php
 					foreach($artwork as $art) {
-						echo "<div class='product'> <li class='featured'> <img src='$art['src']' alt='$art['value']'> </li>" . $art['data-price'] . "<div class='add-to-cart'><button value='Add to Cart'></button></div></div>";
+				//		echo "<div class='product'> <li class='featured'> <img src='$art['src']' alt='$art['value']'> </li>" . $art['data-price'] . "<div class='add-to-cart'><button value='Add to Cart'></button></div></div>";
 					}
 					
-				?> -->
+				?>
 			</div>
 			<hr>
 		</ul>		
