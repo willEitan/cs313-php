@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	//$_SESSION['cart'] = [];
+	$_SESSION['cart'] = [];
 	$_SESSION['artwork'] = [	'a1' => [ 	'id' => 'al',
 											'value' => 'Emma',
 											'src' => 'pics/emma.jpg',
