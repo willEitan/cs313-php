@@ -41,6 +41,7 @@
 	//$_SESSION['user'] = [];				
 						];
 	include(add_to_cart.php);
+	print_r($_SESSION['cart']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -165,7 +166,7 @@
 	<hr>
 	&copy; 
 	<?php
-	print_r($_SESSION['cart']);
+	
 		$created = 2019;
 		$current = date('Y');
 		echo $created . (($created != $current) ? '-' . $current : '') . " Copyright";
