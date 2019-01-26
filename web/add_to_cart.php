@@ -9,6 +9,7 @@
 	if ($el == NULL){
 		$el = filter_input(INPUT_GET, 'el');
 	}
+	$_SESSION['test'] = "debug";
 	$cart = $_SESSION['cart'];
 	switch($action){
 		case "add":
