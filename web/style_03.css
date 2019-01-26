@@ -1,0 +1,96 @@
+h1, h2 {
+	text-align: center;
+	font-color:white;
+	font-family: "Georgia", serif:;
+}
+
+body {
+	margin: 0;
+	background-color: darkgray;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.art-featured {
+	position: relative;
+}
+
+.art-slide {
+	display: none;
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+.next, .prev {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide-info {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+.art-title {
+	text-align: center;
+	background-color: #222;
+	padding: 2px 16px;
+	color: white;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col {
+	float: left;
+	width: 16.66%;
+}
+
+.demo {
+	opacity: .6;
+}
+
+input {
+	background-color: black;
+	padding: 5px 10px;
+	color: #008CBA;
+	border: 2px solid #008CBA;
+	border-radius: 5px;
+	margin: 10px;
+	-webkit-transition-duration: .4s;
+	transition-duration: .4s;
+}
+
+input:hover {
+	background-color: #008CBA;
+	color: black;
+}
