@@ -31,7 +31,7 @@
 											'src' => 'pics/unseen_protection.jpg',
 											'data-price' => '$60.00',
 											'data-description' => "",
-											'data-quantity'	=> 0 ]
+											'data-quantity'	=> 0 ],
 								'a6' => [ 	'id' => 'a6',
 											'value' => 'Castle on a Hill',
 											'src' => 'pics/castle.jpg',
