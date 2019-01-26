@@ -15,6 +15,7 @@
 				foreach($_SESSION['cart'] as $c){
 					if($_SESSION['artwork'][$el] == $c){
 						$c['data-quantity']++;
+						echo "gah";
 					}
 				}
 			} else {
