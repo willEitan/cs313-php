@@ -22,8 +22,11 @@
 			} else {*/
 				//$cart = $_SESSION['artwork'][$el];
 				//$_SESSION['cart'] = $cart;
-				//array_merge($_SESSION['cart'], $_SESSION['artwork'][$el]); 
-				$_SESSION['cart'] += $_SESSION['artwork'][$el];
+				if(!isset($_SESSION['cart'])){
+					 $_SESSION['cart'] = $_SESSION['artwork'][$el];
+				} else {
+					array_push($_SESSION['cart'], $_SESSION['artwork'][$el]);
+				}
 			//}
 			header('Location: browse.php');
 			exit();
