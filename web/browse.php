@@ -60,7 +60,7 @@
 	</header>
 	<div class="art-gallary">
 		<div class="art-featured">.
-			<form method="post" >
+			<form method="post" action="/cart.php">
 				<!-- a1 -->
 				<div class="art-slide">
 		 			<br><div class="slide-info"> 1 / 6 <br>
