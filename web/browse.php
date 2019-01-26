@@ -40,8 +40,9 @@
 											'data-quantity'	=> 0 ]	
 	//$_SESSION['user'] = [];				
 						];
-	include(add_to_cart.php);
+	//include(add_to_cart.php);
 	print_r($_SESSION['cart']);
+	echo $_SESSION['test'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
