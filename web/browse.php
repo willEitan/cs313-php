@@ -39,8 +39,7 @@
 											'data-quantity'	=> 0 ]	
 	//$_SESSION['user'] = [];				
 						];
-	//include(add_to_cart.php);
-	print_r($_SESSION['cart']);
+	//print_r($_SESSION['cart']);
 
 ?>
 <!DOCTYPE html>
