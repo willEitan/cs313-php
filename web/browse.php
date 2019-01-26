@@ -164,6 +164,7 @@
 	<hr>
 	&copy; 
 	<?php
+	print_r($_SESSION['cart']);
 		$created = 2019;
 		$current = date('Y');
 		echo $created . (($created != $current) ? '-' . $current : '') . " Copyright";
