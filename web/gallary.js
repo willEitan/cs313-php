@@ -12,7 +12,7 @@ function currentSlide(n) {
 function showSlides(n){
 	var i;
 	var slides = document.getElementsByClassName("art-slide");
-	var dots = document.getElementsByClassName("demo");
+	var dots = document.getElementsByClassName("mini");
 	var caption = document.getElementById("art-title");
 	if (n > slides.length) {slideIndex = 1}
 	if (n < 1) {slideIndex = slides.length;}
