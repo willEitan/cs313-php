@@ -9,7 +9,7 @@
 	switch($action){
 		case "a1":
 			$_SESSION['artwork']['a1']['data-quantity'] += 1;
-			header(string: 'Location: browse.php');
+			header('Location: browse.php');
 			break;
 	}				
 ?>
