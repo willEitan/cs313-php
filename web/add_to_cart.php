@@ -27,6 +27,7 @@
 			exit();*/
 			echo $el . " - " . $_SESSION['cart'] . " ";
 			print_r($_SESSION['cart']);
+			include(browse.php);
 			break;
 	}				
 ?>
