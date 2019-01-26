@@ -15,6 +15,7 @@
 <body>
 	<?php
 		print_r($_SESSION['cart']);
+		print_r($_GET);
 	?>
 </body>
 <footer>
