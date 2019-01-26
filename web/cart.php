@@ -27,13 +27,13 @@
 			if (isset($_SESSION['cart'])) {
 				echo "<p style='font-size:20px;'>Would you like to continue <a href='browse.php'>browsing</a>?</p><hr>";
 
-				$a1 = 0;
-				$a2 = 0;
-				$a3 = 0;
-				$a4 = 0;
-				$a5 = 0;
-				$a6 = 0;
-				$artwork = $_SESSION['artwork'];
+				static $a1 = 0;
+				static $a2 = 0;
+				static $a3 = 0;
+				static $a4 = 0;
+				static $a5 = 0;
+				static $a6 = 0;
+				static $artwork = $_SESSION['artwork'];
 
 				/* get item quantities*/
 				foreach($_SESSION['cart'] as $cart_item) {
