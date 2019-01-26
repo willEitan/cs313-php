@@ -9,17 +9,19 @@
 	if ($el == NULL){
 		$el = filter_input(INPUT_GET, 'action');
 	}
+	$cart = $_SESSION['cart'];
 	switch($action){
 		case "add":
-			if(!empty($_SESSION['cart'])){
-				foreach($_SESSION['cart'] as $c){
+			if(!empty($cart)){
+				foreach($cart as $c){
 					if($_SESSION['artwork'][$el] == $c){
 						$c['data-quantity']++;
-						echo "gah";
 					}
 				}
 			} else {
-				array_push($_SESSION['cart'], $el);
+				$cart = $_SESSION['$el'];
+				$_SESSION['cart'] = $cart;
+				//array_push($_SESSION['cart'], $el);
 			}
 			header('Location: browse.php');
 			exit();
