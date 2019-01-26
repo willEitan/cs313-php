@@ -25,7 +25,7 @@
 			}
 			//header('Location: browse.php');
 			//exit();
-			echo $el . " " . $cart . " l";
+			echo $el . "e " . $cart . "c";
 			break;
 	}				
 ?>
