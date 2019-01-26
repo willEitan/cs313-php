@@ -23,8 +23,9 @@
 				$_SESSION['cart'] = $cart;
 				//array_push($_SESSION['cart'], $el);
 			}
-			header('Location: browse.php');
-			exit();
+			//header('Location: browse.php');
+			//exit();
+			echo $el . " " . $cart . " l";
 			break;
 	}				
 ?>
