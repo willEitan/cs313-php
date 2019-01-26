@@ -40,6 +40,7 @@
 											'data-quantity'	=> 0 ]	
 	//$_SESSION['user'] = [];				
 						];
+	include(add_to_cart.php);
 ?>
 <!DOCTYPE html>
 <html lang="en">
