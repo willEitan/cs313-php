@@ -23,10 +23,10 @@
 				$_SESSION['cart'] = $cart;
 				//array_push($_SESSION['cart'], $el);
 			}
-			header('Location: browse.php');
-			exit();
+			/*header('Location: browse.php');
+			exit();*/
 			echo $el . " - " . $_SESSION['cart'] . " ";
-			print_r($cart);
+			print_r($_SESSION['cart']);
 			break;
 	}				
 ?>
