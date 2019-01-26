@@ -66,61 +66,61 @@
 				<div class="art-slide">
 		 			<div class="slide-info"> 1 / 6 <br>
 		 				<?php
-		 					echo $_SESSION['artwork']['a1']['data-price'];
-		 				?>
+		 					echo "<em>" . $_SESSION['artwork']['a1']['data-price'] . "</em>";
+		 				?> <br>
 		 				<input type="button" name="Add to Cart" value="Add to Cart" onclick="<?php $_SESSION['artwork']['a1']['data-quantity'] += 1;?>" />
 		 			</div>
-		 			<img src="<?php echo $_SESSION['artwork']['a1']['src'];?>" alt="<?php echo $_SESSION['artwork']['a1']['value'];?>" style="width:100%;  height:150px;">
+		 			<img src="<?php echo $_SESSION['artwork']['a1']['src'];?>" alt="<?php echo $_SESSION['artwork']['a1']['value'];?>" style="width:100%;">
 				</div>
 				<!-- a2 -->
 				<div class="art-slide">
 		 			<div class="slide-info"> 2 / 6 <br>
 		 				<?php
 		 					echo $_SESSION['artwork']['a2']['data-price'];
-		 				?>
+		 				?><br>
 		 				<input type="button" name="Add to Cart" value="Add to Cart" onclick="<?php $_SESSION['artwork']['a2']['data-quantity'] += 1;?>" />
 		 			</div>
-		 			<img src="<?php echo $_SESSION['artwork']['a2']['src'];?>" alt="<?php echo $_SESSION['artwork']['a2']['value'];?>" style="width:100%;  height:150px;">
+		 			<img src="<?php echo $_SESSION['artwork']['a2']['src'];?>" alt="<?php echo $_SESSION['artwork']['a2']['value'];?>" style="width:100%;">
 				</div>
 				<!-- a3 -->
 				<div class="art-slide">
 		 			<div class="slide-info"> 3 / 6 <br>
 		 				<?php
 		 					echo $_SESSION['artwork']['a3']['data-price'];
-		 				?>
+		 				?><br>
 		 				<input type="button" name="Add to Cart" value="Add to Cart" onclick="<?php $_SESSION['artwork']['a3']['data-quantity'] += 1;?>" />
 		 			</div>
-		 			<img src="<?php echo $_SESSION['artwork']['a3']['src'];?>" alt="<?php echo $_SESSION['artwork']['a3']['value'];?>" style="width:100%;  height:150px;">
+		 			<img src="<?php echo $_SESSION['artwork']['a3']['src'];?>" alt="<?php echo $_SESSION['artwork']['a3']['value'];?>" style="width:100%;">
 				</div>
 				<!-- a4 -->
 				<div class="art-slide">
 		 			<div class="slide-info"> 4 / 6 <br>
 		 				<?php
 		 					echo $_SESSION['artwork']['a4']['data-price'];
-		 				?>
+		 				?><br>
 		 				<input type="button" name="Add to Cart" value="Add to Cart" onclick="<?php $_SESSION['artwork']['a4']['data-quantity'] += 1;?>" />
 		 			</div>
-		 			<img src="<?php echo $_SESSION['artwork']['a4']['src'];?>" alt="<?php echo $_SESSION['artwork']['a4']['value'];?>" style="width:100%;  height:150px;">
+		 			<img src="<?php echo $_SESSION['artwork']['a4']['src'];?>" alt="<?php echo $_SESSION['artwork']['a4']['value'];?>" style="width:100%;">
 				</div>
 				<!-- a5 -->
 				<div class="art-slide">
 		 			<div class="slide-info"> 5 / 6 <br>
 		 				<?php
 		 					echo $_SESSION['artwork']['a5']['data-price'];
-		 				?>
+		 				?><br>
 		 				<input type="button" name="Add to Cart" value="Add to Cart" onclick="<?php $_SESSION['artwork']['a5']['data-quantity'] += 1;?>" />
 		 			</div>
-		 			<img src="<?php echo $_SESSION['artwork']['a5']['src'];?>" alt="<?php echo $_SESSION['artwork']['a5']['value'];?>" style="width:100%;  height:150px;">
+		 			<img src="<?php echo $_SESSION['artwork']['a5']['src'];?>" alt="<?php echo $_SESSION['artwork']['a5']['value'];?>" style="width:100%;">
 				</div>
 				<!-- a6 -->
 				<div class="art-slide">
 		 			<div class="slide-info"> 6 / 6 <br>
 		 				<?php
 		 					echo $_SESSION['artwork']['a6']['data-price'];
-		 				?>
+		 				?><br>
 		 				<input type="button" name="Add to Cart" value="Add to Cart" onclick="<?php $_SESSION['artwork']['a6']['data-quantity'] += 1;?>" />
 		 			</div>
-		 			<img src="<?php echo $_SESSION['artwork']['a6']['src'];?>" alt="<?php echo $_SESSION['artwork']['a6']['value'];?>" style="width:100%; height:150px;">
+		 			<img src="<?php echo $_SESSION['artwork']['a6']['src'];?>" alt="<?php echo $_SESSION['artwork']['a6']['value'];?>" style="width:100%;">
 				</div>
 
 				<!-- Browse Arrows -->
@@ -134,22 +134,22 @@
 				<!-- Image Row -->
 				<div class="row">
 					<div class="col">
-						<img class="mini" src="<?php echo $_SESSION['artwork']['a1']['src'];?>" alt="<?php echo $_SESSION['artwork']['a1']['value'];?>" style="width:100%;" onclick="currentSlide(1);">
+						<img class="mini" src="<?php echo $_SESSION['artwork']['a1']['src'];?>" alt="<?php echo $_SESSION['artwork']['a1']['value'];?>" style="width:100%; height:50px;" onclick="currentSlide(1);">
 					</div>
 					<div class="col">
-						<img class="mini" src="<?php echo $_SESSION['artwork']['a2']['src'];?>" alt="<?php echo $_SESSION['artwork']['a2']['value'];?>" style="width:100%;" onclick="currentSlide(2);">
+						<img class="mini" src="<?php echo $_SESSION['artwork']['a2']['src'];?>" alt="<?php echo $_SESSION['artwork']['a2']['value'];?>" style="width:100%; height:50px;" onclick="currentSlide(2);">
 					</div>
 					<div class="col">
-						<img class="mini" src="<?php echo $_SESSION['artwork']['a3']['src'];?>" alt="<?php echo $_SESSION['artwork']['a3']['value'];?>" style="width:100%;" onclick="currentSlide(3);">
+						<img class="mini" src="<?php echo $_SESSION['artwork']['a3']['src'];?>" alt="<?php echo $_SESSION['artwork']['a3']['value'];?>" style="width:100%; height:50px;" onclick="currentSlide(3);">
 					</div>
 					<div class="col">
-						<img class="mini" src="<?php echo $_SESSION['artwork']['a4']['src'];?>" alt="<?php echo $_SESSION['artwork']['a4']['value'];?>" style="width:100%;" onclick="currentSlide(4);">
+						<img class="mini" src="<?php echo $_SESSION['artwork']['a4']['src'];?>" alt="<?php echo $_SESSION['artwork']['a4']['value'];?>" style="width:100%; height:50px;" onclick="currentSlide(4);">
 					</div>
 					<div class="col">
-						<img class="mini" src="<?php echo $_SESSION['artwork']['a5']['src'];?>" alt="<?php echo $_SESSION['artwork']['a5']['value'];?>" style="width:100%;" onclick="currentSlide(5);">
+						<img class="mini" src="<?php echo $_SESSION['artwork']['a5']['src'];?>" alt="<?php echo $_SESSION['artwork']['a5']['value'];?>" style="width:100%; height:50px;" onclick="currentSlide(5);">
 					</div>
 					<div class="col">
-						<img class="mini" src="<?php echo $_SESSION['artwork']['a6']['src'];?>" alt="<?php echo $_SESSION['artwork']['a6']['value'];?>" style="width:100%;" onclick="currentSlide(6);">
+						<img class="mini" src="<?php echo $_SESSION['artwork']['a6']['src'];?>" alt="<?php echo $_SESSION['artwork']['a6']['value'];?>" style="width:100%; height:50px;" onclick="currentSlide(6);">
 					</div>
 				</div>
 				<br><input type="submit" name="Checkout" value="Proceed to Checkout" />
