@@ -70,7 +70,7 @@
 		 				?>
 		 				<input type="button" name="Add to Cart" onclick="<?php $_SESSION['artwork']['a1']['data-quantity'] += 1;?>" />
 		 			</div>
-		 			<img src="<?php echo $_SESSION['artwork']['a1']['src'];?>" alt="<?php echo $_SESSION['artwork']['a1']['value'];?>" style="width:100%;  height:50px;">
+		 			<img src="<?php echo $_SESSION['artwork']['a1']['src'];?>" alt="<?php echo $_SESSION['artwork']['a1']['value'];?>" style="width:100%;  height:150px;">
 				</div>
 				<!-- a2 -->
 				<div class="art-slide">
@@ -80,7 +80,7 @@
 		 				?>
 		 				<input type="button" name="Add to Cart" onclick="<?php $_SESSION['artwork']['a2']['data-quantity'] += 1;?>" />
 		 			</div>
-		 			<img src="<?php echo $_SESSION['artwork']['a2']['src'];?>" alt="<?php echo $_SESSION['artwork']['a2']['value'];?>" style="width:100%;  height:50px;">
+		 			<img src="<?php echo $_SESSION['artwork']['a2']['src'];?>" alt="<?php echo $_SESSION['artwork']['a2']['value'];?>" style="width:100%;  height:150px;">
 				</div>
 				<!-- a3 -->
 				<div class="art-slide">
@@ -90,7 +90,7 @@
 		 				?>
 		 				<input type="button" name="Add to Cart" onclick="<?php $_SESSION['artwork']['a3']['data-quantity'] += 1;?>" />
 		 			</div>
-		 			<img src="<?php echo $_SESSION['artwork']['a3']['src'];?>" alt="<?php echo $_SESSION['artwork']['a3']['value'];?>" style="width:100%;  height:50px;">
+		 			<img src="<?php echo $_SESSION['artwork']['a3']['src'];?>" alt="<?php echo $_SESSION['artwork']['a3']['value'];?>" style="width:100%;  height:150px;">
 				</div>
 				<!-- a4 -->
 				<div class="art-slide">
@@ -100,7 +100,7 @@
 		 				?>
 		 				<input type="button" name="Add to Cart" onclick="<?php $_SESSION['artwork']['a4']['data-quantity'] += 1;?>" />
 		 			</div>
-		 			<img src="<?php echo $_SESSION['artwork']['a4']['src'];?>" alt="<?php echo $_SESSION['artwork']['a4']['value'];?>" style="width:100%;  height:50px;">
+		 			<img src="<?php echo $_SESSION['artwork']['a4']['src'];?>" alt="<?php echo $_SESSION['artwork']['a4']['value'];?>" style="width:100%;  height:150px;">
 				</div>
 				<!-- a5 -->
 				<div class="art-slide">
@@ -110,7 +110,7 @@
 		 				?>
 		 				<input type="button" name="Add to Cart" onclick="<?php $_SESSION['artwork']['a5']['data-quantity'] += 1;?>" />
 		 			</div>
-		 			<img src="<?php echo $_SESSION['artwork']['a5']['src'];?>" alt="<?php echo $_SESSION['artwork']['a5']['value'];?>" style="width:100%;  height:50px;">
+		 			<img src="<?php echo $_SESSION['artwork']['a5']['src'];?>" alt="<?php echo $_SESSION['artwork']['a5']['value'];?>" style="width:100%;  height:150px;">
 				</div>
 				<!-- a6 -->
 				<div class="art-slide">
@@ -120,7 +120,7 @@
 		 				?>
 		 				<input type="button" name="Add to Cart" onclick="<?php $_SESSION['artwork']['a6']['data-quantity'] += 1;?>" />
 		 			</div>
-		 			<img src="<?php echo $_SESSION['artwork']['a6']['src'];?>" alt="<?php echo $_SESSION['artwork']['a6']['value'];?>" style="width:100%; height:50px;">
+		 			<img src="<?php echo $_SESSION['artwork']['a6']['src'];?>" alt="<?php echo $_SESSION['artwork']['a6']['value'];?>" style="width:100%; height:150px;">
 				</div>
 
 				<!-- Browse Arrows -->
