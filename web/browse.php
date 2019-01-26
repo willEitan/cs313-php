@@ -4,37 +4,37 @@
 	$_SESSION['artwork'] = [	'a1' => [ 	'id' => 'al',
 											'value' => 'Emma',
 											'src' => 'pics/emma.jpg',
-											'data-price' => '$50.00',
+											'data-price' => 50.00,
 											'data-description' => "",
 											'data-quantity'	=> 0],
 								'a2' => [ 	'id' => 'a2',
 											'value' => 'Oil Landscape',
 											'src' => 'pics/oil_landscape.jpg',
-											'data-price' => '$50.00',
+											'data-price' => 50.00,
 											'data-description' => "",
 											'data-quantity'	=> 0 ],	
 								'a3' => [ 	'id' => 'a3',
 											'value' => 'Miss Artist',
 											'src' => 'pics/sarah.jpg',
-											'data-price' => '$70.00',
+											'data-price' => 70.00,
 											'data-description' => "",
 											'data-quantity' => 0 ],
 								'a4' => [ 	'id' => 'a4',
 											'value' => 'House in the Woods',
 											'src' => 'pics/hitw.jpg',
-											'data-price' => '$40.00',
+											'data-price' => 40.00,
 											'data-description' => "",
 											'data-quantity'	=> 0 ],	
 								'a5' => [ 	'id' => 'a5',
 											'value' => 'Unseen Protection',
 											'src' => 'pics/unseen_protection.jpg',
-											'data-price' => '$60.00',
+											'data-price' => 60.00,
 											'data-description' => "",
 											'data-quantity'	=> 0 ],
 								'a6' => [ 	'id' => 'a6',
 											'value' => 'Castle on a Hill',
 											'src' => 'pics/castle.jpg',
-											'data-price' => '$45.00',
+											'data-price' => 45.00,
 											'data-description' => "",
 											'data-quantity'	=> 0 ]	
 	//$_SESSION['user'] = [];				
@@ -67,9 +67,9 @@
 				<div class="art-slide">
 		 			<br><div class="slide-info"> 1 / 6 <br>
 		 				<?php
-		 					echo "<em>" . $_SESSION['artwork']['a1']['data-price'] . "</em>";
+		 					echo "<em>$" . $_SESSION['artwork']['a1']['data-price'] . "</em>";
 		 				?>
-		 				<a href="add_to_cart.php?action=add&el=a1"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
+		 				<a href="service.php?action=add&el=a1"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
 		 			</div>
 		 			<img src="<?php echo $_SESSION['artwork']['a1']['src'];?>" alt="<?php echo $_SESSION['artwork']['a1']['value'];?>" style="width:100%;">
 				</div>
@@ -77,9 +77,9 @@
 				<div class="art-slide">
 		 			<br><div class="slide-info"> 2 / 6 <br>
 		 				<?php
-		 					echo "<em>" . $_SESSION['artwork']['a']['data-price'] . "</em>";
+		 					echo "<em>$" . $_SESSION['artwork']['a']['data-price'] . "</em>";
 		 				?>
-		 				<a href="add_to_cart.php?action=add&el=a2"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
+		 				<a href="service.php?action=add&el=a2"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
 		 			</div>
 		 			<img src="<?php echo $_SESSION['artwork']['a2']['src'];?>" alt="<?php echo $_SESSION['artwork']['a2']['value'];?>" style="width:100%;">
 				</div>
@@ -87,9 +87,9 @@
 				<div class="art-slide">
 		 			<br><div class="slide-info"> 3 / 6 <br>
 		 				<?php
-		 					echo "<em>" . $_SESSION['artwork']['a3']['data-price'] . "</em>";
+		 					echo "<em>$" . $_SESSION['artwork']['a3']['data-price'] . "</em>";
 		 				?>
-		 				<a href="add_to_cart.php?action=add&el=a3"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
+		 				<a href="service.php?action=add&el=a3"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
 		 			</div>
 		 			<img src="<?php echo $_SESSION['artwork']['a3']['src'];?>" alt="<?php echo $_SESSION['artwork']['a3']['value'];?>" style="width:100%;">
 				</div>
@@ -97,9 +97,9 @@
 				<div class="art-slide">
 		 			<br><div class="slide-info"> 4 / 6 <br>
 		 				<?php
-		 					echo "<em>" . $_SESSION['artwork']['a4']['data-price'] . "</em>";
+		 					echo "<em>$" . $_SESSION['artwork']['a4']['data-price'] . "</em>";
 		 				?>
-		 				<a href="add_to_cart.php?action=add&el=a4"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
+		 				<a href="service.php?action=add&el=a4"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
 		 			</div>
 		 			<img src="<?php echo $_SESSION['artwork']['a4']['src'];?>" alt="<?php echo $_SESSION['artwork']['a4']['value'];?>" style="width:100%;">
 				</div>
@@ -107,9 +107,9 @@
 				<div class="art-slide">
 		 			<br><div class="slide-info"> 5 / 6 <br>
 		 				<?php
-		 					echo "<em>" . $_SESSION['artwork']['a5']['data-price'] . "</em>";
+		 					echo "<em>$" . $_SESSION['artwork']['a5']['data-price'] . "</em>";
 		 				?>
-		 				<a href="add_to_cart.php?action=add&el=a5"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
+		 				<a href="service.php?action=add&el=a5"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
 		 			</div>
 		 			<img src="<?php echo $_SESSION['artwork']['a5']['src'];?>" alt="<?php echo $_SESSION['artwork']['a5']['value'];?>" style="width:100%;">
 				</div>
@@ -117,9 +117,9 @@
 				<div class="art-slide">
 		 			<br><div class="slide-info"> 6 / 6 <br>
 		 				<?php
-		 					echo "<em>" . $_SESSION['artwork']['a6']['data-price'] . "</em>";
+		 					echo "<em>$" . $_SESSION['artwork']['a6']['data-price'] . "</em>";
 		 				?>
-		 				<a href="add_to_cart.php?action=add&el=a6"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
+		 				<a href="service.php?action=add&el=a6"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
 		 			</div>
 		 			<img src="<?php echo $_SESSION['artwork']['a6']['src'];?>" alt="<?php echo $_SESSION['artwork']['a6']['value'];?>" style="width:100%;">
 				</div>
@@ -154,7 +154,7 @@
 						<img class="mini" src="<?php echo $_SESSION['artwork']['a6']['src'];?>" alt="<?php echo $_SESSION['artwork']['a6']['value'];?>" style="width:100%; height:50px;" onclick="currentSlide(6);">
 					</div>
 				</div>
-				<br><input type="submit" name="Checkout" value="Proceed to Checkout" />
+				<br><input type="submit" name="Checkout" value="View Cart" />
 			</form>
 			<script type="text/javascript" src="gallary.js"></script>
 		</div>
