@@ -19,7 +19,7 @@
 					}
 				}
 			} else {
-				$cart = $_SESSION['$el'];
+				$cart = $_SESSION['artwork']['$el'];
 				$_SESSION['cart'] = $cart;
 				//array_push($_SESSION['cart'], $el);
 			}
