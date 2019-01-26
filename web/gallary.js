@@ -13,7 +13,7 @@ function showSlides(n){
 	var i;
 	var slides = document.getElementsByClassName("art-slide");
 	var dots = document.getElementsByClassName("mini");
-	var caption = document.getElementById("art-title");
+	var caption = document.getElementById("caption");
 	if (n > slides.length) {slideIndex = 1}
 	if (n < 1) {slideIndex = slides.length;}
 	for (i = 0; i < dots.length; i++){
