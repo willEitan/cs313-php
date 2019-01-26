@@ -1,8 +1,6 @@
 <?php
 	session_start();
 
-	$_SESSION['cart'] = [];
-
 	$action = filter_input(INPUT_POST, 'action');
 	if ($action == NULL){
 		$action = filter_input(INPUT_GET, 'action');
@@ -12,7 +10,7 @@
 		$el = filter_input(INPUT_GET, 'el');
 	}
 
-	$cart = $_SESSION['cart'];
+//	$cart = $_SESSION['cart'];
 	switch($action){
 		case "add":
 			/*if(!empty($cart)){
