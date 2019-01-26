@@ -5,7 +5,10 @@
 	if ($action == NULL){
 		$action = filter_input(INPUT_GET, 'action');
 	}
-
+	$el = filter_input(INPUT_POST, 'el');
+	if ($el == NULL){
+		$el = filter_input(INPUT_GET, 'action');
+	}
 	switch($action){
 		case "add":
 			if(!empty($_SESSION['cart'])){
