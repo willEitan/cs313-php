@@ -24,7 +24,7 @@
 				$_SESSION['cart'] = $cart;
 				//array_push($_SESSION['cart'], $el);
 			}
-			header('Location: cart.php');
+			header('Location: browse.php');
 			exit();
 			echo $el . " - " . $_SESSION['cart'] . " ";
 			print_r($_SESSION['cart']);
