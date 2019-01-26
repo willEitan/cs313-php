@@ -1,46 +1,5 @@
 <?php
 	session_start();
-
-	//$_SESSION['cart'] = [];
-	$_SESSION['artwork'] = [	'a1' => [ 	'id' => 'al',
-											'value' => 'Emma',
-											'src' => 'pics/emma.jpg',
-											'data-price' => '$50.00',
-											'data-description' => "",
-											'data-quantity'	=> 0],
-								'a2' => [ 	'id' => 'a2',
-											'value' => 'Oil Landscape',
-											'src' => 'pics/oil_landscape.jpg',
-											'data-price' => '$50.00',
-											'data-description' => "",
-											'data-quantity'	=> 0 ],	
-								'a3' => [ 	'id' => 'a3',
-											'value' => 'Miss Artist',
-											'src' => 'pics/sarah.jpg',
-											'data-price' => '$70.00',
-											'data-description' => "",
-											'data-quantity' => 0 ],
-								'a4' => [ 	'id' => 'a4',
-											'value' => 'House in the Woods',
-											'src' => 'pics/hitw.jpg',
-											'data-price' => '$40.00',
-											'data-description' => "",
-											'data-quantity'	=> 0 ],	
-								'a5' => [ 	'id' => 'a5',
-											'value' => 'Unseen Protection',
-											'src' => 'pics/unseen_protection.jpg',
-											'data-price' => '$60.00',
-											'data-description' => "",
-											'data-quantity'	=> 0 ],
-								'a6' => [ 	'id' => 'a6',
-											'value' => 'Castle on a Hill',
-											'src' => 'pics/castle.jpg',
-											'data-price' => '$45.00',
-											'data-description' => "",
-											'data-quantity'	=> 0 ]	
-	//$_SESSION['user'] = [];				
-						];
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,7 +27,7 @@
 		 				<?php
 		 					echo "<em>" . $_SESSION['artwork']['a1']['data-price'] . "</em>";
 		 				?>
-		 				<input type="button" name="Add to Cart" value="Add to Cart" onclick="<?php $_SESSION['artwork']['a1']['data-quantity'] += 1;?>" /><br>
+		 				<a href="add_to_cart.php?id=a1"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
 		 			</div>
 		 			<img src="<?php echo $_SESSION['artwork']['a1']['src'];?>" alt="<?php echo $_SESSION['artwork']['a1']['value'];?>" style="width:100%;">
 				</div>
