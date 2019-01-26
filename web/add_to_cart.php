@@ -24,7 +24,7 @@
 			} else {*/
 				//$cart = $_SESSION['artwork'][$el];
 				//$_SESSION['cart'] = $cart;
-				array_push($_SESSION['cart'], $_SESSION[$el]);
+				array_push($_SESSION['cart'], $_SESSION['artwork'][$el]);
 			//}
 			header('Location: browse.php');
 			exit();
