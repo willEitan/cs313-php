@@ -19,13 +19,13 @@
 					}
 				}
 			} else {
-				$cart = $_SESSION['artwork']['$el'];
+				$cart = $_SESSION['artwork'][$el];
 				$_SESSION['cart'] = $cart;
 				//array_push($_SESSION['cart'], $el);
 			}
 			//header('Location: browse.php');
 			//exit();
-			echo $el . " - " . $cart;
+			echo $el . " - " . $cart . " - " . $_SESSION['artwork'][$el];
 			break;
 	}				
 ?>
