@@ -67,7 +67,7 @@
 		 				<?php
 		 					echo "<em>" . $_SESSION['artwork']['a1']['data-price'] . "</em>";
 		 				?>
-		 				<a href="add_to_cart.php?action=a1"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
+		 				<a href="add_to_cart.php?action=add?el=a1"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
 		 			</div>
 		 			<img src="<?php echo $_SESSION['artwork']['a1']['src'];?>" alt="<?php echo $_SESSION['artwork']['a1']['value'];?>" style="width:100%;">
 				</div>
