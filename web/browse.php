@@ -1,7 +1,6 @@
 <?php
 	session_start();
 
-	$_SESSION['cart'] = [];
 	$_SESSION['artwork'] = [	'a1' => [ 	'id' => 'al',
 											'value' => 'Emma',
 											'src' => 'pics/emma.jpg',
@@ -42,7 +41,7 @@
 						];
 	//include(add_to_cart.php);
 	print_r($_SESSION['cart']);
-	echo $_SESSION['test'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
