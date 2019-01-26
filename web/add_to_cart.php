@@ -1,8 +1,5 @@
 <?php
 	session_start();
-	if ($_SESSION['cart'] == NULL) {
-		
-	}
 
 	$action = filter_input(INPUT_POST, 'action');
 	if ($action == NULL){
@@ -25,7 +22,8 @@
 			} else {*/
 				//$cart = $_SESSION['artwork'][$el];
 				//$_SESSION['cart'] = $cart;
-				array_merge($_SESSION['cart'], $_SESSION['artwork'][$el]);
+				//array_merge($_SESSION['cart'], $_SESSION['artwork'][$el]); 
+				$_SESSION['cart'] += $_SESSION['artwork'][$el];
 			//}
 			header('Location: browse.php');
 			exit();
