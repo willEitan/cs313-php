@@ -64,7 +64,7 @@
 			<form method="post" action="/cart.php">
 				<!-- a1 -->
 				<div class="art-slide">
-		 			<div class="slide-info"> 1 / 6 <br>
+		 			<br><div class="slide-info"> 1 / 6 <br>
 		 				<?php
 		 					echo "<em>" . $_SESSION['artwork']['a1']['data-price'] . "</em>";
 		 				?> <br>
@@ -74,9 +74,9 @@
 				</div>
 				<!-- a2 -->
 				<div class="art-slide">
-		 			<div class="slide-info"> 2 / 6 <br>
+		 			<br><div class="slide-info"> 2 / 6 <br>
 		 				<?php
-		 					echo $_SESSION['artwork']['a2']['data-price'];
+		 					echo "<em>" . $_SESSION['artwork']['a']['data-price'] . "</em>";
 		 				?><br>
 		 				<input type="button" name="Add to Cart" value="Add to Cart" onclick="<?php $_SESSION['artwork']['a2']['data-quantity'] += 1;?>" />
 		 			</div>
@@ -84,9 +84,9 @@
 				</div>
 				<!-- a3 -->
 				<div class="art-slide">
-		 			<div class="slide-info"> 3 / 6 <br>
+		 			<br><div class="slide-info"> 3 / 6 <br>
 		 				<?php
-		 					echo $_SESSION['artwork']['a3']['data-price'];
+		 					echo "<em>" . $_SESSION['artwork']['a3']['data-price'] . "</em>";
 		 				?><br>
 		 				<input type="button" name="Add to Cart" value="Add to Cart" onclick="<?php $_SESSION['artwork']['a3']['data-quantity'] += 1;?>" />
 		 			</div>
@@ -94,9 +94,9 @@
 				</div>
 				<!-- a4 -->
 				<div class="art-slide">
-		 			<div class="slide-info"> 4 / 6 <br>
+		 			<br><div class="slide-info"> 4 / 6 <br>
 		 				<?php
-		 					echo $_SESSION['artwork']['a4']['data-price'];
+		 					echo "<em>" . $_SESSION['artwork']['a4']['data-price'] . "</em>";
 		 				?><br>
 		 				<input type="button" name="Add to Cart" value="Add to Cart" onclick="<?php $_SESSION['artwork']['a4']['data-quantity'] += 1;?>" />
 		 			</div>
@@ -104,9 +104,9 @@
 				</div>
 				<!-- a5 -->
 				<div class="art-slide">
-		 			<div class="slide-info"> 5 / 6 <br>
+		 			<br><div class="slide-info"> 5 / 6 <br>
 		 				<?php
-		 					echo $_SESSION['artwork']['a5']['data-price'];
+		 					echo "<em>" . $_SESSION['artwork']['a5']['data-price'] . "</em>";
 		 				?><br>
 		 				<input type="button" name="Add to Cart" value="Add to Cart" onclick="<?php $_SESSION['artwork']['a5']['data-quantity'] += 1;?>" />
 		 			</div>
@@ -114,9 +114,9 @@
 				</div>
 				<!-- a6 -->
 				<div class="art-slide">
-		 			<div class="slide-info"> 6 / 6 <br>
+		 			<br><div class="slide-info"> 6 / 6 <br>
 		 				<?php
-		 					echo $_SESSION['artwork']['a6']['data-price'];
+		 					echo "<em>" . $_SESSION['artwork']['a6']['data-price'] . "</em>";
 		 				?><br>
 		 				<input type="button" name="Add to Cart" value="Add to Cart" onclick="<?php $_SESSION['artwork']['a6']['data-quantity'] += 1;?>" />
 		 			</div>
