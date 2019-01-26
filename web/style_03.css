@@ -31,6 +31,7 @@ header {
 	position: absolute;
 	top: 40%;
 	width: auto;
+	height: auto;
 	padding: 16px;
 	color: white;
 	font-weight: bold;
@@ -51,7 +52,7 @@ header {
 }
 
 .slide-info {
-	color: #008CBA;
+	color: black;
 	font-size: 12px;
 	padding: 8px 12px;
 	position: absolute;
