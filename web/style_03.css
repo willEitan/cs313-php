@@ -1,4 +1,4 @@
-h1, h2 {
+h1, h3 {
 	text-align: center;
 	font-color:white;
 	font-family: "Georgia", serif:;
@@ -7,6 +7,11 @@ h1, h2 {
 body {
 	margin: 0;
 	background-color: darkgray;
+}
+
+header {
+	background-color: #008CBA;
+	padding-bottom: 10px;
 }
 
 * {
@@ -19,10 +24,6 @@ body {
 
 .art-slide {
 	display: none;
-}
-
-.cursor {
-	cursor: pointer;
 }
 
 .next, .prev {
@@ -77,6 +78,7 @@ body {
 
 .mini {
 	opacity: .6;
+	cursor: pointer;
 }
 
 input {
