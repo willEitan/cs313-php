@@ -25,7 +25,8 @@
 			}
 			//header('Location: browse.php');
 			//exit();
-			echo $el . " - " . $cart . " - " . $_SESSION['artwork'][$el];
+			echo $el . " - " . $_SESSION['cart'] . " ";
+			print_r($cart);
 			break;
 	}				
 ?>
