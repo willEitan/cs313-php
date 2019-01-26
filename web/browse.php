@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	
+
 	//$_SESSION['cart'] = [];
 	$_SESSION['artwork'] = [	'a1' => [ 	'id' => 'al',
 											'value' => 'Emma',
@@ -60,14 +60,14 @@
 	</header>
 	<div class="art-gallary">
 		<div class="art-featured">.
-			<form method="post" action="/cart.php">
+			<form method="post" >
 				<!-- a1 -->
 				<div class="art-slide">
 		 			<br><div class="slide-info"> 1 / 6 <br>
 		 				<?php
 		 					echo "<em>" . $_SESSION['artwork']['a1']['data-price'] . "</em>";
 		 				?>
-		 				<a href="add_to_cart.php?id=a1"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
+		 				<a href="add_to_cart.php?action=a1"><input type="button" name="Add to Cart" value="Add to Cart"/></a>
 		 			</div>
 		 			<img src="<?php echo $_SESSION['artwork']['a1']['src'];?>" alt="<?php echo $_SESSION['artwork']['a1']['value'];?>" style="width:100%;">
 				</div>
