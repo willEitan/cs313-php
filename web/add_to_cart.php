@@ -7,8 +7,16 @@
 	}
 
 	switch($action){
-		case "a1":
-			$_SESSION['artwork']['a1']['data-quantity'] += 1;
+		case "add":
+			if(!empty($_SESSION['cart'])){
+				foreach($_SESSION['cart'] as $c){
+					if($_SESSION['artwork'][$el] == $c){
+						$c['data-quantity']++;
+					}
+				}
+			} else {
+				array_push($_SESSION['cart'], $el);
+			}
 			header('Location: browse.php');
 			break;
 	}				
