@@ -22,9 +22,9 @@
 					}
 				}
 			} else {*/
-				$cart = $_SESSION['artwork'][$el];
-				$_SESSION['cart'] = $cart;
-				//array_push($_SESSION['cart'], $el);
+				//$cart = $_SESSION['artwork'][$el];
+				//$_SESSION['cart'] = $cart;
+				array_push($_SESSION['cart'], $_SESSION[$el]);
 			//}
 			header('Location: browse.php');
 			exit();
