@@ -7,7 +7,7 @@
 	}
 	$el = filter_input(INPUT_POST, 'el');
 	if ($el == NULL){
-		$el = filter_input(INPUT_GET, 'action');
+		$el = filter_input(INPUT_GET, 'el');
 	}
 	$cart = $_SESSION['cart'];
 	switch($action){
@@ -25,7 +25,7 @@
 			}
 			//header('Location: browse.php');
 			//exit();
-			echo $el . "e " . $cart . "c";
+			echo $el . "e " . $action . "c";
 			break;
 	}				
 ?>
