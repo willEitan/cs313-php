@@ -15,21 +15,19 @@
 	$cart = $_SESSION['cart'];
 	switch($action){
 		case "add":
-			if(!empty($cart)){
+			/*if(!empty($cart)){
 				foreach($cart as $c){
 					if($_SESSION['artwork'][$el] == $c){
 						$c['data-quantity']++;
 					}
 				}
-			} else {
+			} else {*/
 				$cart = $_SESSION['artwork'][$el];
 				$_SESSION['cart'] = $cart;
 				//array_push($_SESSION['cart'], $el);
-			}
+			//}
 			header('Location: browse.php');
 			exit();
-			echo $el . " - " . $_SESSION['cart'] . " ";
-			print_r($_SESSION['cart']);
 			break;
 	}				
 ?>
