@@ -21,6 +21,7 @@
 				array_push($_SESSION['cart'], $el);
 			}
 			header('Location: browse.php');
+			exit();
 			break;
 	}				
 ?>
