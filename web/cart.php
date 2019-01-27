@@ -21,6 +21,7 @@
 	<div class="title">
 		<header>
 			<h1 style="color:black">Shopping Bag</h1>
+			<br><br><br><br>
 		</header>
 	</div>
 		<?php
@@ -64,8 +65,8 @@
 					$a = $_SESSION['artwork']['a1'];
 					$src = $a['src'];
 					$alt = $a['value'];
-					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
-					echo "<div class='image'><img height='20px' width='20px' src='$src' alt='$alt'/></div>";
+					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/remove.png' alt='trash'/></button>";
+					echo "<div class='image'><img height='20px' width='7px' src='$src' alt='$alt'/></div>";
 					echo "<div class='bag_item_description'><p>" . $a['description'] . "</p></div>";
 					echo "<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>";
 					echo "<img src='pics/plus.png' alt='plus'/></button>"; 
@@ -79,8 +80,8 @@
 					$a = $_SESSION['artwork']['a2'];
 					$src = $a['src'];
 					$alt = $a['value'];
-					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
-					echo "<div class='image'><img height='20px' width='20px' src='$src' alt='$alt'/></div>";
+					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/remove.png' alt='trash'/></button>";
+					echo "<div class='image'><img height='20px' width='7px' src='$src' alt='$alt'/></div>";
 					echo "<div class='bag_item_description'><p>" . $a['description'] . "</p></div>";
 					echo "<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>";
 					echo "<img src='pics/plus.png' alt='plus'/></button>"; 
@@ -94,8 +95,8 @@
 					$a = $$_SESSION['artwork']['a3'];
 					$src = $a['src'];
 					$alt = $a['value'];
-					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
-					echo "<div class='image'><img height='20px' width='20px' src='$src' alt='$alt'/></div>";
+					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/remove.png' alt='trash'/></button>";
+					echo "<div class='image'><img height='20px' width='7px' src='$src' alt='$alt'/></div>";
 					echo "<div class='bag_item_description'><p>" . $a['description'] . "</p></div>";
 					echo "<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>";
 					echo "<img src='pics/plus.png' alt='plus'/></button>"; 
@@ -109,8 +110,8 @@
 					$a = $_SESSION['artwork']['a4'];
 					$src = $a['src'];
 					$alt = $a['value'];
-					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
-					echo "<div class='image'><img height='20px' width='20px' src='$src' alt='$alt'/></div>";
+					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/remove.png' alt='trash'/></button>";
+					echo "<div class='image'><img height='20px' width='7px' src='$src' alt='$alt'/></div>";
 					echo "<div class='bag_item_description'><p>" . $a['description'] . "</p></div>";
 					echo "<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>";
 					echo "<img src='pics/plus.png' alt='plus'/></button>"; 
@@ -124,8 +125,8 @@
 					$a = $_SESSION['artwork']['a5'];
 					$src = $a['src'];
 					$alt = $a['value'];
-					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
-					echo "<div class='image'><img height='20px' width='20px' src='$src' alt='$alt'/></div>";
+					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/remove.png' alt='trash'/></button>";
+					echo "<div class='image'><img height='20px' width='7px' src='$src' alt='$alt'/></div>";
 					echo "<div class='bag_item_description'><p>" . $a['description'] . "</p></div>";
 					echo "<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>";
 					echo "<img src='pics/plus.png' alt='plus'/></button>"; 
@@ -139,8 +140,8 @@
 					$a = $_SESSION['artwork']['a6'];
 					$src = $a['src'];
 					$alt = $a['value'];
-					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
-					echo "<div class='image'><img height='20px' width='20px' src='$src' alt='$alt'/></div>";
+					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/remove.png' alt='trash'/></button>";
+					echo "<div class='image'><img height='20px' width='7px' src='$src' alt='$alt'/></div>";
 					echo "<div class='bag_item_description'><p>" . $a['description'] . "</p></div>";
 					echo "<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>";
 					echo "<img src='pics/plus.png' alt='plus'/></button>"; 
