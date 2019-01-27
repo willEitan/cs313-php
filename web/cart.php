@@ -33,7 +33,7 @@
 				static $a4 = 0;
 				static $a5 = 0;
 				static $a6 = 0;
-				static $artwork[] = $_SESSION['artwork'];
+				//static $artwork[] = $_SESSION['artwork'];
 
 				/* get item quantities*/
 				foreach($_SESSION['cart'] as $cart_item) {
@@ -62,7 +62,7 @@
 
 				/*Display items if quantity is not 0*/
 				if ($a1 != 0){
-					$a = $artwork['a1'];
+					$a = $_SESSION['artwork']['a1'];
 					$src = $a['src'];
 					$alt = $a['value'];
 					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
@@ -77,7 +77,7 @@
 					echo "<img src='pics/minus.png' alt='minus'/></button></div></div><hr>";
 				}
 				if ($a2 != 0){
-					$a = $artwork['a2'];
+					$a = $_SESSION['artwork']['a2'];
 					$src = $a['src'];
 					$alt = $a['value'];
 					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
@@ -92,7 +92,7 @@
 					echo "<img src='pics/minus.png' alt='minus'/></button></div></div><hr>";
 				}
 				if ($a3 != 0){
-					$a = $artwork['a3'];
+					$a = $$_SESSION['artwork']['a3'];
 					$src = $a['src'];
 					$alt = $a['value'];
 					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
@@ -107,7 +107,7 @@
 					echo "<img src='pics/minus.png' alt='minus'/></button></div></div><hr>";
 				}
 				if ($a4 != 0){
-					$a = $artwork['a4'];
+					$a = $_SESSION['artwork']['a4'];
 					$src = $a['src'];
 					$alt = $a['value'];
 					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
@@ -122,7 +122,7 @@
 					echo "<img src='pics/minus.png' alt='minus'/></button></div></div><hr>";
 				}
 				if ($a5 != 0){
-					$a = $artwork['a5'];
+					$a = $_SESSION['artwork']['a5'];
 					$src = $a['src'];
 					$alt = $a['value'];
 					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
@@ -137,7 +137,7 @@
 					echo "<img src='pics/minus.png' alt='minus'/></button></div></div><hr>";
 				}
 				if ($a6 != 0){
-					$a = $artwork['a6'];
+					$a = $_SESSION['artwork']['a6'];
 					$src = $a['src'];
 					$alt = $a['value'];
 					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
