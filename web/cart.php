@@ -102,73 +102,78 @@
 				}
 				if ($a2 != 0){
 					$a = $artwork['a2'];
-					echo "<div class='bag_item'><button class='rm' src='pics/delete.svg' alt='trash'></button>" . 
-					"<div class='image'><img height='20px' width='20px' src='$a['src']' alt='$a['value']'/></div>" . 
-					"<div class='bag_item_description'><p> $a['description'] </p></div>" . 
-					"<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>" .
-					 "<img src='pics/plus.png' alt='plus'/></button>" . 
-					 "<input type='text' name='amount' value='$a2'/>" . 
-					 "<button class='minus_btn' type='button' name='minus-button'>" . 
-					 "<div class='bag_item_total'><p>" . $a2 * $a['data-prce'] .
-					  "</p></div>"
-					 "<img src='pics/minus.png' alt='minus'/></button></div>" .
-					"</div><hr>";
+					$src = $a['src'];
+					$alt = $a['value'];
+					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
+					echo "<div class='image'><img height='20px' width='20px' src='$src' alt='$alt'/></div>";
+					echo "<div class='bag_item_description'><p>" . $a['description'] . "</p></div>";
+					echo "<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>";
+					echo "<img src='pics/plus.png' alt='plus'/></button>"; 
+					echo "<input type='text' name='amount' value='$a1'/>";
+					echo "<button class='minus_btn' type='button' name='minus-button'>";
+					echo "<div class='bag_item_total'><p>" . $a1 * $a['data-prce'] .
+					  "</p></div>";
+					echo "<img src='pics/minus.png' alt='minus'/></button></div></div><hr>";
 				}
 				if ($a3 != 0){
 					$a = $artwork['a3'];
-					echo "<div class='bag_item'><button class='rm' src='pics/delete.svg' alt='trash'></button>" . 
-					"<div class='image'><img height='20px' width='20px' src='$a['src']' alt='$a['value']'/></div>" . 
-					"<div class='bag_item_description'><p> $a['description'] </p></div>" . 
-					"<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>" .
-					 "<img src='pics/plus.png' alt='plus'/></button>" . 
-					 "<input type='text' name='amount' value='$a3'/>" . 
-					 "<button class='minus_btn' type='button' name='minus-button'>" . 
-					 "<div class='bag_item_total'><p>" . $a3 * $a['data-prce'] .
-					  "</p></div>"
-					 "<img src='pics/minus.png' alt='minus'/></button></div>" .
-					"</div><hr>";
+					$src = $a['src'];
+					$alt = $a['value'];
+					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
+					echo "<div class='image'><img height='20px' width='20px' src='$src' alt='$alt'/></div>";
+					echo "<div class='bag_item_description'><p>" . $a['description'] . "</p></div>";
+					echo "<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>";
+					echo "<img src='pics/plus.png' alt='plus'/></button>"; 
+					echo "<input type='text' name='amount' value='$a1'/>";
+					echo "<button class='minus_btn' type='button' name='minus-button'>";
+					echo "<div class='bag_item_total'><p>" . $a1 * $a['data-prce'] .
+					  "</p></div>";
+					echo "<img src='pics/minus.png' alt='minus'/></button></div></div><hr>";
 				}
 				if ($a4 != 0){
 					$a = $artwork['a4'];
-					echo "<div class='bag_item'><button class='rm' src='pics/delete.svg' alt='trash'></button>" . 
-					"<div class='image'><img height='20px' width='20px' src='$a['src']' alt='$a['value']'/></div>" . 
-					"<div class='bag_item_description'><p> $a['description'] </p></div>" . 
-					"<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>" .
-					 "<img src='pics/plus.png' alt='plus'/></button>" . 
-					 "<input type='text' name='amount' value='$a4'/>" . 
-					 "<button class='minus_btn' type='button' name='minus-button'>" . 
-					 "<div class='bag_item_total'><p>" . $a4 * $a['data-prce'] .
-					  "</p></div>"
-					 "<img src='pics/minus.png' alt='minus'/></button></div>" .
-					"</div><hr>";
+					$src = $a['src'];
+					$alt = $a['value'];
+					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
+					echo "<div class='image'><img height='20px' width='20px' src='$src' alt='$alt'/></div>";
+					echo "<div class='bag_item_description'><p>" . $a['description'] . "</p></div>";
+					echo "<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>";
+					echo "<img src='pics/plus.png' alt='plus'/></button>"; 
+					echo "<input type='text' name='amount' value='$a1'/>";
+					echo "<button class='minus_btn' type='button' name='minus-button'>";
+					echo "<div class='bag_item_total'><p>" . $a1 * $a['data-prce'] .
+					  "</p></div>";
+					echo "<img src='pics/minus.png' alt='minus'/></button></div></div><hr>";
 				}
 				if ($a5 != 0){
 					$a = $artwork['a5'];
-					echo "<div class='bag_item'><button class='rm' src='pics/delete.svg' alt='trash'></button>" . 
-					"<div class='image'><img height='20px' width='20px' src='$a['src']' alt='$a['value']'/></div>" . 
-					"<div class='bag_item_description'><p> $a['description'] </p></div>" . 
-					"<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>" .
-					 "<img src='pics/plus.png' alt='plus'/></button>" . 
-					 "<input type='text' name='amount' value='$a5'/>" . 
-					 "<button class='minus_btn' type='button' name='minus-button'>" . 
-					 "<div class='bag_item_total'><p>" . $a5 * $a['data-prce'] .
-					  "</p></div>"
-					 "<img src='pics/minus.png' alt='minus'/></button></div>" .
-					"</div><hr>";
+					$src = $a['src'];
+					$alt = $a['value'];
+					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
+					echo "<div class='image'><img height='20px' width='20px' src='$src' alt='$alt'/></div>";
+					echo "<div class='bag_item_description'><p>" . $a['description'] . "</p></div>";
+					echo "<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>";
+					echo "<img src='pics/plus.png' alt='plus'/></button>"; 
+					echo "<input type='text' name='amount' value='$a1'/>";
+					echo "<button class='minus_btn' type='button' name='minus-button'>";
+					echo "<div class='bag_item_total'><p>" . $a1 * $a['data-prce'] .
+					  "</p></div>";
+					echo "<img src='pics/minus.png' alt='minus'/></button></div></div><hr>";
 				}
 				if ($a6 != 0){
 					$a = $artwork['a6'];
-					echo "<div class='bag_item'><button class='rm' src='pics/delete.svg' alt='trash'></button>" . 
-					"<div class='image'><img height='20px' width='20px' src='$a['src']' alt='$a['value']'/></div>" . 
-					"<div class='bag_item_description'><p> $a['description'] </p></div>" . 
-					"<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>" .
-					 "<img src='pics/plus.png' alt='plus'/></button>" . 
-					 "<input type='text' name='amount' value='$a6'/>" . 
-					 "<button class='minus_btn' type='button' name='minus-button'>" . 
-					 "<div class='bag_item_total'><p>" . $a6 * $a['data-prce'] .
-					  "</p></div>"
-					 "<img src='pics/minus.png' alt='minus'/></button></div>" .
-					"</div><hr>";
+					$src = $a['src'];
+					$alt = $a['value'];
+					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
+					echo "<div class='image'><img height='20px' width='20px' src='$src' alt='$alt'/></div>";
+					echo "<div class='bag_item_description'><p>" . $a['description'] . "</p></div>";
+					echo "<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>";
+					echo "<img src='pics/plus.png' alt='plus'/></button>"; 
+					echo "<input type='text' name='amount' value='$a1'/>";
+					echo "<button class='minus_btn' type='button' name='minus-button'>";
+					echo "<div class='bag_item_total'><p>" . $a1 * $a['data-prce'] .
+					  "</p></div>";
+					echo "<img src='pics/minus.png' alt='minus'/></button></div></div><hr>";
 				}
 
 				echo "<a href='checkout.html'><button type='button' value='Proceed to Checkout'></button></a>"
