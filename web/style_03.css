@@ -86,7 +86,7 @@ header {
 }
 
 .mini:hover {
-	opacity: 0;
+	opacity: 1;
 }
 
 input {
