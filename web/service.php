@@ -69,7 +69,7 @@
 				$_SESSION['address'] .= ", ";
 				$_SESSION['address'] .= $_POST['ZIP'];
 			}
-			header('Location: confirmation.php')
+			header('Location: confirmation.php');
 			break;
 	}				
 ?>
