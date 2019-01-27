@@ -111,6 +111,8 @@ input:hover {
 
 .checkout {
 	border: solid 2px black;
+	margin: 5px;
+	padding: 5px;
 }
 /* curtusy of https://designmodo.com/shopping-cart-ui/ for the following code*/
 .shopping_cart {
