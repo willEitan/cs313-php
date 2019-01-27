@@ -62,7 +62,7 @@
 			break;
 		case "remove":
 			break;
-		case "address"
+		case "address":
 			if (!isset($_SESSION['address'])) {
 				$_SESSION['address'] .= $_POST['Street Address'];
 				$_SESSION['address'] .= $_POST['City'];
