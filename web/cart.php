@@ -88,7 +88,8 @@
 				if ($a1 != 0){
 					$a = $artwork['a1'];
 					echo "<div class='bag_item'><button class='rm' src='pics/delete.svg' alt='trash'></button>" . 
-					"<div class='image'><img style='height:20px; width:20px;' src='$a['src']' alt='$a['value']'/></div>" . 
+					"<div class='image'>" . 
+					"<img style='height:20px; width:20px;' src='$a['src']' alt='$a['value']'/></div>" . 
 					"<div class='bag_item_description'><p> $a['description'] </p></div>" . 
 					"<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>" .
 					 "<img src='pics/plus.png' alt='plus'/></button>" . 
