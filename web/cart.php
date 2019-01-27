@@ -38,25 +38,50 @@
 				/* get item quantities*/
 				foreach($_SESSION['cart'] as $cart_item) {
 					switch ($cart_item){
+						case $_SESSION['artwork']['a1']):
+							$a1++;
+							break;
+						case $_SESSION['artwork']['a2']):
+							$a2++;
+							break;
+						case $_SESSION['artwork']['a3']):
+							$a3++;
+							break;
+						case $_SESSION['artwork']['a4']):
+							$a4++;
+							break;
+						case $_SESSION['artwork']['a5']):
+							$a5++;
+							break;
+						case $_SESSION['artwork']['a6']):						$a6++;
+							break;
+					}
+					/*switch ($cart_item){
 						case ($cart_item == $_SESSION['artwork']['a1']){
 							$a1++;
+							break;
 						}
 						case ($cart_item == $_SESSION['artwork']['a2']){
 							$a2++;
+							break;
 						}
 						case ($cart_item == $_SESSION['artwork']['a3']){
 							$a3++;
+							break;
 						}
 						case ($cart_item == $_SESSION['artwork']['a4']){
 							$a4++;
+							break;
 						}
 						case ($cart_item == $_SESSION['artwork']['a5']){
 							$a5++;
+							break;
 						}
 						case ($cart_item == $_SESSION['artwork']['a6']){
 							$a6++;
+							break;
 						}
-					}
+					}*/
 				}
 
 				/*Display items if quantity is not 0*/
