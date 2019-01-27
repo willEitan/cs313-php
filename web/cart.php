@@ -151,10 +151,10 @@
 					echo "<img src='pics/minus.png' alt='minus'/></button></div></div><hr>";
 				}
 
-				echo "<a href='checkout.html'><button type='button' value='Proceed to Checkout'></button></a>";
+				echo "<a href='checkout.php'><button type='button' value='Proceed to Checkout'></button></a>";
 				echo "<br><p style='font-size:15px; padding: 20px'>Would you like to continue <a href='browse.php'>browsing</a>?</p>";
 			} else {
-				echo "<em><h3> You've not selected any items </h3></em>" . "<p style='font-size:20px'>Please continue <a href='browse.php'>browsing</a>.</p>";
+				echo "<em><h3> You've not selected any items </h3></em>" . "<p style='font-size:15px'>Please continue <a href='browse.php'>browsing</a>.</p>";
 			}
 		?>
 	</div>
