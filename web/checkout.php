@@ -22,10 +22,13 @@
 			City: <input class="checkout-input" type="text" name="City">
 			ZIP: <input class="checkout-input" type="text" name="ZIP">
 			<input type="submit" name="Confirm" onclick="getAddress();">
+			<a href="cart.php"><button>Review Cart</button></a>
 		</form>
 	</div>
 </body>
 <footer>
-	
+	<?php
+		include 'footer.php';
+	?>
 </footer>
 </html>
