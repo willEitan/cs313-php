@@ -20,12 +20,11 @@
 	<div class="shopping_cart">
 	<div class="title">
 		<header>
-			<h1>Shopping Bag</h1>
+			<h1 style="color:black">Shopping Bag</h1>
 		</header>
 	</div>
 		<?php
 			if (isset($_SESSION['cart'])) {
-				echo "<p style='font-size:20px;'>Would you like to continue <a href='browse.php'>browsing</a>?</p><hr>";
 
 				static $a1 = 0;
 				static $a2 = 0;
@@ -153,6 +152,7 @@
 				}
 
 				echo "<a href='checkout.html'><button type='button' value='Proceed to Checkout'></button></a>";
+				echo "<br><p style='font-size:15px; padding: 20px'>Would you like to continue <a href='browse.php'>browsing</a>?</p>";
 			} else {
 				echo "<em><h3> You've not selected any items </h3></em>" . "<p style='font-size:20px'>Please continue <a href='browse.php'>browsing</a>.</p>";
 			}
@@ -161,7 +161,7 @@
 	
 	<!-- curtosy of  view-source:https://designmodo.com/demo/shopping-cart/ for the following jquery code-->
 	<script type="text/javascript">
-		$(document).ready(function{
+		$(document).ready(function(){
 			$('.minus_btn').on('click', function(e) {
 			    e.preventDefault();
 			    var $this = $(this);
