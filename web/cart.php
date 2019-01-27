@@ -91,7 +91,7 @@
 					$alt = $a['value'];
 					echo "<div class='bag_item'><button type='button' class='rm'><img src='pics/delete.svg' alt='trash'/></button>";
 					echo "<div class='image'><img height='20px' width='20px' src='$src' alt='$alt'/></div>";
-					echo "<div class='bag_item_description'><p> $a['description'] </p></div>";
+					echo "<div class='bag_item_description'><p>" . $a['description'] . "</p></div>";
 					echo "<div class='quantity'><button class='plus_btn' type='button' name='plus-button'>";
 					echo "<img src='pics/plus.png' alt='plus'/></button>"; 
 					echo "<input type='text' name='amount' value='$a1'/>";
