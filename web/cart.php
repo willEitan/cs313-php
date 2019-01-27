@@ -196,12 +196,9 @@
 		});
 	</script>
 </body>
-<footer><hr>
-	&copy; 
+<footer>
 	<?php
-		$created = 2019;
-		$current = date('Y');
-		echo $created . (($created != $current) ? '-' . $current : '') . " Copyright";
+		include 'footer.php';
 	?>
 </footer>
 </html>
