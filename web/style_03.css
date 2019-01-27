@@ -105,6 +105,13 @@ input:hover {
 	color: black;
 }
 
+.checkout-input {
+	width: 100%
+}
+
+.checkout {
+	border: solid 2px black;
+}
 /* curtusy of https://designmodo.com/shopping-cart-ui/ for the following code*/
 .shopping_cart {
 	width: 750px;
