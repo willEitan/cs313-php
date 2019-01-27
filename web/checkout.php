@@ -1,3 +1,6 @@
+<?php 
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +16,12 @@
 	<h3>Thank you for shoping!</h3>
 	<div class="checkout">
 		<form method="post" action="confirmation.php">
-			<input type="text" name="First Name">
-			<input type="text" name="Last Name">
-			<input type="text" name="Street Address">
-			<input type="text" name="City">
-			<input type="text" name="ZIP">
-			<input type="submit" name="Confirm">
+			First Name: <input class="checkout-input" type="text" name="First Name">
+			Last Name: <input class="checkout-input" type="text" name="Last Name">
+			Street Address: <input class="checkout-input" type="text" name="Street Address">
+			City: <input class="checkout-input" type="text" name="City">
+			ZIP: <input class="checkout-input" type="text" name="ZIP">
+			<input type="submit" name="Confirm" onclick="getAddress();">
 		</form>
 	</div>
 </body>
