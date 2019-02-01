@@ -11,7 +11,7 @@
 								'a2' => [ 	'id' => 'a2',
 											'value' => 'Oil Landscape',
 											'src' => 'pics/oil_landscape.jpg',
-											'data-price' => 50.00,
+											'data-price' => 55.00,
 											'data-description' => "Landscape Oil Painting",
 											'data-quantity'	=> 0 ],	
 								'a3' => [ 	'id' => 'a3',
