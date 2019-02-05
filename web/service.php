@@ -4,7 +4,7 @@
 
 	$_SESSION['artwork'] = [	'a1' => [ 	'id' => 'al',
 											'value' => 'Emma',
-											'src' => 'pics/emma.jpg',
+											'src' => 'pics/emma_thumb.jpg',
 											'data-price' => 50.00,
 											'data-description' => "Emma Watson drawing",
 											'data-quantity'	=> 0],
