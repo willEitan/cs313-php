@@ -31,9 +31,9 @@
 	foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
 	{
 		//print_r($row);
-	  echo "<p style='font-weight:bold'>" . $row['book'] . " {$row['chapter']}:{$row['verse']} - </p>";
+	  echo "<p><b>" . $row['book'] . " {$row['chapter']}:{$row['verse']} - </b> \"";
 	  echo $row['content'];
-	  echo '<br/>';
+	  echo '"</p>';
 	}
 	?>
 </body>
