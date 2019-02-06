@@ -21,7 +21,6 @@
 	  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
 	  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	  echo "db connected!";
 	}
 	catch (PDOException $ex)
 	{
@@ -31,6 +30,7 @@
 	echo "<h1>Scripture References</h1>";
 	foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
 	{
+		print_r($row);
 	  echo "<p style='font-weight:bold'>" . $row['book'] . " {$row['chapter']}:{$row['verse']} - </p>";
 	  echo $row['content'];
 	  echo '<br/>';
