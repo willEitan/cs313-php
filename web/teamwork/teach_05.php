@@ -29,7 +29,7 @@
 			$statement = $db->query("SELECT book FROM scriptures WHERE book='{$book}'");
 			$results = $statement->fetchAll(PDO::FETCH_ASSOC);
 			if ($results) {
-				echo $results . " is found";
+				echo $results['book'] . " is found";
 			} else {
 				echo "Sorry, not found!";
 			}
