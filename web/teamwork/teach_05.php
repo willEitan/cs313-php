@@ -6,27 +6,7 @@
 </head>
 <body>
 	<?php
-	try
-	{
-	  $dbUrl = getenv('DATABASE_URL');
-
-	  $dbOpts = parse_url($dbUrl);
-
-	  $dbHost = $dbOpts["host"];
-	  $dbPort = $dbOpts["port"];
-	  $dbUser = $dbOpts["user"];
-	  $dbPassword = $dbOpts["pass"];
-	  $dbName = ltrim($dbOpts["path"],'/');
-
-	  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-	  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	}
-	catch (PDOException $ex)
-	{
-	  echo 'Error!: ' . $ex->getMessage();
-	  die();
-	}
+	include "db_connect.php";
 	echo "<h1>Scripture References</h1>";
 	foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
 	{
@@ -35,6 +15,25 @@
 	  echo $row['content'];
 	  echo '"</p>';
 	}
+	?>
+	<br>
+	<form method="post" action="">
+		Search for Book: <input type="text" name="book">
+		<input type="submit" name="submit">
+	</form>
+
+	<?php
+		if(isset($_POST) && $_POST['book']){
+			
+			$book = htmlspecialchars($_POST['book']);
+			$statement = $db->query("SELECT book FROM scriptures WHERE book={$book}");
+			$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+			if ($results) {
+				echo $results['book'] . " is found";
+			} else {
+				echo "Sorry, not found!";
+			}
+		}
 	?>
 </body>
 </html>
