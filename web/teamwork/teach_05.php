@@ -27,7 +27,7 @@
 	  echo 'Error!: ' . $ex->getMessage();
 	  die();
 	}
-	
+	echo "<h1>Scripture References</h1>";
 	foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
 	{
 	  echo "<p style='font-weight:bold'>" . $row['book'] . " {$row['chapter']}:{$row['verse']} - </p>";
