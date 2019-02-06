@@ -32,7 +32,7 @@
 			if ($results) {
 				echo $results[0]['book'] . " is found";
 			} else {
-				echo "Sorry, not found!";
+				echo "Sorry, $_POST['book'] is not found!";
 			}
 		}
 	?>
