@@ -37,6 +37,15 @@ header {
 	font-size:19px0;
 }
 
+.cart_button {
+	float: right;
+	cursor: pointer;
+	position: relative;
+	margin-top: 7px;
+	margin-right: 25px;
+	background-color: orange;
+}
+
 .search-form {
 	margin-top: 15px;
 	float: right;
@@ -62,14 +71,4 @@ input[type=submit] {
 	font-family: sans-serif;
 	border: none;
 	font-size: 16px;
-}
-
-.cart_button {
-	float: right;
-	cursor: pointer;
-	position: relative;
-	padding: 7px;
-	margin-top: 7px;
-	margin-right: 25px;
-	background-color: orange;
 }
