@@ -33,7 +33,7 @@
 		print_r($row);
 	  echo "<p style='font-weight:bold'>" . $row['book'] . " {$row['chapter']}:{$row['verse']} - </p>";
 	  echo $row['content'];
-	  echo '<br/>';
+	  echo 'hello<br/>';
 	}
 	?>
 </body>
