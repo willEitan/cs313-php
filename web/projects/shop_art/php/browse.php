@@ -9,9 +9,9 @@
 	<script type="text/javascript" src="shop.js"></script>
 </head>
 <body>
+	<div w3-include-html="../html/nav.html"></div>
 	<?php
-		include "nav.html";
-		require "db_connect";
+		require "db_connect.php";
 	?>
 	<!-- <?php
 		foreach ($db->query('SELECT  FROM art') as $row)
