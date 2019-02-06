@@ -28,6 +28,7 @@
 			$book = htmlspecialchars($_POST['book']);
 			$statement = $db->query("SELECT book FROM scriptures WHERE book='{$book}'");
 			$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+			print_r($results);
 			if ($results) {
 				echo $results[0] . " is found";
 			} else {
