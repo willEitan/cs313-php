@@ -121,7 +121,7 @@ CREATE TABLE orders
 );
 
 CREATE TABLE art_order_lookup 
-( art_order_lookup_id  SERIAL
+( art_order_lookup_id   SERIAL
 , order_id			    INT			    CONSTRAINT nn_art_order_lookup_01 NOT NULL
 , art_id 			    INT			    CONSTRAINT nn_art_order_lookup_02 NOT NULL
 , item_quantity		    INT 		    CONSTRAINT nn_art_order_lookup_03 NOT NULL
