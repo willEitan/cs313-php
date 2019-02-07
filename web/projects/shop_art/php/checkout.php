@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" type="text/css" href="shop_style.css">
+	<link rel="stylesheet" type="text/css" href="../css/shop_style.css">
 	<script type="text/javascript" src="shop.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/checkout.css">
 	<?php require "db_connect.php";?>
