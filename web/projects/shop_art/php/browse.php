@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div include-html="../html/nav.html"></div>
-	<script>includeHTML();</script>
+	<script>includeHTML();</script><br>
 
 	<div class="main-content">
 		<h3>Featuring art by Sarah Tenney</h3>
