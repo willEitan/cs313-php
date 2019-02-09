@@ -24,7 +24,7 @@
 					if (ar.pseudonym != '') {
 						$artist_name = $row['ar.pseudonym'];
 					} else {
-						$artist_name = "$row['first_name'] $row['last_name']";
+						$artist_name = "{$row['first_name']} {$row['last_name']}";
 					}
 					echo $artist_name .  ' ';
 					echo $row['name'] . ' ';
