@@ -18,9 +18,9 @@
 		<div id="featured-gallary"></div>
 		<section id="gallary">
 			<?php
-				foreach ($db->query('SELECT ar.first_name, ar.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id
-					JOIN art_type AS at ON a.art_type_id = at.art_type_id') as $row)
+				foreach ($db->query('SELECT ar.first_name, ar.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN art_type AS at ON a.art_type_id = at.art_type_id') as $row)
 				{
+					echo "displaying";
 					echo $row['ar.first_name'] . ' ' . $row['ar.last_name'] .  ' ' . $row['at.name'] . ' ' . $row['a.image'] . '<br>';
 				}
 			?>
