@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="../css/shop_style.css">
 	<script type="text/javascript" src="../js/shop.js"></script>
-	<!-- <?php require "db_connect.php";?>-->
+	<?php require "db_connect.php";?>
 </head>
 <body>
 	<div include-html="../html/nav.html"></div>
@@ -16,10 +16,10 @@
 	<div class="main-content">
 		<?php
 			
-			require "../php/db_connect.php";
+			//require "../php/db_connect.php";
 			echo "hello";
 			print_r($db);
-			$statement = $db->query('SELECT about, picture FROM artist');
+			$statement = $db->query('SELECT book FROM scripture');
 			echo " world";
 			$results = $statement->fetchAll(PDO::FETCH_ASSOC);
 			
