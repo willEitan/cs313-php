@@ -16,10 +16,11 @@
 	<div class="main-content">
 		<?php
 			echo "hello";
-			$row = ($db->query('SELECT about, picture FROM artist'))->fetchAll(PDO::FETCH_ASSOC);
-			print_r($row);
-		  	echo "<img class = 'artist-image'src='{$row['picture']}' width:240px; height:540px;><br>";
-		  	echo $row['about'] . "<br>";
+			$statement = $db->query('SELECT about, picture FROM artist')
+			$results= $statement->fetchAll(PDO::FETCH_ASSOC);
+			print_r($results);
+		  	echo "<img class = 'artist-image'src='{$results['picture']}' width:240px; height:540px;><br>";
+		  	echo $results['about'] . "<br>";
 		
 		?>
 	</div>
