@@ -15,7 +15,7 @@
 
 	<div class="main-content">
 		<?php
-			
+			require "../php/db_connect.php";
 			$statement = $db->query('SELECT about_artist, picture FROM artist');
 			$results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
