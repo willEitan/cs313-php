@@ -15,9 +15,10 @@
 
 	<div class="main-content">
 		<?php
-			foreach ($db->query('SELECT  FROM artist') as $row) {
+			foreach ($db->query('SELECT about, picture FROM artist') as $row) {
 				//print_r($row);
-			  
+			  	echo "<img class = 'artist-image'src='{$row['picture']}' width:240px; height:540px;><br>";
+			  	echo $row['about'] . "<br>";
 			}
 		?>
 	</div>

@@ -14,7 +14,7 @@
 	<script>includeHTML();</script><br>
 
 	<div class="main-content">
-		<h3>Featuring art by Sarah Tenney</h3>
+		<h3 style="padding-left: 25px;">Featuring Artwork by <a href="../php/about.php">Sarah Tenney</a></h3>
 		<div id="featured-gallary"></div>
 
 		<!-- <?php
