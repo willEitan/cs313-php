@@ -16,18 +16,11 @@
 	<div class="main-content">
 		<?php
 			
-			//require "../php/db_connect.php";
-			echo "hello";
-			print_r($db);
 			$statement = $db->query('SELECT about_artist, picture FROM artist');
-			echo " world";
 			$results = $statement->fetchAll(PDO::FETCH_ASSOC);
-			
-			print_r($results);
-			var_dump($results);
-			print_r($statement);
+
 		  	echo "<img class = 'artist-image'src='{$results['picture']}' width:240px; height:540px;><br>";
-		  	echo $results['about_artist'] . "<br>";
+		  	echo $results['about_artist'] . "<br>" . $results['picture'];
 		
 		?>
 	</div>
