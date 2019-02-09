@@ -15,30 +15,10 @@
 
 	<div class="main-content">
 		<?php
+			
+			require "../php/db_connect.php";
 			echo "hello";
-			//require "../php/db_connect.php";
-		try
-	{
-	  $dbUrl = getenv('DATABASE_URL');
-
-	  $dbOpts = parse_url($dbUrl);
-
-	  $dbHost = $dbOpts["host"];
-	  $dbPort = $dbOpts["port"];
-	  $dbUser = $dbOpts["user"];
-	  $dbPassword = $dbOpts["pass"];
-	  $dbName = ltrim($dbOpts["path"],'/');
-
-	  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-	  echo "setting";
-	  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	  echo " set";
-	}
-	catch (PDOException $ex)
-	{
-	  echo 'Error!: ' . $ex->getMessage();
-	  die();
-	}
+			print_r($db);
 			$statement = $db->query('SELECT about, picture FROM artist');
 			echo " world";
 			$results = $statement->fetchAll(PDO::FETCH_ASSOC);
