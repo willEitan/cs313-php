@@ -18,6 +18,7 @@
 			echo "hello";
 			$statement = $db->query('SELECT about, picture FROM artist');
 			$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+			echo " world";
 			print_r($results);
 			var_dump($results);
 			print_r($statement);
