@@ -20,15 +20,8 @@
 			<?php
 				foreach ($db->query('SELECT ar.pseudonym, ui.first_name, ui.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id') as $row)
 				{
-					//print_r($row);
-					if (ar.pseudonym != '') {
-						$artist_name = $row['ar.pseudonym'];
-					} else {
-						$artist_name = "{$row['first_name']} {$row['last_name']}";
-					}
-					echo $artist_name .  ' ';
-					echo $row['name'] . ' ';
-					echo $row['image'] . '<br>';
+					<div class='image-wrapper'><a href='#_'><img src='$row['image']' alt='$row['image_title']'width='400px' height='300px' style='display:block;'><br><p>$row['image_title']</p></a></div>	
+					<div class='modal'></div>			
 				}
 			?>
 		</section>
