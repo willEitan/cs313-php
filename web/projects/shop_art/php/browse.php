@@ -20,6 +20,7 @@
 			<?php
 				foreach ($db->query('SELECT ar.pseudonym, ui.first_name, ui.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id') as $row)
 				{
+					print_r($row);
 					/*if (ar.pseudonym != '') {
 						$artist_name = $row['ar.pseudonym'];
 					} else {
