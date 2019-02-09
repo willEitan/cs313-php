@@ -16,7 +16,7 @@
 	<div class="main-content">
 		<?php
 			echo "hello";
-			$statement = $db->query('SELECT about, picture FROM artist')
+			$statement = $db->query('SELECT about, picture FROM artist');
 			$results= $statement->fetchAll(PDO::FETCH_ASSOC);
 			print_r($results);
 		  	echo "<img class = 'artist-image'src='{$results['picture']}' width:240px; height:540px;><br>";
