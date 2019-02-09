@@ -15,12 +15,12 @@
 
 	<div class="main-content">
 		<?php
-			require "../php/db_connect.php";
+			//require "../php/db_connect.php";
 			$statement = $db->query('SELECT about_artist, picture FROM artist');
 			$results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-		  	//echo "<img class = 'artist-image'src='{$results['picture']}' width:240px; height:540px;><br>";
-		  	echo $results['about_artist'] . "<br>" . $results['picture'];
+		  	echo "<img class = 'artist-image'src='{$results[0]['picture']}' width:240px; height:540px;><br>";
+		  	echo $results[0]['about_artist'] . "<br>" . $results[0]['picture'];
 		
 		?>
 	</div>
