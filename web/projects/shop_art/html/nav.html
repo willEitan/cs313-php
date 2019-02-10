@@ -1,6 +1,6 @@
 <header>
 	<link rel="stylesheet" type="text/css" href="../css/nav.css">
-	<nav class="menu">
+	<nav class="menu" style="position:sticky">
 		<ul>
 			<em><li><a href="../php/browse.php">Shop Art</a></li></em>
 			<li><a href="../php/about.php">About</a></li>
@@ -8,7 +8,7 @@
 		</ul>
 		<div class="cart_button"><a href="cart.php"><img src="../icons/cart_icon.png" alt="cart"/></a></div>
 		<form class="search-form" method="get" action="../php/search.php">
-			<input type="text" name="SA" value="Search for Artwork" onfocus="this.value=''" onblur="this.value='Search for Artwork'">
+			<input type="text" name="SA" value="Search for Artwork" onfocus="this.value=''" onblur="if(this.value == '') this.value='Search for Artwork'">
 			<input type="submit" name="SB" value="Search">
 		</form>
 		
