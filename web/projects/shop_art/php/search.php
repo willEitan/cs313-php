@@ -29,6 +29,7 @@
 				if ($results) {
 					echo "<h3>Search \"$search\" found results:</h3>";
 					foreach ($results as $row) {
+						echo $row['image_title'];
 						echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='400px' height='300px' style='display:block;'>";
 						echo "<br><p>{$row['image_title']}</p></div><div class='modal'></div>";	
 					}
