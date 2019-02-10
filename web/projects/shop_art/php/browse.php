@@ -15,7 +15,7 @@
 
 	<div class="main-content">
 		<h3 style="padding-left: 25px;">Featuring Artwork by <a href="../php/about.php">Sarah Tenney</a></h3>
-		<div id="featured-gallary"><img src="../artwork/Simply_beautiful" alt="test"></div>
+		<div id="featured-gallary"><img src="..\artwork\Simply_beautiful" alt="test"></div>
 		<section id="gallary">
 			<?php
 				foreach ($db->query('SELECT ar.pseudonym, ui.first_name, ui.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id') as $row)
