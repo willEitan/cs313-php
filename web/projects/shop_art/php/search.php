@@ -27,7 +27,7 @@
 
 				} else {
 					echo "<h3>Sorry, query \"$search\" found nothing!</h3>";
-					echo "<br><strong>Suggestions:</strong><ul><li>Make sure spelling is correct</li><li>Make sure you are searching for art title, art description, art type, or artist's name</li>"
+					echo "<br><strong>Suggestions:</strong><ul><li>Make sure spelling is correct</li><li>Make sure you are searching for art title, art description, art type, or artist's name</li>";
 				}
 			}
 		?>
