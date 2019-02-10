@@ -27,13 +27,14 @@
 				$results = $statement->fetchAll(PDO::FETCH_ASSOC);
 				//print_r($results);
 				if ($results) {
-					echo "Search \"" . $search . "\" found results:<br>";
-					echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='400px' height='300px' style='display:block;'>";
-					echo "<br><p>{$row['image_title']}</p></div><div class='modal'></div>";	
-
+					echo "<h3>Search \"$search\" found results:</h3>";
+					foreach ($results as $row) {
+						echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='400px' height='300px' style='display:block;'>";
+						echo "<br><p>{$row['image_title']}</p></div><div class='modal'></div>";	
+					}
 				} else {
-					echo "<h3>Sorry, query \"$search\" found nothing!</h3>";
-					echo "<br><strong>Suggestions:</strong><ul><li>Make sure spelling is correct</li><li>Make sure you are searching for art title, art description, art type, or artist's name</li>";
+					echo "<h3>Sorry, query \"$search\" found no results!</h3>";
+					echo "<br><strong>Suggestions:</strong><ul><li>Make sure spelling is correct</li><li>Are you searching for: <ul><li>artwork title</li><li>art type</li><li>artist's name</li><li>price OR</li><li>ratings</li></ul></li><li>Make sure your capitalization is correct</li></ul>";
 				}
 			}
 		?>
