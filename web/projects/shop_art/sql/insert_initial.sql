@@ -156,7 +156,7 @@ INSERT INTO art
 ( nextval('art_seq')
 , (SELECT artist_id FROM artist WHERE picture = '..\artwork\sarah.jpg')
 , (SELECT art_type_id FROM art_type WHERE name = 'Oil Painting')
-, '../artwork/landscape'
+, '..\artwork\landscape.jpg'
 , 'Oil Landscape'
 , 25.00
 , current_date
@@ -178,7 +178,7 @@ INSERT INTO art
 ( nextval('art_seq')
 , (SELECT artist_id FROM artist WHERE picture = '..\artwork\sarah.jpg')
 , (SELECT art_type_id FROM art_type WHERE name = 'Photography')
-, '../artwork/Emphasis_on_Red'
+, '..\artwork\Emphasis_on_Red.jpg'
 , 'Emphasis on Red'
 , 20.00
 , current_date
@@ -200,7 +200,7 @@ INSERT INTO art
 ( nextval('art_seq')
 , (SELECT artist_id FROM artist WHERE picture = '..\artwork\sarah.jpg')
 , (SELECT art_type_id FROM art_type WHERE name = 'Photography')
-, '../artwork/In_a_Big_World'
+, '..\artwork\In_a_Big_World.jpg'
 , 'In a Big World'
 , 20.00
 , current_date
@@ -222,7 +222,7 @@ INSERT INTO art
 ( nextval('art_seq')
 , (SELECT artist_id FROM artist WHERE picture = '..\artwork\sarah.jpg')
 , (SELECT art_type_id FROM art_type WHERE name = 'Photography')
-, '../artwork/Simply_beautiful'
+, '..\artwork\Simply_Beautiful.jpg'
 , 'Simply Beautiful'
 , 20.00
 , current_date
