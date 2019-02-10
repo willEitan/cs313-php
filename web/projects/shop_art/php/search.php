@@ -18,7 +18,7 @@
 			if(isset($_GET) && $_GET['SA']){	
 				$search = htmlspecialchars($_GET['SA']);
 				echo $search;
-				/*$statement = $db->query("SELECT  FROM  JOIN WHERE ={$search}");*/
+				/*$statement = $db->query("SELECT  FROM  JOIN WHERE ={$search}");
 				$results = $statement->fetchAll(PDO::FETCH_ASSOC);
 				//print_r($results);
 				if ($results) {
@@ -26,7 +26,7 @@
 				} else {
 					echo "<h3>Sorry, query \"$search\" found nothing!</h3>";
 					echo "<br><strong>Suggestions:</strong><ul><li>Make sure spelling is correct</li><li>Make sure you are searching for art title, art description, art type, or artist's name</li>"
-				}
+				}*/
 			}
 		?>
 	</div>
