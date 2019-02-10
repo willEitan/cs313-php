@@ -20,7 +20,7 @@
 			<?php
 				foreach ($db->query('SELECT ar.pseudonym, ui.first_name, ui.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id') as $row)
 				{
-					//echo $row['image'];
+					echo $row['image'];
 					echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='400px' height='300px' style='display:block;'>";
 					echo "<br><p>{$row['image_title']}</p></div><div class='modal'></div>";			
 				}
