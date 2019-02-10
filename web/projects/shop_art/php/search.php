@@ -15,10 +15,10 @@
 
 	<div class="main-content">
 		<?php
-			if(isset($_GET) && $_GET['SA']){
-				
+			if(isset($_GET) && $_GET['SA']){	
 				$search = htmlspecialchars($_GET['SA']);
-				$statement = $db->query("SELECT  FROM  JOIN WHERE ={$search}");
+				echo $search;
+				/*$statement = $db->query("SELECT  FROM  JOIN WHERE ={$search}");*/
 				$results = $statement->fetchAll(PDO::FETCH_ASSOC);
 				//print_r($results);
 				if ($results) {
