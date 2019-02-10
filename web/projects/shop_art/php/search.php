@@ -19,9 +19,9 @@
 				$search = htmlspecialchars($_GET['SA']);
 				//echo $search;
 				if (is_numeric($search)){
-					$statement = $db->query("SELECT ar.pseudonym, ui.first_name, ui.middle_name, ui.last_name, at.name, a.image_title FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id WHERE a.rating = {$search} OR a.price = {$search} OR a.discounted_price = {$search}");
+					$statement = $db->query("SELECT ar.pseudonym, ui.first_name, ui.middle_name, ui.last_name, at.name, a.image, a.image_title FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id WHERE a.rating = {$search} OR a.price = {$search} OR a.discounted_price = {$search}");
 				} else {
-					$statement = $db->query("SELECT ar.pseudonym, ui.first_name, ui.middle_name, ui.last_name, at.name, a.image_title FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id WHERE ar.pseudonym = '{$search}' OR ui.first_name = '{$search}' OR ui.middle_name = '{$search}' OR ui.last_name = '{$search}' OR at.name = '{$search}' OR a.image_title = '{$search}'");
+					$statement = $db->query("SELECT ar.pseudonym, ui.first_name, ui.middle_name, ui.last_name, at.name, a.image, a.image_title FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id WHERE ar.pseudonym = '{$search}' OR ui.first_name = '{$search}' OR ui.middle_name = '{$search}' OR ui.last_name = '{$search}' OR at.name = '{$search}' OR a.image_title = '{$search}'");
 				}
 				
 				$results = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -29,7 +29,6 @@
 				if ($results) {
 					echo "<h3>Search \"$search\" found results:</h3>";
 					foreach ($results as $row) {
-						echo $row['image'];
 						echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='400px' height='300px' style='display:block;'>";
 						echo "<br><p>{$row['image_title']}</p></div><div class='modal'></div>";	
 					}
