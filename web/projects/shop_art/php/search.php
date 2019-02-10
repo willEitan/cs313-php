@@ -17,6 +17,7 @@
 		<?php
 			if(isset($_GET) && $_GET['SA']){	
 				$search = htmlspecialchars($_GET['SA']);
+				echo $search;
 				$statement = $db->query("SELECT ar.pseudonym, ui.first_name, ui.last_name, at.name, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id WHERE ar.pseudonym = '{$search}' OR ui.first_name = '{$search}' OR ui.last_name = '{$search}' OR at.name = '{$search}' OR a.image_title = '{$search}' OR a.rating = '{$search}' OR a.price");
 				$results = $statement->fetchAll(PDO::FETCH_ASSOC);
 				//print_r($results);
