@@ -28,10 +28,16 @@
 					echo "<div class='desc'><p>{$row['image_title']}</p></div></div>";			
 					$i += 1;
 				}
+				foreach ($query as $row)
+				{
+					echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='600px' height='400px' style='display:block;' onclick='openModal(); currentSlide({$i});'>";
+					echo "<div class='desc'><p>{$row['image_title']}</p></div></div>";			
+					$i += 1;
+				}
 				echo "</div><div id='mySidebar' class='sidebar'></div>";
 
 				echo "<div id='myModal' class='modal'><span class='close cursor' onclick='closeModal()'>&times;</span><div class='modal-content'>";
-				require "db_connect.php";
+
 				foreach($query as $row){
 					echo "<div class='mySlides'><img src='{$row['image']}' alt='{$row['image_title']}'width='100%'></div>";
 				}
