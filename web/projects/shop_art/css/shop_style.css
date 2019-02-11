@@ -4,7 +4,7 @@ body {
 	font-family: Georgia, serif;
 }
 
-div.imgage-wrapper {
+div.image-wrapper {
 	position: relative;
 	margin: 5px;
 	border: 1px solid #ccc;
@@ -12,13 +12,13 @@ div.imgage-wrapper {
 	width: 180px;
 }
 
-div.imgage-wrapper:hover {
+div.image-wrapper:hover {
 	cursor: pointer;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transition: .3s;
 }
 
-div.imgage-wrapper img {
+div.image-wrapper img {
 	width: 100%;
 	height: auto;
 }
@@ -41,7 +41,7 @@ div.desc {
 	cursor: pointer;
 }
 
-.sidebar,
+#mySidebar,
 #myModal {
 	display: hidden;
 }
@@ -50,7 +50,7 @@ div.desc {
   display: none;
   position: fixed;
   z-index: 0;
-  margin-top: 50%;
+  padding-top: 25%;
   right: 20%;
   top: 0;
   width: 80%;
@@ -70,7 +70,7 @@ div.desc {
   width:25%; 
   height: 100%; 
   float:right; 
-  background:lightgray;
+  background:orange;
 }
 
 /* Next & previous buttons */

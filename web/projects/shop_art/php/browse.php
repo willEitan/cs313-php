@@ -19,8 +19,10 @@
 		<section>
 			<?php
 				$q1 = $db->query('SELECT image, image_title FROM art ORDER BY image_title');
-				$q2 = $db->query('SELECT ar.pseudonym, ui.first_name, ui.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id ORDER BY a.image_title');
+				$q2 = $db->query('SELECT image FROM art ORDER BY image_title');
+				$q3 = $db->query('SELECT ar.pseudonym, ui.first_name, ui.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id ORDER BY a.image_title');
 
+				//gallary content
 				echo "<div class='content'>";
 				$i = 1;
 				foreach ($q1 as $row)
@@ -29,17 +31,25 @@
 					echo "<div class='desc'><p>{$row['image_title']}</p></div></div>";			
 					$i += 1;
 				}
-				
-				//echo "</div><div id='mySidebar' class='sidebar'></div>";
+				echo "</div>";
 
-				echo "<div id='myModal' class='modal'><span class='close cursor' onclick='closeModal()'>&times;</span><div class='modal-content'>";
-
-				foreach($q2 as $row){
-					echo "<div class='mySlides'><img src='{$row['image']}' alt='{$row['image_title']}'width='100%'>";
-					echo "<div class='sidebar'><p>{$row['image_title']}</p><button value='Add to Cart'></button></div></div>";
+				//modal content
+				echo "<div id='myModal' class='modal'>";
+				echo "<span class='close cursor' onclick='closeModal()'>&times;</span><div class='modal-content'>";
+				foreach ($q2 as $row) {
+					//hidden slides
+					echo "<div class='mySlides'><img src='{$row['image']}' width='100%'></div>";
 				}
-				echo "<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>";
+				echo "</div><a class='prev' onclick='plusSlides(-1)'>&#10094;</a>";
 				echo "<a class='next' onclick='plusSlides(1)'>&#10095;</a></div>";
+
+				//sidebar content
+				echo "</div><div id='mySidebar' class='sidebar'>";
+				foreach($q3 as $row){
+					echo "<div class='art-integrals'><p>{$row['image_title']}</p><button value='Add to Cart'></button></div></div>";
+				}
+				echo "</div>"
+				
 			?>
 
 		</section>
