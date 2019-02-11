@@ -4,21 +4,21 @@ body {
 	font-family: Georgia, serif;
 }
 
-div.img-wrapper {
+div.imgage-wrapper {
 	position: relative;
 	margin: 5px;
 	border: 1px solid #ccc;
 	float: left;
-	width: 75%;
+	width: 180px;
 }
 
-div.img-wrapper:hover {
+div.imgage-wrapper:hover {
 	cursor: pointer;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transition: .3s;
 }
 
-div.img-wrapper img {
+div.imgage-wrapper img {
 	width: 100%;
 	height: auto;
 }
