@@ -4,6 +4,7 @@
 	top: 20px;
 	width: 100%;
 	background:#142b47;
+	overflow: auto;
 }
 
 .menu ul {
