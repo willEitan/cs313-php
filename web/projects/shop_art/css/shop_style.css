@@ -50,10 +50,10 @@ div.desc {
   display: none;
   position: fixed;
   z-index: 0;
-  padding-top: 100px;
+  padding-top: 50%;
   right: 25%;
   top: 0;
-  width: 80%;
+  width: 75%;
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.6);
