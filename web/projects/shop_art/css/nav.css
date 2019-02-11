@@ -1,11 +1,7 @@
-header {
-
-}
-
 .menu {
 	position: sticky;
 	position: -webkit-sticky;
-	top: 0;
+	top: 10px;
 	width: 100%;
 	background:#142b47;
 	overflow: auto;
