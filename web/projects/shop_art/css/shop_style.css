@@ -59,7 +59,7 @@ div.desc {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.sidebar {
+#mySidebar {
   position: fixed;
   top: 0;
   right: 0;
