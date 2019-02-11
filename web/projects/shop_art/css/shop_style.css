@@ -41,7 +41,7 @@ div.desc {
 	cursor: pointer;
 }
 
-#mySidebar,
+.sidebar,
 #myModal {
 	display: hidden;
 }
@@ -50,7 +50,7 @@ div.desc {
   display: none;
   position: fixed;
   z-index: 0;
-  padding-top: 100px;
+  margin-top: 50%;
   right: 20%;
   top: 0;
   width: 80%;

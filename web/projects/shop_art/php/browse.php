@@ -30,14 +30,15 @@
 					$i += 1;
 				}
 				
-				echo "</div><div id='mySidebar' class='sidebar'></div>";
+				//echo "</div><div id='mySidebar' class='sidebar'></div>";
 
 				echo "<div id='myModal' class='modal'><span class='close cursor' onclick='closeModal()'>&times;</span><div class='modal-content'>";
 
 				foreach($q2 as $row){
-					echo "<div class='mySlides'><img src='{$row['image']}' alt='{$row['image_title']}'width='100%'></div>";
+					echo "<div class='mySlides'><img src='{$row['image']}' alt='{$row['image_title']}'width='100%'>"
+					echo "<div class='sidebar'><p>{$row['image_title']}</p><button value='Add to Cart'></button></div></div>";
 				}
-				echo "</div><a class='prev' onclick='plusSlides(-1)'>&#10094;</a>";
+				echo "<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>";
 				echo "<a class='next' onclick='plusSlides(1)'>&#10095;</a></div>";
 			?>
 

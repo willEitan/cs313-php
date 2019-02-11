@@ -1,11 +1,11 @@
 function openModal() {
   document.getElementById('myModal').style.display = "block";
-  document.getElementById('mySidebar').style.display = "block";
+  document.getElementsByClassName('sidebar').style.display = "block";
 }
 
 function closeModal(){
   document.getElementById('myModal').style.display = "none";
-  document.getElementById('mySidebar').style.display = "none";
+  document.getElementsByClassName('sidebar').style.display = "none";
 }
 
 var slideIndex = 1;
