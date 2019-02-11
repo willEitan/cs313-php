@@ -5,7 +5,7 @@ function openModal() {
 
 function closeModal(){
   document.getElementById('myModal').style.display = "none";
-  document.getElementsById('mySidebar').style.display = "none";
+  document.getElementById('mySidebar').style.display = "none";
 }
 
 var slideIndex = 1;
