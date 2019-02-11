@@ -51,6 +51,7 @@ div.desc {
 	position: fixed;
 	z-index: 0;
 	vertical-align: middle;
+	padding-top: 100px;
 	right: 25%;
 	top: 0;
 	width: 75%;
