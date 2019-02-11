@@ -50,7 +50,7 @@ div.desc {
   display: none;
   position: fixed;
   z-index: 0;
-  padding-top: 25%;
+  padding-top: 100px;
   right: 20%;
   top: 0;
   width: 80%;
@@ -106,8 +106,8 @@ div.desc {
 .main-content {
 	width: 80%;
 	margin: auto;
-	border: 3px solid #142b47;
+	border: 3px solid orange;
 	min-height: auto;
-	background-color: lightgray;
+	background-color: #142b47; 
 	position: relative;
 }
