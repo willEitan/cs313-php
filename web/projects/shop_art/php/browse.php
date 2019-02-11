@@ -24,7 +24,7 @@
 				foreach ($query as $row)
 				{
 					echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='600px' height='400px' style='display:block;'>";
-					echo "<div class='desc'>$row['image-title']</div>";
+					echo "<div class='desc'>{$row['image-title']}</div>";
 					echo "<br><p>{$row['image_title']}</p></div><div class='modal'></div>";			
 				}
 				echo "</div><div id='mySidebar' class='sidebar'></div>";
