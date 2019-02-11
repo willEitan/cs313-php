@@ -60,7 +60,8 @@ div.desc {
 
 .modal-content {
 	position: absolute;
-	top: 40%;
+	top: 25%;
+	left: 5%;
 	margin: auto;
 	vertical-align: middle;
 	padding: 0;
