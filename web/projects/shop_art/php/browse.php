@@ -21,11 +21,12 @@
 				$query = $db->query('SELECT ar.pseudonym, ui.first_name, ui.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id');
 
 				echo "<div class='content'>";
+				$i = 1;
 				foreach ($query as $row)
 				{
-					echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='600px' height='400px' style='display:block;'>";
-					echo "<div class='desc'>{$row['image-title']}</div>";
-					echo "<br><p>{$row['image_title']}</p></div><div class='modal'></div>";			
+					echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='600px' height='400px' style='display:block;' onclick='openModal(); currentSlide({$i});'>";
+					echo "<div class='desc'><p>{$row['image_title']}</p></div></div>";			
+					$i += 1;
 				}
 				echo "</div><div id='mySidebar' class='sidebar'></div>";
 
