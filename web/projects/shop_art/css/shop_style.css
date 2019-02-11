@@ -50,7 +50,7 @@ div.desc {
   display: none;
   position: fixed;
   z-index: 0;
-  padding-top: 50%;
+  margin-top: auto;
   right: 25%;
   top: 0;
   width: 75%;
