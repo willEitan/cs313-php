@@ -18,11 +18,11 @@
 		<div id="featured-gallary"></div>
 		<section>
 			<?php
-				$q1 = $db->query('SELECT image, image_title FROM art');
-				$q2 = $db->query('SELECT ar.pseudonym, ui.first_name, ui.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id');
+				$q1 = $db->query('SELECT image, image_title FROM art ORDER BY image_title');
+				$q2 = $db->query('SELECT ar.pseudonym, ui.first_name, ui.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id ORDER BY a.image_title');
 
 				echo "<div class='content'>";
-				$i = 1;
+				$i = 0;
 				foreach ($q1 as $row)
 				{
 					echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='600px' height='400px' style='display:block;' onclick='openModal(); currentSlide({$i});'>";
