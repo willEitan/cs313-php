@@ -38,7 +38,7 @@
 				echo "<a class='next' onclick='plusSlides(1)'>&#10095;</a></div>";
 			?>
 		</section>
-	<!-- </div> -->
+		<script type="text/javascript" src="../js/gallary.js"></script>
 </body>
 <?php
 	include "footer.php";
