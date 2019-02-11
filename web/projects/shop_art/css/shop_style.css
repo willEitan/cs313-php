@@ -50,10 +50,8 @@ div.desc {
 	display: none;
 	position: fixed;
 	z-index: 0;
-	vertical-align: middle;
-	padding-top: 50%;
 	right: 25%;
-	top: 0;
+	top: 50%;
 	width: 75%;
 	height: 100%;
 	overflow: auto;
