@@ -19,7 +19,7 @@
 		<section>
 			<?php
 				$query = $db->query('SELECT ar.pseudonym, ui.first_name, ui.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id');
-
+				$q2 = $query;
 				echo "<div class='content'>";
 				$i = 1;
 				foreach ($query as $row)
@@ -31,12 +31,13 @@
 				echo "</div><div id='mySidebar' class='sidebar'></div>";
 
 				echo "<div id='myModal' class='modal'><span class='close cursor' onclick='closeModal()'>&times;</span><div class='modal-content'>";
-				foreach($query as $row){
+				foreach($q2 as $row){
 					echo "<div class='mySlides'><img src='{$row['image']}' alt='{$row['image_title']}'width='100%'></div>";
 				}
 				echo "</div><a class='prev' onclick='plusSlides(-1)'>&#10094;</a>";
 				echo "<a class='next' onclick='plusSlides(1)'>&#10095;</a></div>";
 			?>
+			
 		</section>
 		<script type="text/javascript" src="../js/gallary.js"></script>
 </body>
