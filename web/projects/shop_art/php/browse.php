@@ -35,7 +35,7 @@
 				echo "<div id='myModal' class='modal'><span class='close cursor' onclick='closeModal()'>&times;</span><div class='modal-content'>";
 
 				foreach($q2 as $row){
-					echo "<div class='mySlides'><img src='{$row['image']}' alt='{$row['image_title']}'width='100%'>"
+					echo "<div class='mySlides'><img src='{$row['image']}' alt='{$row['image_title']}'width='100%'>";
 					echo "<div class='sidebar'><p>{$row['image_title']}</p><button value='Add to Cart'></button></div></div>";
 				}
 				echo "<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>";
