@@ -51,7 +51,7 @@ div.desc {
 	position: fixed;
 	z-index: 0;
 	right: 25%;
-	top: 50%;
+	top: 0;
 	width: 75%;
 	height: 100%;
 	overflow: auto;
@@ -59,7 +59,8 @@ div.desc {
 }
 
 .modal-content {
-	position: relative;
+	position: absolute;
+	top: 50%;
 	margin: auto;
 	vertical-align: middle;
 	padding: 0;
