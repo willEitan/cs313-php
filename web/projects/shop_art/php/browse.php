@@ -54,7 +54,7 @@
 
 		</section>
 		<script type="text/javascript" src="../js/gallary.js"></script>
-</body>
+</body><br>
 <?php
 	include "footer.php";
 ?>

@@ -47,48 +47,57 @@ div.desc {
 }
 
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 0;
-  vertical-align: middle;
-  right: 25%;
-  top: 0;
-  width: 75%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+	position: fixed;
+	z-index: 0;
+	vertical-align: middle;
+	right: 25%;
+	top: 0;
+	width: 75%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+	position: relative;
+	margin: auto;
+	vertical-align: middle;
+	padding: 0;
+	width: 90%;
+	max-width: 1200px;
 }
 
 #mySidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 5px;
-  display: none;
-  z-index: 1;
-  color:#142b47; 
-  width:25%; 
-  height: 100%; 
-  float:right; 
-  background:orange;
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5px;
+	display: none;
+	z-index: 1;
+	color:#142b47; 
+	width:25%; 
+	height: 100%; 
+	float:right; 
+	background:orange;
 }
 
 /* Next & previous buttons */
 .prev,
 .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 /* Position the "next button" to the right */
