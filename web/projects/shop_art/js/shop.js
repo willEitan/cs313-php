@@ -1,11 +1,11 @@
 function openModal() {
-  document.getElementById('mymodal').style.display = "block";
-  document.getElementById('sidebar').style.display = "block";
+  document.getElementById('myModal').style.display = "block";
+  document.getElementById('mySidebar').style.display = "block";
 }
 
 function closeModal(){
-  document.getElementById('mymodal').style.display = "none";
-  document.getElementById('sidebar').style.display = "none";
+  document.getElementById('myModal').style.display = "none";
+  document.getElementById('mySidebar').style.display = "none";
 }
 
 var slideIndex = 1;
@@ -21,7 +21,7 @@ function currentSlide(n){
 
 function showSlides(n){
   var i;
-  var slides = document.getElementByClassName("mySlides");
+  var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("demo");
 
   if (n > slides.length) {slideIndex = 1}
