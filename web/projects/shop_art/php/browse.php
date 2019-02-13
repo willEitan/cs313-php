@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,41 +19,47 @@
 	<!-- <div class="main-content"> -->
 		<h3 style="padding-left: 25px;">Featuring Artwork by <a href="../php/about.php">Sarah Tenney</a></h3>
 		<div id="featured-gallary"></div>
-		<section>
-			<?php
-				$q1 = $db->query('SELECT image, image_title FROM art ORDER BY image_title');
-				$q2 = $db->query('SELECT image FROM art ORDER BY image_title');
-				$q3 = $db->query('SELECT ar.pseudonym, ui.first_name, ui.last_name, at.name, a.image, a.image_title, a.rating, a.price FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id ORDER BY a.image_title');
+		<section>.
+			<!--gallary content-->
+			<div class='content'>
+				<?php
+					$q1 = $db->query('SELECT image, image_title FROM art ORDER BY image_title');
+					
+					$i = 1;
+					foreach ($q1 as $row)
+					{
+						echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='600px' height='400px' style='display:block;' onclick='openModal(); currentSlide({$i});'>";
+						echo "<div class='desc'><p>{$row['image_title']}</p></div></div>";			
+						$i += 1;
+					}
+				?>
+			</div>
 
-				//gallary content
-				echo "<div class='content'>";
-				$i = 1;
-				foreach ($q1 as $row)
-				{
-					echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='600px' height='400px' style='display:block;' onclick='openModal(); currentSlide({$i});'>";
-					echo "<div class='desc'><p>{$row['image_title']}</p></div></div>";			
-					$i += 1;
-				}
-				echo "</div>";
+			<!-- modal content -->
+			<div id='myModal' class='modal'>
+				<span class='close cursor' onclick='closeModal()'>&times;</span>
+				<div class='modal-content'>
+					<?php
+						$q2 = $db->query('SELECT image FROM art ORDER BY image_title');
+						foreach ($q2 as $row) {
+							//hidden slides
+							echo "<div class='mySlides'><img src='{$row['image']}' width='100%'></div>";
+						}
+					?>
+				</div>
+				<a class='prev' onclick='plusSlides(-1)'>&#10094;</a>
+				<a class='next' onclick='plusSlides(1)'>&#10095;</a>
+			</div>
 
-				//modal content
-				echo "<div id='myModal' class='modal'>";
-				echo "<span class='close cursor' onclick='closeModal()'>&times;</span><div class='modal-content'>";
-				foreach ($q2 as $row) {
-					//hidden slides
-					echo "<div class='mySlides'><img src='{$row['image']}' width='100%'></div>";
-				}
-				echo "</div><a class='prev' onclick='plusSlides(-1)'>&#10094;</a>";
-				echo "<a class='next' onclick='plusSlides(1)'>&#10095;</a></div>";
-
-				//sidebar content
-				echo "</div><div id='mySidebar' class='sidebar'>";
-				foreach($q3 as $row){
-					echo "<div class='art-integrals'><p>{$row['image_title']}</p><button value='Add to Cart'></button></div></div>";
-				}
-				echo "</div>"
-				
-			?>
+			<!-- sidebar content -->
+			<div id='mySidebar' class='sidebar'>";
+				<p class="art-integrals" id="title"></p><br>
+				<p class="art-integrals" id="type"></p><br>
+				<p class="art-integrals" id="artist"></p><br>
+				<p class="art-integrals" id="price"></p><br>
+				<p class="art-integrals" id="dprice"></p><br>
+				<button id="addtocart" value="Add to Cart"></button>
+			</div>
 
 		</section>
 		<script type="text/javascript" src="../js/gallary.js"></script>
