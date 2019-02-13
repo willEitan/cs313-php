@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	header("Content-Type: application/json; charset=UTF-8");
+	//header("Content-Type: application/json; charset=UTF-8");
 	$cart_json = filter_input(INPUT_POST, 'cs');
 	if ($cart_json == NULL){
 		$cart_json = filter_input(INPUT_GET, 'cs');
@@ -9,5 +9,5 @@
 	$obj = json_decode($_GET["cs"], false);
 	$_SESSION["ids"] = $obj->id;
 	$_SESSION["quantites"] = $obj->quantity;
-	header('Location: cart-checkout.php');
+	header('Location: ../php/cart-checkout.php');
 ?>
