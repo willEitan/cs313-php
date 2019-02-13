@@ -35,7 +35,7 @@ function showSlides(n){
 }
 
 function showSide (n) {
-  //n = n - 1;
+  n = n - 1;
   var xmlhttp = new XMLHttpRequest();
 
   xmlhttp.onreadystatechange = function () {
