@@ -33,8 +33,6 @@ function showSlides(n){
       slides[i].style.display = "none";
   }
   slides[slideIndex-1].style.display = "block";
-
-  
 }
 
 function showSide (n) {
@@ -75,11 +73,38 @@ function showSide (n) {
       } else {
         document.getElementById("dprice").innerHTML = '$' + myObj.dprice[m];
       }
-
-      document.getElementById("dprice").innerHTML = n + ' ' + m;
     }
   };
 
   xmlhttp.open("GET", "sidebar_data.php", true);
   xmlhttp.send();
+}
+var cart = [];
+
+function addtocart () {
+  var xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200){
+      var myObj = JSON.parse(this.responseText);
+      var quantity = document.getElementById("quantity");
+      var id = myObj.id[slideIndex - 1];
+      var item = {id: id, quantity: quantity};
+      //check for previous insertion
+      for (var i in cart) {
+        if (cart[i].id == item.id){
+          cart[i].quantity += item.quantity;
+
+          return;
+        }
+      }
+      cart.push(item);
+      alert("inserted id:" + id);
+    }
+  };
+
+  xmlhttp.open("GET", "sidebar_data.php", true);
+  xmlhttp.send();
+  //check for previous insertion
+    
 }
