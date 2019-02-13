@@ -87,7 +87,7 @@ function addtocart () {
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200){
       var myObj = JSON.parse(this.responseText);
-      var quantity = document.getElementById("quantity");
+      var quantity = document.getElementById("quantity").value;
       var id = myObj.id[slideIndex - 1];
       var item = {id: id, quantity: quantity};
       //check for previous insertion
