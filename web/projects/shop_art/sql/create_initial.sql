@@ -13,7 +13,7 @@ CREATE TABLE user_info
 , CONSTRAINT pk_user_info_1 PRIMARY KEY(user_info_id)
 );
 
-CREATE SEQUENCE ui_seq START 1 increment by 1;
+CREATE SEQUENCE ui_seq START 1 INCREMENT BY 1;
 
 CREATE TABLE artist 
 ( artist_id      	    INT
