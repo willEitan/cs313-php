@@ -38,7 +38,7 @@ function showSide (n) {
   var slides = document.getElementsByClassName("mySlides");
   if (n > slides.length) {slideIndex = 1;}
   if (n < slides.length) {slideIndex = slides.length;}
-  slideIndex = slideIndex - 1;
+  //slideIndex = slideIndex - 1;
   
   var xmlhttp = new XMLHttpRequest();
 
@@ -69,6 +69,8 @@ function showSide (n) {
       } else {
         document.getElementById("dprice").innerHTML = '$' + myObj.dprice[slideIndex];
       }
+
+      document.getElementById("dprice").innerHTML = n + ' ' + slideIndex;
     }
   };
 
