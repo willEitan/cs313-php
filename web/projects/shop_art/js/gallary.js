@@ -32,7 +32,7 @@ function showSlides(n){
   }
   slides[slideIndex-1].style.display = "block";
 
-  /*var m = slideIndex - 1;
+  var m = slideIndex - 1;
   var xmlhttp = new XMLHttpRequest();
 
   xmlhttp.onreadystatechange = function () {
@@ -68,7 +68,7 @@ function showSlides(n){
   };
 
   xmlhttp.open("GET", "sidebar_data.php", true);
-  xmlhttp.send();*/
+  xmlhttp.send();
 }
 
 function showSide (n) {
