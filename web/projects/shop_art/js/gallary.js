@@ -10,16 +10,18 @@ function closeModal(){
 
 var slideIndex = 1;
 showSlides(slideIndex);
-//showSide(slideIndex);
+showSide(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
-  //showSide(slideIndex += n);
+  slideIndex += n;
+  showSlides(slideIndex);
+  showSide(slideIndex);
 }
 
 function currentSlide(n){
-  showSlides(slideIndex = n);
-  showSide(slideIndex = n);
+  slideIndex = n;
+  showSlides(slideIndex);
+  showSide(slideIndex);
 }
 
 function showSlides(n){
@@ -31,6 +33,17 @@ function showSlides(n){
       slides[i].style.display = "none";
   }
   slides[slideIndex-1].style.display = "block";
+
+  
+}
+
+function showSide (n) {
+  var slides = document.getElementsByClassName("mySlides");
+  var m;
+  if (n > slides.length) {m = 1;}
+  if (n < slides.length) {m = slides.length;}
+  m = m - 1;
+  
 
   var m = slideIndex - 1;
   var xmlhttp = new XMLHttpRequest();
@@ -69,12 +82,4 @@ function showSlides(n){
 
   xmlhttp.open("GET", "sidebar_data.php", true);
   xmlhttp.send();
-}
-
-function showSide (n) {
-/*  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1;}
-  if (n < slides.length) {slideIndex = slides.length;}
-  //slideIndex = slideIndex - 1;
-  */
 }
