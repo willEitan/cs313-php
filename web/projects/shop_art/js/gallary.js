@@ -94,7 +94,7 @@ function addtocart () {
       for (var i in cart) {
         if (cart[i].id == item.id){
           cart[i].quantity += item.quantity;
-          alert("Quantity of " + myObj.art_title[slideIndex - 1] + " has been changed to " + quantity);
+          alert("Quantity of " + myObj.art_title[slideIndex - 1] + " has been changed to " + cart[i].quantity);
           return;
         }
       }
