@@ -36,9 +36,9 @@ function showSlides(n){
 
 function showSide (n) {
   var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {n = 1;}
-  if (n < slides.length) {n = slides.length;}
-  n = n - 1;
+  if (n > slides.length) {slideIndex = 1;}
+  if (n < slides.length) {slideIndex = slides.length;}
+  slideIndex = slideIndex - 1;
   
   var xmlhttp = new XMLHttpRequest();
 
@@ -46,20 +46,29 @@ function showSide (n) {
     if (this.readyState == 4 && this.status == 200){
       var myObj = JSON.parse(this.responseText);
 
-      document.getElementById("title").innerHTML = myObj.art_title[n];
-      document.getElementById("type").innerHTML = myObj.art_type[n];
-      if (!myObj.psy[n]) {
-        document.getElementById("artist").innerHTML = myObj.fn[n] + ' ' + myObj.ln[n];
+      document.getElementById("title").innerHTML = myObj.art_title[slideIndex];
+      document.getElementById("type").innerHTML = myObj.art_type[slideIndex];
+      //check for alternate name     
+      if (!myObj.psy[slideIndex]) {
+        document.getElementById("artist").innerHTML = myObj.fn[slideIndex] + ' ' + myObj.ln[slideIndex];
       } else {
-        document.getElementById("artist").innerHTML = myObj.psy[n];
+        document.getElementById("artist").innerHTML = myObj.psy[slideIndex];
       }
-      if (Number.isInteger(myObj.price[n])) {
-        document.getElementById("price").innerHTML = '$' + myObj.price[n] + '.00';
-        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[n] + '.00';
+      //check for integer to display trailing 0s
+      if (Number.isSafeInteger(myObj.price[slideIndex])) {
+        document.getElementById("price").innerHTML = '$' + myObj.price[slideIndex] + '.00';
       } else {
-        document.getElementById("price").innerHTML = '$' + myObj.price[n];
-        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[n];
-      }  
+        document.getElementById("price").innerHTML = '$' + myObj.price[slideIndex];
+        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[slideIndex];
+      }
+      //check for null and integer to display discounted price
+      if (!myObj.dprice[slideIndex]) {
+        document.getElementById("dprice").innerHTML = '';
+      } else if (Number.isSafeInteger(myObj.dprice[slideIndex])) {
+        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[slideIndex] + '.00';
+      } else {
+        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[slideIndex];
+      }
     }
   };
 
