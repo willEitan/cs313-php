@@ -9,5 +9,5 @@
 	$obj = json_decode($_GET["cs"], false);
 	$_SESSION["ids"] = $obj->id;
 	$_SESSION["quantites"] = $obj->quantity;
-	//header('Location: cart-checkout.php');
+	header('Location: cart-checkout.php');
 ?>
