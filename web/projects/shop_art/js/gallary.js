@@ -39,7 +39,7 @@ function showSide (n) {
   if (n > slides.length) {n = 1;}
   if (n < slides.length) {n = slides.length;}
   n = n - 1;
-  }
+  
   var xmlhttp = new XMLHttpRequest();
 
   xmlhttp.onreadystatechange = function () {
@@ -53,8 +53,13 @@ function showSide (n) {
       } else {
         document.getElementById("artist").innerHTML = myObj.psy[n];
       }
-      document.getElementById("price").innerHTML = myObj.price[n];
-      document.getElementById("dprice").innerHTML = myObj.dprice[n];
+      if (isInteger(myObj.price[n])) {
+        document.getElementById("price").innerHTML = '$' + myObj.price[n] + '.00';
+        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[n] + '.00';
+      } else {
+        document.getElementById("price").innerHTML = '$' + myObj.price[n];
+        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[n];
+      }  
     }
   };
 
