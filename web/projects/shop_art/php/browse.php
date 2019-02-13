@@ -63,7 +63,7 @@
 
 		</section>
 		<script type="text/javascript" src="../js/gallary.js"></script>
-</body><br>
+</body><br><br><br>
 <?php
 	include "footer.php";
 ?>

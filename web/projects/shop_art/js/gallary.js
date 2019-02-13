@@ -32,48 +32,49 @@ function showSlides(n){
   }
   slides[slideIndex-1].style.display = "block";
 
-}
-
-function showSide (n) {
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1;}
-  if (n < slides.length) {slideIndex = slides.length;}
-  //slideIndex = slideIndex - 1;
-  
+  var m = slideIndex - 1;
   var xmlhttp = new XMLHttpRequest();
 
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200){
       var myObj = JSON.parse(this.responseText);
 
-      document.getElementById("title").innerHTML = myObj.art_title[slideIndex];
-      document.getElementById("type").innerHTML = myObj.art_type[slideIndex];
+      document.getElementById("title").innerHTML = myObj.art_title[m];
+      document.getElementById("type").innerHTML = myObj.art_type[m];
       //check for alternate name     
-      if (!myObj.psy[slideIndex]) {
-        document.getElementById("artist").innerHTML = myObj.fn[slideIndex] + ' ' + myObj.ln[slideIndex];
+      if (!myObj.psy[m]) {
+        document.getElementById("artist").innerHTML = myObj.fn[m] + ' ' + myObj.ln[m];
       } else {
-        document.getElementById("artist").innerHTML = myObj.psy[slideIndex];
+        document.getElementById("artist").innerHTML = myObj.psy[m];
       }
       //check for integer to display trailing 0s
-      if (Number.isSafeInteger(myObj.price[slideIndex])) {
-        document.getElementById("price").innerHTML = '$' + myObj.price[slideIndex] + '.00';
+      if (Number.isSafeInteger(myObj.price[m])) {
+        document.getElementById("price").innerHTML = '$' + myObj.price[m] + '.00';
       } else {
-        document.getElementById("price").innerHTML = '$' + myObj.price[slideIndex];
-        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[slideIndex];
+        document.getElementById("price").innerHTML = '$' + myObj.price[m];
+        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[m];
       }
       //check for null and integer to display discounted price
-      if (!myObj.dprice[slideIndex]) {
+      if (!myObj.dprice[m]) {
         document.getElementById("dprice").innerHTML = '';
-      } else if (Number.isSafeInteger(myObj.dprice[slideIndex])) {
-        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[slideIndex] + '.00';
+      } else if (Number.isSafeInteger(myObj.dprice[m])) {
+        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[m] + '.00';
       } else {
-        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[slideIndex];
+        document.getElementById("dprice").innerHTML = '$' + myObj.dprice[m];
       }
 
-      document.getElementById("dprice").innerHTML = n + ' ' + slideIndex;
+      document.getElementById("dprice").innerHTML = n + ' ' + m;
     }
   };
 
   xmlhttp.open("GET", "sidebar_data.php", true);
   xmlhttp.send();
+}
+
+function showSide (n) {
+/*  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1;}
+  if (n < slides.length) {slideIndex = slides.length;}
+  //slideIndex = slideIndex - 1;
+  */
 }
