@@ -10,11 +10,11 @@ function closeModal(){
 
 var slideIndex = 1;
 showSlides(slideIndex);
-showSide(slideIndex);
+//showSide(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
-  showSide(slideIndex += n);
+  //showSide(slideIndex += n);
 }
 
 function currentSlide(n){
