@@ -53,11 +53,11 @@
 
 			<!-- sidebar content -->
 			<div id='mySidebar' class='sidebar'>
-				<p class="art-integrals" id="title"></p><br>
-				<p class="art-integrals" id="type"></p><br>
-				<p class="art-integrals" id="artist"></p><br>
-				<p class="art-integrals" id="price"></p><br>
-				<p class="art-integrals" id="dprice"></p><br>
+				<p class="art-integrals" id="title"></p>
+				<p class="art-integrals" id="type"></p>
+				<p class="art-integrals" id="artist"></p>
+				<p class="art-integrals" id="price"></p>
+				<p class="art-integrals" id="dprice"></p>
 				<button id="addtocart" value="Add to Cart"></button>
 			</div>
 

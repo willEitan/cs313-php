@@ -35,7 +35,11 @@ function showSlides(n){
 }
 
 function showSide (n) {
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {n = 1;}
+  if (n < slides.length) {n = slides.length;}
   n = n - 1;
+  }
   var xmlhttp = new XMLHttpRequest();
 
   xmlhttp.onreadystatechange = function () {
