@@ -101,9 +101,9 @@ function addtocart () {
       cart.push(item);
       //notify customer of successful insertion
       if (quantity == 1){
-        alert(quanty + " " + myObj.art_title[slideIndex - 1] + " art piece has been added to your art cart");
+        alert(quantity + " " + myObj.art_title[slideIndex - 1] + " art piece has been added to your art cart");
       } else {
-        alert(quanty + " " + myObj.art_title[slideIndex - 1] + " art pieces have been added to your art cart");
+        alert(quantity + " " + myObj.art_title[slideIndex - 1] + " art pieces have been added to your art cart");
       }
     }
   };
