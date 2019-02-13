@@ -94,17 +94,27 @@ function addtocart () {
       for (var i in cart) {
         if (cart[i].id == item.id){
           cart[i].quantity += item.quantity;
-
+          alert("Quantity of " + myObj.art_title[slideIndex - 1] + " has been changed to " + quantity);
           return;
         }
       }
       cart.push(item);
-      alert("inserted id:" + id);
+      //notify customer of successful insertion
+      if (quantity == 1){
+        alert(quanty + " " + myObj.art_title[slideIndex - 1] + " art piece has been added to your art cart");
+      } else {
+        alert(quanty + " " + myObj.art_title[slideIndex - 1] + " art pieces have been added to your art cart");
+      }
     }
   };
 
   xmlhttp.open("GET", "sidebar_data.php", true);
-  xmlhttp.send();
-  //check for previous insertion
-    
+  xmlhttp.send();  
+}
+
+function tocart() {
+  var cart_string = JSON.stringify(cart);
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", "checkout.php?cs=" + cart_string, true);
+  xmlhttp.send();  
 }

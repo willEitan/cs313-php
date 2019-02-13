@@ -58,8 +58,8 @@
 				<p class="art-integrals" id="artist"></p>
 				<p class="art-integrals" id="price"></p>
 				<p class="art-integrals" id="dprice"></p>
-				Purchase quantity: <input id="quantity" type="text" value="1" name="">
-				<button onclick="addtocart();" id="addtocart" value="Add to Cart" name="Add to Cart"></button>
+				Purchase quantity: <br><input id="quantity" type="text" value="1" name="">
+				<button onclick="addtocart();" id="addtocart" value="Add to Cart" name="Add to Cart">Add to Cart</button>
 			</div>
 
 		</section>
