@@ -59,7 +59,7 @@ function showSide (n) {
         document.getElementById("artist").innerHTML = myObj.psy[m];
       }
       //check for integer to display trailing 0s
-      if (Number.isSafeInteger(myObj.price[m])) {
+      if (Number.isSafeInteger(Number(myObj.price[m]))) {
         document.getElementById("price").innerHTML = '$' + myObj.price[m] + '.00';
       } else {
         document.getElementById("price").innerHTML = '$' + myObj.price[m];
@@ -68,7 +68,7 @@ function showSide (n) {
       //check for null and integer to display discounted price
       if (!myObj.dprice[m]) {
         document.getElementById("dprice").innerHTML = '';
-      } else if (Number.isSafeInteger(myObj.dprice[m])) {
+      } else if (Number.isSafeInteger(Number(myObj.dprice[m]))) {
         document.getElementById("dprice").innerHTML = '$' + myObj.dprice[m] + '.00';
       } else {
         document.getElementById("dprice").innerHTML = '$' + myObj.dprice[m];
@@ -87,7 +87,7 @@ function addtocart () {
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200){
       var myObj = JSON.parse(this.responseText);
-      var quantity = document.getElementById("quantity").value;
+      var quantity = Number(document.getElementById("quantity").value);
       var id = myObj.id[slideIndex - 1];
       var item = {id: id, quantity: quantity};
       //check for previous insertion
