@@ -40,7 +40,7 @@ function showSide (n) {
 
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200){
-      var myObj = JSON.parse(this.respnseText);
+      var myObj = JSON.parse(this.responseText);
 
       document.getElementById("title").innerHTML = myObj.art_title[n];
       document.getElementById("type").innerHTML = myObj.art_type[n];

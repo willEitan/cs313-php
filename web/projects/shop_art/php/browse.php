@@ -52,7 +52,7 @@
 			</div>
 
 			<!-- sidebar content -->
-			<div id='mySidebar' class='sidebar'>";
+			<div id='mySidebar' class='sidebar'>
 				<p class="art-integrals" id="title"></p><br>
 				<p class="art-integrals" id="type"></p><br>
 				<p class="art-integrals" id="artist"></p><br>
