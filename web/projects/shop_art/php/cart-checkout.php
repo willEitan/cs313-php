@@ -1,9 +1,7 @@
 <?php
 	session_start();
-	print_r($_SESSION);
-	print_r($_SESSION["logs"]);
-	print_r($_SESSION["obj"]);
-	print_r($_SESSION["cart"]);
+	print_r($_SESSION["cart"]["id"]);
+	print_r($_SESSION["cart"]["quantity"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
