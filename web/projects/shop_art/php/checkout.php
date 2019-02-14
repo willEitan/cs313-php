@@ -10,10 +10,12 @@
 	$_SESSION["obj"] = $objects;
 	foreach ($objects as $obj) {
 		if(!isset($_SESSION['cart'])){
-			$_SESSION['cart'] = [ "id"=> $obj->id, "quantity" => $obj->quantity];
+			$_SESSION['cart'] = [ "ids" => ["id" => $obj->id ], 
+								"quantities" => [ "quantity" => $obj->quantity]
+								];
 		} else {
-			array_push($_SESSION['cart']["id"], $obj->id);
-			array_push($_SESSION['cart']["quantity"], $obj->quantity);
+			array_push($_SESSION['cart']["ids"], $obj->id);
+			array_push($_SESSION['cart']["quantities"], $obj->quantity);
 		}
 	}
 	$_SESSION["ids"] = $obj->id;
