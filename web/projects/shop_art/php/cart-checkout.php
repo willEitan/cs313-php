@@ -29,22 +29,22 @@
 						<div class="col-50">
 							<h3>Billing Address</h3>
 							<label for="fname"><i class="fa fa-user"></i> Full Name</label>
-							<input type="text" id="fname" name="firstname" placeholder="Michelangelo di Lodovico Buonarroti Simoni">
+							<input type="text" class="text" id="fname" name="firstname" placeholder="Michelangelo di Lodovico Buonarroti Simoni">
 							<label for="email"><i class="fa fa-envelope"></i></label>
-							<input type="text" id="email" name="email" placeholder="michelangelo@sculpt.com">
+							<input type="text" class="text" id="email" name="email" placeholder="michelangelo@sculpt.com">
 							<label for="adr"><i class="fa fa-address-card-o"></i></label>
-							<input type="text" id="adr" name="address" placeholder="10 david drive">
+							<input type="text" class="text" id="adr" name="address" placeholder="10 david drive">
 							<label for="city"><i class="fa fa-institution"></i></label>
-							<input type="text" id="city" name="city" placeholder="Capresse">
+							<input type="text" class="text" id="city" name="city" placeholder="Capresse">
 							
 							<div class="row">
 								<div class="col-50">
 									<label for="state">State</label>
-									<input type="text" id="state" name="state" placeholder="NY">
+									<input type="text" class="text" id="state" name="state" placeholder="NY">
 								</div>
 								<div class="col-50">
 									<label for="zip">ZIP</label>
-									<input type="text" id="zip" name="zip" placeholder="55555">
+									<input type="text" class="text" id="zip" name="zip" placeholder="55555">
 								</div>
 							</div>
 						</div>
@@ -58,19 +58,19 @@
 								<i class="fa fa-cc-discover" style="color:orange;"></i>
 							</div>
 							<label for="cname">Name on Card</label>
-							<input type="text" id="cname" name="cardname" placeholder="Edgar Degas">
+							<input type="text" class="text" id="cname" name="cardname" placeholder="Edgar Degas">
 							<label for="ccnum">Credit Card Number</label>
-							<input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-							<label for="expmonth"></label>
-							<input type="text" id="expmonth" name="expmonth" placeholder="March">
+							<input type="text" class="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+							<label for="expmonth">Exp Month</label>
+							<input type="text" class="text" id="expmonth" name="expmonth" placeholder="March">
 							<div class="row">
 								<div class="col-50">
-									<label for="expyear"></label>
-									<input type="text" id="expyear" name="expyear" placeholder="2019">
+									<label for="expyear">Exp Year</label>
+									<input type="text" class="text" id="expyear" name="expyear" placeholder="2019">
 								</div>
 								<div class="col-50">
 									<label for="cvv">CVV</label>
-									<input type="text" id="cvv" name="cvv" placeholder="123">
+									<input type="text" class="text" id="cvv" name="cvv" placeholder="123">
 								</div>									
 							</div>
 						</div>
@@ -84,7 +84,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<h4>Art Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b><?php ?></b></span></h4>
+			<h4>Art Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b><?php ?></b></span></h4>
 			<?php
 
 			?>

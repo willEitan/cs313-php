@@ -164,7 +164,7 @@ div.desc {
   border-radius: 3px;
 }
 
-input[type=text] {
+.text {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
