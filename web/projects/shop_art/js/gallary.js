@@ -113,7 +113,8 @@ function addtocart () {
 }
 
 function tocart() {
-  return "checkout.php?cs=" + JSON.stringify(cart);
+  var url = "checkout.php?cs=" + JSON.stringify(cart);
+  document.location.href = url;
   /*var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET", "checkout.php?cs=" + cart_string, true);
   xmlhttp.send();
