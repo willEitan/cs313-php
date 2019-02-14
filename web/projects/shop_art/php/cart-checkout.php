@@ -2,7 +2,8 @@
 	session_start();
 	print_r($_SESSION);
 	print_r($_SESSION["logs"]);
-	print_r($_SESSION["quantities"]);
+	print_r($_SESSION["obj"]);
+	print_r($_SESSION["cart"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
