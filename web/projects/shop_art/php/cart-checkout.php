@@ -83,13 +83,15 @@
 				</form>	
 			</div>
 		</div>
-		<div class="container">
-			<h4>Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b><?php ?></b></span></h4>
-			<?php
+		<div class="col-25">
+			<div class="container">
+				<h4>Art Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b><?php ?></b></span></h4>
+				<?php
 
-			?>
-			<hr>
-			<p>Total <span class="price" style="color:black"><b><?php ?></b></span></p>
+				?>
+				<hr>
+				<p>Total <span class="price" style="color:black"><b><?php ?></b></span></p>
+			</div>
 		</div>
 	</div>
 </body>
