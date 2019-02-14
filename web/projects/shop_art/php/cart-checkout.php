@@ -84,7 +84,7 @@
 			</div>
 		</div>
 		<div class="container">
-			<h4>Art Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b><?php ?></b></span></h4>
+			<h4>Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b><?php ?></b></span></h4>
 			<?php
 
 			?>
