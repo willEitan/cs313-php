@@ -1,6 +1,7 @@
 <?php
 	session_start();
-	print_r($_SESSION["ids"]);
+	print_r($_SESSION["logs"]);
+	print_r($_SESSION["quantities"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">

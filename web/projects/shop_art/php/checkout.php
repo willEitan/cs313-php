@@ -5,7 +5,7 @@
 	if ($cart_json == NULL){
 		$cart_json = filter_input(INPUT_GET, 'cs');
 	}
-	print_r($cart_json);
+	$_SESSION["log"] = print_r($cart_json);
 	$obj = json_decode($_GET["cs"], false);
 	$_SESSION["ids"] = $obj->id;
 	$_SESSION["quantites"] = $obj->quantity;
