@@ -1,8 +1,6 @@
 <?php
 	session_start();
-	foreach($_SESSION["cart"] as $c) {
-		print_r($c);
-	}
+	print_r($_SESSION["cart"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
