@@ -1,7 +1,6 @@
 <?php
 	session_start();
-	print_r($_SESSION["cart"]["id"]);
-	print_r($_SESSION["cart"]["quantity"]);
+	print_r($_SESSION["cart"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
