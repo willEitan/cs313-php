@@ -89,10 +89,14 @@
 				<h4>Art Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b>
 					<?php 
 						$quantity = 0;
-						for($_SESSION["cart"] as $key => $value) {
-							if ($key == "quantity") {
-								$quantity += $key[$value];
+						if (is_array($_SESSION["cart"])) {
+							for($_SESSION["cart"] as $key => $value) {
+								if ($key == "quantity") {
+									$quantity += $key[$value];
+								}
 							}
+						} else {
+							echo "NULL ARRAY";
 						}
 						unset($value);
 						echo $quantity;
@@ -102,7 +106,7 @@
 					$total = 0;
 					$query = $db->query('SELECT art_id, image, image_title, price FROM art WHERE {$key[$value]} = art_id ORDER BY image_title');
 
-					foreach ($_SESSION["cart"] as $key => $value) {
+					/*foreach ($_SESSION["cart"] as $key => $value) {
 						$results = $query->fetch(PDO::FETCH_ASSOC);
 						if ($results) {
 							echo "<p class='products'><a href='{$results[0]['image']}'></a>";
@@ -114,7 +118,7 @@
 							echo "<span class='price'>{$price}</span></p>";
 						}
 					}
-					unset($value);
+					unset($value);*/
 				?>
 				<hr>
 				<p>Total <span class="price" style="color:black"><b><?php echo $total; ?></b></span></p>
