@@ -124,5 +124,7 @@
 </body>
 <?php
 	include "footer.php";
+	session_unset();
+	session_destroy();
 ?>
 </html>
