@@ -16,8 +16,9 @@
 			array_push($_SESSION['cart'], htmlspecialchars($obj->id), htmlspecialchars($obj->quantity));
 		}
 	}
+	/* debug
 	print_r($_SESSION["obj"]);
-	print_r($_SESSION["cart"]);
+	print_r($_SESSION["cart"]);*/
 	//with session filled, redirect
-	//header('Location: ../php/cart-checkout.php');
+	header('Location: ../php/cart-checkout.php');
 ?>
