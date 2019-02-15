@@ -21,7 +21,7 @@
 	<!-- <div class="main-content"> -->
 		<h3 style="padding-left: 25px;">Featuring Artwork by <a href="../php/about.php">Sarah Tenney</a></h3>
 		<div id="featured-gallary"></div>
-		<section>.
+		<section>
 			<!--gallary content-->
 			<div class='content'>
 				<?php
