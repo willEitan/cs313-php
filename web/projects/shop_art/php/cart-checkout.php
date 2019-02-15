@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	require "db_connect.php";
 	//print_r($_SESSION["cart"]);
 	foreach ($_SESSION["cart"] as $c) {
 		print_r($c);
@@ -84,13 +85,35 @@
 			</div>
 		</div>
 		<div class="col-25">
-			<div class="container">
-				<h4>Art Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b><?php ?></b></span></h4>
+			<div class="container">,
+				<h4>Art Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b>
+					<?php 
+						$quantity;
+							for($_SESSION["cart"] as $item) {
+								$quantity += $item["quantities"];
+							}
+						echo $quantity;
+					?>
+					</b></span></h4>
 				<?php
-
+					$total = 0;
+					$query = $db->query('SELECT art_id, image, image_title, price FROM art WHERE {$item[ids]} = art_id');
+					
+					foreach ($_SESSION["cart"] as $item) {
+						$results = $query->fetch(PDO::FETCH_ASSOC);
+						if ($results) {
+							echo "<p class='products'><a href='{$results[0]['image']}'></a>";
+							if ($item["quantities"] > 1){
+								echo " (" . $item["quantities"] . ")";
+							}
+							$price = (float)$results[0]['price'] * (int)$item['quantities'];
+							$total += $price;
+							echo "<span class='price'>{$price}</span></p>";
+						}
+					}
 				?>
 				<hr>
-				<p>Total <span class="price" style="color:black"><b><?php ?></b></span></p>
+				<p>Total <span class="price" style="color:black"><b><?php echo $total; ?></b></span></p>
 			</div>
 		</div>
 	</div>
