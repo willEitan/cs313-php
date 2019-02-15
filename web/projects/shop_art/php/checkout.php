@@ -10,15 +10,13 @@
 	$_SESSION["obj"] = $objects;
 	foreach ($objects as $obj) {
 		if(!isset($_SESSION['cart'])){
-			$_SESSION['cart'] = [ "ids" => ["id" => htmlspecialchars($obj->id) ], 
-								"quantities" => [ "quantity" => htmlspecialchars($obj->quantity)]
-								];
+			$_SESSION['cart'] = [ "id" => htmlspecialchars($obj->id), 
+								"quantity" => htmlspecialchars($obj->quantity)];
 		} else {
-			array_push($_SESSION['cart']["ids"], htmlspecialchars($obj->id));
-			array_push($_SESSION['cart']["quantities"], htmlspecialchars($obj->quantity));
+			array_push($_SESSION['cart']["id"], htmlspecialchars($obj->id));
+			array_push($_SESSION['cart']["quantity"], htmlspecialchars($obj->quantity));
 		}
 	}
-	$_SESSION["ids"] = $obj->id;
-	$_SESSION["quantites"] = $obj->quantity;
+	//with session filled, redirect
 	header('Location: ../php/cart-checkout.php');
 ?>
