@@ -1,10 +1,10 @@
 <?php
 	session_start();
 	require "db_connect.php";
-	//print_r($_SESSION["cart"]);
-	foreach ($_SESSION["cart"] as $c) {
+	print_r($_SESSION["cart"]);
+	/*foreach ($_SESSION["cart"] as $c) {
 		print_r($c);
-	}
+	}*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +85,7 @@
 			</div>
 		</div>
 		<div class="col-25">
-			<div class="container">,
+			<div class="container">
 				<h4>Art Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b>
 					<?php 
 						$quantity = 0;
