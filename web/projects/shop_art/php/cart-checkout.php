@@ -100,7 +100,7 @@
 					</b></span></h4>
 				<?php
 					$total = 0;
-					$query = $db->query('SELECT art_id, image, image_title, price FROM art WHERE {$key['id']} = art_id ORDER BY image_title');
+					$query = $db->query('SELECT art_id, image, image_title, price FROM art WHERE {$key[$value]} = art_id ORDER BY image_title');
 
 					/*foreach ($_SESSION["cart"] as $key => $value) {
 						$results = $query->fetch(PDO::FETCH_ASSOC);
