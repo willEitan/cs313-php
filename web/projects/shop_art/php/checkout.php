@@ -13,8 +13,7 @@
 			$_SESSION['cart'] = array( "id" => htmlspecialchars($obj->id), 
 								"quantity" => htmlspecialchars($obj->quantity));
 		} else {
-			$_SESSION['cart']["id"] = htmlspecialchars($obj->id);
-			$_SESSION['cart']["quantity"] = htmlspecialchars($obj->quantity);
+			array_push($_SESSION['cart']["quantity"], htmlspecialchars($obj->id), htmlspecialchars($obj->quantity));
 		}
 	}
 	print_r($_SESSION["obj"]);
