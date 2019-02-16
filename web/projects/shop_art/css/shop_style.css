@@ -16,6 +16,7 @@ div.image-wrapper {
 	border: 1px solid #ccc;
 	float: left;
 	width: 180px;
+	border-radius: 1.5px;
 }
 
 div.image-wrapper:hover {
@@ -33,7 +34,6 @@ div.desc {
 	padding: 5px;
 	text-align: center;
 	background: aliceblue;
-	border-radius: 1.5px;
 }
 
 .close {
@@ -132,6 +132,7 @@ div.desc {
 
 /*Sidebar styling*/
 .art-integrals {
+	position: relative;
 	float: right;
 	font-family: serif;
 	font-size: 14px;
@@ -139,10 +140,14 @@ div.desc {
 }
 
 #quantity {
-	width: 10px;
+	position: relative;
+	float: right;
+	width: 10%;
 }
 
 #addtocart {
+	position: relative;
+	float: center;
 	background-color: #142b47;
   	color: aliceblue;
   	border-radius: 5px;

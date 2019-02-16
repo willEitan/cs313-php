@@ -19,8 +19,8 @@
 	<script>includeHTML();</script><br>
 
 	<!-- <div class="main-content"> -->
-		<h3 style="padding-left: 25px;">Featuring Artwork by <a href="../php/about.php">Sarah Tenney</a></h3>
-		<div id="featured-gallary"></div>
+		<!-- <h3 style="padding-left: 25px;">Featuring Artwork by <a href="../php/about.php">Sarah Tenney</a></h3>
+		<div id="featured-gallary"></div> -->
 		<section>
 			<!--gallary content-->
 			<div class='content'>
@@ -55,19 +55,19 @@
 
 			<!-- sidebar content -->
 			<div id='mySidebar' class='sidebar'>
-				<p class="art-integrals" id="title"></p>
-				<p class="art-integrals" id="type"></p>
-				<p class="art-integrals" id="artist"></p>
-				<p class="art-integrals" id="price"></p>
+				Piece Title: <p class="art-integrals" id="title"></p>
+				Art Type: <p class="art-integrals" id="type"></p>
+				Artist: <p class="art-integrals" id="artist"></p>
+				Price: <p class="art-integrals" id="price"></p>
 				<p class="art-integrals" id="dprice"></p>
-				Purchase quantity: <br><input id="quantity" type="text" value="1" name="">
+				Purchase quantity: <br><input id="quantity" type="text" value="1" name=""><br>
 				<button onclick="addtocart();" id="addtocart" value="Add to Cart" name="Add to Cart">Add to Cart</button>
 			</div>
 
 		</section>
 		<script type="text/javascript" src="../js/gallary.js"></script>
-</body><br><br><br>
-<?php
+</body>
+<!-- <?php
 	include "footer.php";
-?>
+?> -->
 </html>
