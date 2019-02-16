@@ -31,11 +31,11 @@
 							<h3>Billing Address</h3>
 							<label for="fname"><i class="fa fa-user"></i> Full Name</label>
 							<input type="text" class="text" id="fname" name="firstname" placeholder="Michelangelo di Lodovico Buonarroti Simoni">
-							<label for="email"><i class="fa fa-envelope"></i></label>
+							<label for="email"><i class="fa fa-envelope"></i> Email</label>
 							<input type="text" class="text" id="email" name="email" placeholder="michelangelo@sculpt.com">
-							<label for="adr"><i class="fa fa-address-card-o"></i></label>
+							<label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
 							<input type="text" class="text" id="adr" name="address" placeholder="10 david drive">
-							<label for="city"><i class="fa fa-institution"></i></label>
+							<label for="city"><i class="fa fa-institution"></i> City</label>
 							<input type="text" class="text" id="city" name="city" placeholder="Capresse">
 							
 							<div class="row">
