@@ -14,7 +14,6 @@ div.image-wrapper {
 	position: relative;
 	margin: 5px;
 	border: 1px solid #ccc;
-	border-radius: 7.5px;
 	float: left;
 	width: 180px;
 }
@@ -34,6 +33,7 @@ div.desc {
 	padding: 5px;
 	text-align: center;
 	background: aliceblue;
+	border-radius: 1.5px;
 }
 
 .close {
