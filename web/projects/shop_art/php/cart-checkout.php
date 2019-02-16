@@ -90,11 +90,11 @@
 					<?php 
 						$quantity = 0;
 						foreach($_SESSION["cart"] as $key => $value) {
-							echo $value . "<br>";
-							if ($key == "quantity" || $key % 2) {
+							echo $key . " " . $value . "<br>";
+							/*if ($key == "quantity" || $key % 2) {
 								echo "here<br>";
 								$quantity += $key[$value];
-							}
+							}*/
 						}
 						unset($value);
 						//echo $quantity;
