@@ -103,19 +103,23 @@
 						$results = $query->fetch(PDO::FETCH_ASSOC);
 
 						if ($results) {
-							echo "<p class='products'><a href='{$results['image']}'>{$results['image_title']}</a>";
+							echo "<p class='products'><a target='_blank' href='{$results['image']}'>{$results['image_title']}</a>";
 							if ($value > 1){
 								echo " (" . $value . ")";
 							}
 							$price = (float)$results['price'] * (int)$value;
 							$total += $price;
-							echo "<span class='price'>{$price}</span></p>";
+							echo "<span class='price'>\${$price}";
+							if (is_integer($price)) {
+								echo ".00";
+							}
+							echo "</span></p>";
 						}
 					}
 					unset($value);
 				?>
 				<hr style="border: 1px solid;">
-				<p>Total <span class="price" style="color:black"><b><?php echo $total; ?></b></span></p>
+				<p>Total <span class="price" style="color:black"><b><?php echo "\$" . $total; if (is_integer($total)) echo ".00"; ?></b></span></p>
 			</div>
 		</div>
 	</div>
