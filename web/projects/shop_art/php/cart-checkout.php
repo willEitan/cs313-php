@@ -98,7 +98,7 @@
 					</b></span></h4>
 				<?php
 					$total = 0;
-					$query = $db->query('SELECT art_id, image, image_title, price FROM art WHERE art_id = {$key} ORDER BY image_title');
+					/*$query = $db->query('SELECT art_id, image, image_title, price FROM art WHERE art_id = {$key} ORDER BY image_title');
 
 					foreach ($_SESSION["cart"] as $key => $value) {
 						$results = $query->fetch(PDO::FETCH_ASSOC);
@@ -112,7 +112,7 @@
 							echo "<span class='price'>{$price}</span></p>";
 						}
 					}
-					unset($value);
+					unset($value);*/
 				?>
 				<hr>
 				<p>Total <span class="price" style="color:black"><b><?php echo $total; ?></b></span></p>
