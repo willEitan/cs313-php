@@ -71,3 +71,13 @@
 	border: none;
 	font-size: 16px;
 }
+
+em {
+	color: orange;
+	font-family: merienda, serif;
+	font-size: 21px;
+}
+
+em:hover {
+	font-size: 22px;
+}
