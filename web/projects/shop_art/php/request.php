@@ -22,27 +22,34 @@
 						<div class="col-50">
 							<h3>The Vision</h3>
 							<input type="text" name="">
-							<label for="type"> Select Artist </label> <?php 
-								$statement = $db->query("SELECT ar.pseudonym, ui.first_name, ui.middle_name, ui.last_name FROM artist AS ar JOIN user_info AS ui ON ar.user_id = ui.user_info");
-								foreach($statement as $result){
-									if ($result['pseudonym']) {
-										$name = $result['pseudonym'];
-									} else {
-										if ($result['middle_name']) {
-											$name = $result['first_name'] + ' ' + $result['middle_name'] + ' ' + $result['last_name'];
+							<label for="type"> Select Artist </label> 
+							<select>
+								<?php 
+									$statement = $db->query("SELECT ar.pseudonym, ui.first_name, ui.middle_name, ui.last_name FROM artist AS ar JOIN user_info AS ui ON ar.user_id = ui.user_info");
+									foreach($statement as $result){
+										if ($result['pseudonym']) {
+											$name = $result['pseudonym'];
 										} else {
-											$name = $result['first_name'] + ' ' + $result['last_name'];
+											if ($result['middle_name']) {
+												$name = $result['first_name'] + ' ' + $result['middle_name'] + ' ' + $result['last_name'];
+											} else {
+												$name = $result['first_name'] + ' ' + $result['last_name'];
+											}
 										}
+										echo "<option class='choose-artist'>{$name}</option>";
 									}
-									echo "<select class='choose-artist'>{$name}</select>";
-								}
-							?>
-							<label for="type"> Select Art Type </label><?php
-								$statement = $db->query("SELECT name, description FROM art_type");
-								foreach($statement as $result) {
-									echo "<select class='choose-type'>{$result['name']}</select>";
-								}
-							?>
+								?>
+							</select>
+							<label for="type"> Select Art Type </label>
+							<select>
+								<option> </option>
+								<?php
+									$statement = $db->query("SELECT name, description FROM art_type");
+									foreach($statement as $result) {
+										echo "<option class='choose-type'>{$result['name']}</option>";
+									}
+								?>
+							</select>
 							<label for="desc"> Describe the artwork you envision in detail </label>
 							<input type="textarea" name="request-description">
 						</div>
