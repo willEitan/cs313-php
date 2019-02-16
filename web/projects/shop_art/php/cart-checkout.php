@@ -99,7 +99,7 @@
 				<?php
 					$total = 0;
 					foreach ($_SESSION["cart"] as $key => $value) {
-						$query = $db->query('SELECT art_id, image, image_title, price FROM art WHERE art_id = '{$key}' ORDER BY image_title');
+						$query = $db->query("SELECT art_id, image, image_title, price FROM art WHERE art_id = '{$key}' ORDER BY image_title");
 						$results = $query->fetch(PDO::FETCH_ASSOC);
 
 						if ($results) {
