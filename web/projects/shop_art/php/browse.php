@@ -22,7 +22,6 @@
 				require "gallary.php";
 			?>
 		</section>
-		<script type="text/javascript" src="../js/gallary.js"></script>
 </body>
 <!-- <?php
 	include "footer.php";
