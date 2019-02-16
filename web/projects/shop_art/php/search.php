@@ -15,7 +15,7 @@
 
 	<div class="main-content">
 		<?php
-			if(isset($_GET) && $_GET['SA']){	
+			if(isset($_GET) && $_GET['SA']) {	
 				$search = htmlspecialchars($_GET['SA']);
 				//echo $search;
 				if (is_numeric($search)){
@@ -34,8 +34,8 @@
 					require "gallary.php";
 					/*foreach ($results as $row) {
 						echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='400px' height='300px' style='display:block;'>";
-						echo "<br><p>{$row['image_title']}</p></div><div class='modal'></div>";	*/
-					}
+						echo "<br><p>{$row['image_title']}</p></div><div class='modal'></div>";	
+					}*/
 				} else {
 					echo "<h3>Sorry, query \"$search\" found no results!</h3>";
 					echo "<br><strong>Suggestions:</strong><ul><li>Make sure spelling is correct</li><li>Are you searching for: <ul><li>artwork title</li><li>art type</li><li>artist's name</li><li>price OR</li><li>ratings</li></ul></li><li>Make sure your capitalization is correct</li></ul>";
