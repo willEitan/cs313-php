@@ -24,13 +24,18 @@
 					$query_1 = $db->query("SELECT ar.pseudonym, ui.first_name, ui.middle_name, ui.last_name, at.name, a.image, a.image_title FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id WHERE ar.pseudonym = '{$search}' OR ui.first_name = '{$search}' OR ui.middle_name = '{$search}' OR ui.last_name = '{$search}' OR at.name = '{$search}' OR a.image_title = '{$search}' ORDER BY image_title");
 					$query_2 = $db->query("SELECT ar.pseudonym, ar.about_artist, ui.first_name, ui.middle_name, ui.last_name, at.name, a.image, a.image_title FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id WHERE ar.pseudonym = '{$search}' OR ui.first_name = '{$search}' OR ui.middle_name = '{$search}' OR ui.last_name = '{$search}' OR at.name = '{$search}' OR a.image_title = '{$search}' ORDER BY image_title");
 				}
-				echo "hello";
 				$test_statement = $query_1;
-				echo "again";
 				$test_results = $test_statement->fetchAll(PDO::FETCH_ASSOC);
 				//print_r($results);
 				if ($test_results) {
 					echo "<h3>Search \"$search\" found results:</h3>";
+					if (is_numeric($search)){
+					$query_1 = $db->query("SELECT a.image, a.image_title FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id WHERE a.rating = {$search} OR a.price = {$search} OR a.discounted_price = {$search}");
+					$query_2 = $db->query("SELECT a.image FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id WHERE a.rating = {$search} OR a.price = {$search} OR a.discounted_price = {$search}");
+				} else {
+					$query_1 = $db->query("SELECT a.image, a.image_title FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id WHERE ar.pseudonym = '{$search}' OR ui.first_name = '{$search}' OR ui.middle_name = '{$search}' OR ui.last_name = '{$search}' OR at.name = '{$search}' OR a.image_title = '{$search}' ORDER BY image_title");
+					$query_2 = $db->query("SELECT a.image FROM art AS a JOIN artist AS ar ON a.artist_id = ar.artist_id JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id JOIN art_type AS at ON a.art_type_id = at.art_type_id WHERE ar.pseudonym = '{$search}' OR ui.first_name = '{$search}' OR ui.middle_name = '{$search}' OR ui.last_name = '{$search}' OR at.name = '{$search}' OR a.image_title = '{$search}' ORDER BY image_title");
+				}
 					require "gallary.php";
 					/*foreach ($results as $row) {
 						echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='400px' height='300px' style='display:block;'>";
