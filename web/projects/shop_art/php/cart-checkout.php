@@ -90,7 +90,7 @@
 					<?php 
 						$quantity = 0;
 						if (is_array($_SESSION["cart"])) {
-							for($_SESSION["cart"] as $key => $value) {
+							foreach($_SESSION["cart"] as $key => $value) {
 								if ($key == "quantity") {
 									$quantity += $key[$value];
 								}
