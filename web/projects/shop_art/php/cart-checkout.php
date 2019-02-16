@@ -89,19 +89,11 @@
 				<h4>Art Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b>
 					<?php 
 						$quantity = 0;
-						if (is_array($_SESSION["cart"])) {
-							foreach($_SESSION["cart"] as $key => $value) {
-								if ($key == "quantity") {
-									$quantity += $key[$value];
-								}
+						foreach($_SESSION["cart"] as $key => $value) {
+							echo $key . $value . "<br>";
+							if ($key == "quantity") {
+								$quantity += $key[$value];
 							}
-							/*foreach($_SESSION["cart"] as $value) {
-								//if ($key == "quantity") {
-									$quantity += $value["quantity"];
-								//}
-							}*/
-						} else {
-							echo "NULL ARRAY";
 						}
 						unset($value);
 						echo $quantity;
