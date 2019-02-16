@@ -12,7 +12,7 @@
 		if(!isset($_SESSION['cart'])){
 			$_SESSION['cart'] = array(htmlspecialchars($obj->id) => htmlspecialchars($obj->quantity));
 		} else {
-			array_push($_SESSION['cart'], htmlspecialchars($obj->id), htmlspecialchars($obj->quantity));
+			$_SESSION['cart'][htmlspecialchars($obj->id)] = htmlspecialchars($obj->quantity);
 		}
 	}
 	/* debug
