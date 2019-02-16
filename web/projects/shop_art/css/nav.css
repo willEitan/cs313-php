@@ -22,7 +22,7 @@
 	padding: 0;
 	list-style: none;
 	line-height: 60px;
-	color: aliceblue;
+	background: aliceblue;
 }
 
 .menu li {
@@ -53,7 +53,7 @@
 	position: relative;
 	margin-top: 7px;
 	margin-right: 25px;
-	color:aliceblue;
+	background: aliceblue;
 }
 
 .search-form {
@@ -69,13 +69,13 @@
 	font-size: 16px;
 	font-family: sans-serif;
 	border-radius: 5px 0 0 5px;
-	color: aliceblue;
+	background: aliceblue;
 }
 
 #sb {
 	float: right;
 	background: orange;
-	color: white;
+	color: aliceblue;
 	border-radius: 0 5px 5px 0;
 	cursor: pointer;
 	position: relative;
