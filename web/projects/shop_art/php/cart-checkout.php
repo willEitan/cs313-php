@@ -89,10 +89,10 @@
 				<h4>Art Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b>
 					<?php 
 						$quantity = 0;
-						foreach($_SESSION["cart"] as $value) {
-							$quantity += (int)$value;
+						foreach($_SESSION["cart"] as $q) {
+							$quantity += (int)$q;
 						}
-						unset($value);
+						unset($q);
 						echo $quantity;
 					?>
 					</b></span></h4>
@@ -103,12 +103,11 @@
 						$results = $query->fetch(PDO::FETCH_ASSOC);
 
 						if ($results) {
-							echo $results["image"];
-							echo "<p class='products'><a href='{$results[0]['image']}'></a>";
+							echo "<p class='products'><a href='{$results['image']}'></a>";
 							if ($value > 1){
 								echo " (" . $value . ")";
 							}
-							$price = (float)$results[0]['price'] * (int)$value;
+							$price = (float)$results['price'] * (int)$value;
 							$total += $price;
 							echo "<span class='price'>{$price}</span></p>";
 						}
