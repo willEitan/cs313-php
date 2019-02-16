@@ -12,8 +12,7 @@
 <body>
 	<div include-html="../html/nav.html"></div>
 	<script>includeHTML();</script><br>
-
-	<div class="main-content">
+	<section>
 		<?php
 			if(isset($_GET) && $_GET['SA']) {	
 				$search = htmlspecialchars($_GET['SA']);
@@ -27,6 +26,7 @@
 				}
 				echo "hello";
 				$test_statement = $query_1;
+				echo "again";
 				$test_results = $statement->fetchAll(PDO::FETCH_ASSOC);
 				//print_r($results);
 				if ($test_results) {
@@ -42,7 +42,7 @@
 				}
 			}
 		?>
-	</div>
+	</section>
 </body>
 <?php
 	include "footer.php";
