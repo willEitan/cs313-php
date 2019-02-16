@@ -130,6 +130,24 @@ div.desc {
 	position: relative;
 }
 
+/*Sidebar styling*/
+.art-integrals {
+	float: right;
+	font-family: serif;
+	font-size: 14px;
+	padding: 3px;
+}
+
+#quantity {
+	width: 10px;
+}
+
+#addtocart {
+	background-color: #142b47;
+  	color: aliceblue;
+  	border-radius: 5px;
+}
+
 /*styling for checkout*/
 .row {
   display: -ms-flexbox; /* IE10 */
@@ -188,7 +206,7 @@ label {
 
 .btn {
   background-color: #142b47;
-  color: white;
+  color: aliceblue;
   padding: 12px;
   margin: 10px 0;
   border: none;
