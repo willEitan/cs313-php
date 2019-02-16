@@ -1,10 +1,8 @@
 <!--gallary content-->
 <div class='content'>
 	<?php
-		$q1 = $db->query('SELECT image, image_title FROM art ORDER BY image_title');
-		
 		$i = 1;
-		foreach ($q1 as $row)
+		foreach ($query_1 as $row)
 		{
 			echo "<div class='image-wrapper'><img src='{$row['image']}' alt='{$row['image_title']}'width='600px' height='400px' style='display:block;' onclick='openModal(); currentSlide({$i});'>";
 			echo "<div class='desc'><p>{$row['image_title']}</p></div></div>";			
@@ -18,8 +16,7 @@
 	<span class='close cursor' onclick='closeModal()'>&times;</span>
 	<div class='modal-content'>
 		<?php
-			$q2 = $db->query('SELECT image FROM art ORDER BY image_title');
-			foreach ($q2 as $row) {
+			foreach ($query_2 as $row) {
 				//hidden slides
 				echo "<div class='mySlides'><img src='{$row['image']}' width='100%'></div>";
 			}

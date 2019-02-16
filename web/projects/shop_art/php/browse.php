@@ -16,7 +16,11 @@
 		<!-- <h3 style="padding-left: 25px;">Featuring Artwork by <a href="../php/about.php">Sarah Tenney</a></h3>
 		<div id="featured-gallary"></div> -->
 		<section>
-			<?php require "gallary.php"; ?>
+			<?php 
+				$query_1 = $db->query('SELECT image, image_title FROM art ORDER BY image_title');
+				$query_2 = $db->query('SELECT image FROM art ORDER BY image_title');
+				require "gallary.php";
+			?>
 		</section>
 		<script type="text/javascript" src="../js/gallary.js"></script>
 </body>

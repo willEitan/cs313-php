@@ -130,6 +130,10 @@ div.desc {
 	position: relative;
 }
 
+section {
+	margin: 10px;
+}
+
 /*Sidebar styling*/
 .art-integrals {
 	position: relative;
