@@ -103,7 +103,7 @@
 						$results = $query->fetch(PDO::FETCH_ASSOC);
 
 						if ($results) {
-							echo "<p class='products'><a href='{$results['image']}'></a>";
+							echo "<p class='products'><a href='{$results['image']}'>{$results['image_title']</a>";
 							if ($value > 1){
 								echo " (" . $value . ")";
 							}
