@@ -27,7 +27,7 @@
 				echo "hello";
 				$test_statement = $query_1;
 				echo "again";
-				$test_results = $statement->fetchAll(PDO::FETCH_ASSOC);
+				$test_results = $test_statement->fetchAll(PDO::FETCH_ASSOC);
 				//print_r($results);
 				if ($test_results) {
 					echo "<h3>Search \"$search\" found results:</h3>";
