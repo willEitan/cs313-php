@@ -95,7 +95,7 @@
 									$quantity += $key[$value];
 								}
 							}*/
-							for($_SESSION["cart"] as $value) {
+							foreach($_SESSION["cart"] as $value) {
 								//if ($key == "quantity") {
 									$quantity += $value["quantity"];
 								//}
