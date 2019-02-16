@@ -89,9 +89,10 @@
 				<h4>Art Cart<span class="price" style="color:black"><i class="fa fa-shopping-cart"></i><b>
 					<?php 
 						$quantity = 0;
-						foreach($_SESSION["cart"] as $value) {
+						foreach($_SESSION["cart"] as $key => $value) {
 							echo $value . "<br>";
-							if ($key == "quantity") {
+							if ($key == "quantity" || $key % 2) {
+								echo "here<br>";
 								$quantity += $key[$value];
 							}
 						}
