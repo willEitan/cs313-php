@@ -103,18 +103,19 @@
 						$results = $query->fetch(PDO::FETCH_ASSOC);
 
 						if ($results) {
+							echo $results["image"];
 							echo "<p class='products'><a href='{$results[0]['image']}'></a>";
-							if ($key["quantity"] > 1){
-								echo " (" . $key["quantity"] . ")";
+							if ($value > 1){
+								echo " (" . $value . ")";
 							}
-							$price = (float)$results[0]['price'] * (int)$key['quantity'];
+							$price = (float)$results[0]['price'] * (int)$value;
 							$total += $price;
 							echo "<span class='price'>{$price}</span></p>";
 						}
 					}
 					unset($value);
 				?>
-				<hr>
+				<hr style="border: 1px solid;">
 				<p>Total <span class="price" style="color:black"><b><?php echo $total; ?></b></span></p>
 			</div>
 		</div>
