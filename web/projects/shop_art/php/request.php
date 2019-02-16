@@ -36,7 +36,6 @@
 									}
 									echo "<select class='choose-artist'>{$name}</select>";
 								}
-								}
 							?>
 							<label for="type"> Select Art Type </label><?php
 								$statement = $db->query("SELECT name, description FROM art_type");
