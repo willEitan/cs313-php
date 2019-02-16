@@ -21,7 +21,8 @@
 					<div class="row">
 						<div class="col-50">
 							<h3>The Vision</h3>
-							<input type="text" name="">
+							<label for="title">Name</label>
+							<input type="text" name="name">
 							<label for="type"> Select Artist </label> 
 							<select>
 								<?php 
