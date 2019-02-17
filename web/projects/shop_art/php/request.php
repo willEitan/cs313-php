@@ -25,7 +25,7 @@
 							<label for="title">Name</label>
 							<input type="text" class="text" name="name" placeholder="David">
 							<label for="type"> Select Artist </label> 
-							<select class="select"><option> </option>
+							<select class="text"><option> </option>
 								<?php 
 									$statement = $db->query("SELECT ar.pseudonym, ui.first_name, ui.middle_name, ui.last_name FROM artist AS ar JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id");
 									foreach($statement as $result){
@@ -43,7 +43,7 @@
 								?>
 							</select>
 							<label for="type"> Select Art Type </label>
-							<select class="select">
+							<select class="text">
 								<option> </option>
 								<?php
 									$statement = $db->query("SELECT name, description FROM art_type");
@@ -53,7 +53,7 @@
 								?>
 							</select>
 							<label for="desc"> Describe the artwork you envision in detail </label>
-							<input type="textarea" name="request-description">
+							<input type="textarea" class="textarea" name="request-description">
 						</div>
 						<div class="col-50">
 							<h3>Your Info</h3>
