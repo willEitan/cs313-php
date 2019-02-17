@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/shop_style.css">
 	<script type="text/javascript" src="../js/shop.js"></script>
 	<script type="text/javascript" src="../js/gallary.js"></script>
@@ -22,9 +23,9 @@
 						<div class="col-50">
 							<h3>The Vision</h3>
 							<label for="title">Name</label>
-							<input type="text" name="name">
+							<input type="text" class="text" name="name" placeholder="David">
 							<label for="type"> Select Artist </label> 
-							<select>
+							<select class="select"><option> </option>
 								<?php 
 									$statement = $db->query("SELECT ar.pseudonym, ui.first_name, ui.middle_name, ui.last_name FROM artist AS ar JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id");
 									foreach($statement as $result){
@@ -42,7 +43,7 @@
 								?>
 							</select>
 							<label for="type"> Select Art Type </label>
-							<select>
+							<select class="select">
 								<option> </option>
 								<?php
 									$statement = $db->query("SELECT name, description FROM art_type");
