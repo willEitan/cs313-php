@@ -26,3 +26,88 @@ function includeHTML() {
     }
   }
 }
+
+/*REGEX*/
+function valName() {
+  var feild = document.getElementById("fname");
+  var regex;
+  var error = document.getElementById("errName");
+}
+
+function valEmail () {
+  var feild = document.getElementById("email");
+  var regex;
+  var error = document.getElementById("errEmail");
+}
+
+
+function valAdr () {
+  var feild = document.getElementById("adr");
+  var regex;
+  var error = document.getElementById("errAdr");
+}
+
+function valCity () {
+  var feild = document.getElementById("city");
+  var regex;
+  var error = document.getElementById("errCity");
+}
+
+function valState () {
+  var feild = document.getElementById("state");
+  var regex;
+  var error = document.getElementById("errState");
+}
+
+function valZip () {
+  var feild = document.getElementById("zip");
+  var regex;
+  var error = document.getElementById("errZip");
+}
+
+function valCname() {
+  var feild = document.getElementById("cname");
+  var regex;
+  var error = document.getElementById("errCname");
+}
+
+function valCnn () {
+  var feild = document.getElementById("ccnum");
+  var regex;
+  var error = document.getElementById("errCnn");
+}
+
+function valMonth () {
+  var feild = document.getElementById("expmonth");
+  var regex;
+  var error = document.getElementById("errEmonth");
+}
+
+function valYear () {
+  var feild = document.getElementById("expyear");
+  var regex;
+  var error = document.getElementById("errEyear");
+}
+
+function valCvv () {
+  var feild = document.getElementById("cvv");
+  var regex;
+  var error = document.getElementById("errCvv");
+}
+
+function valCheck() {
+
+}
+
+function validate() {
+  var check = document.getElementsByClassName("error-message");
+  var valide = true;
+  /*foreach(check as c){
+    if (c.style.display != 'none') {
+      check = false;
+    }
+  }*/
+  if (valide) {
+    document.location.href = "checkout.php?p=purchase";
+  }
+}
