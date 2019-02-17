@@ -32,9 +32,12 @@
 										if ($result['pseudonym']) {
 											$name = $result['pseudonym'];
 										} else {
+											echo "h";
 											if ($result['middle_name']) {
+												echo "i";
 												$name = $result['first_name'] + ' ' + $result['middle_name'] + ' ' + $result['last_name'];
 											} else {
+												echo "j";
 												$name = $result['first_name'] + ' ' + $result['last_name'];
 											}
 										}
