@@ -1,0 +1,45 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+
+https://polar-river-16702.herokuapp.com/projects/shop_art/php/browse.php
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+
+https://github.com/willEitan/cs313-php/tree/master/web/projects/shop_art
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+
+data is inserted into the database
+querys are running succesfully
+header style and links are fully functional
+search bar is functioning properly
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+request forms
+checkout forms
+add to cart
+cart view
+styling
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+
+learning how to do join was pretty cool
+
+6. Why should you create a separate user account for your application to access the database?
+
+security. a malicous user would have to high privalage
+
+7. Please select the category you feel best describes your assignment:
+1 - Some attempt was made
+2 - Developing, but significantly deficient
+3 - Slightly deficient, but still mostly adequate
+4 - Meets requirements
+5 - Shows creativity and excels above and beyond requirements
+
+5
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I worked hard on this assignment; the front-end design is coming together very nicely and the search bar is a complicated feature, which I succesfully implimented!

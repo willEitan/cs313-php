@@ -1,0 +1,39 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+
+https://polar-river-16702.herokuapp.com/projects/shop_art/php/browse.php
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+
+
+https://github.com/willEitan/cs313-php/tree/master/web/projects/shop_art
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+
+I have no login, though that is a feature that I wish to add. I don't think I'll be able to get to that as I have already bit off more than I can chew, I think. This week I have been working on forms, checkout as well as request. I also did more styling and work on database retrivals.
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+I need to finish the regex and inserting into the database. I would also like to create another page for super users to modify the website--ah, but thats a lot. I need to add more artwork, style more, create markup for the series page, figure out how to hash sensitive form input and subsequently store in the database. I also need to refine my tables, perhaps create new ones.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+
+I spent too much time this week in the front end design, I learned how to create a very nice looking checkout form. Oh, I also figured out how to use JSON to communicate data between js and php. That was cool!
+
+6. What is a benefit of having a foreign key constraint?
+
+This helps enforce uniqueness.
+
+7. Please select the category you feel best describes your assignment:
+1 - Some attempt was made
+2 - Developing, but significantly deficient
+3 - Slightly deficient, but still mostly adequate
+4 - Meets requirements
+5 - Shows creativity and excels above and beyond requirements
+
+3
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I spent a lot of time working on my website this week, but I can't say that my work meets all of the requirements. It doesn't, sadly.
