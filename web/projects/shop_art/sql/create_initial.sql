@@ -152,6 +152,19 @@ CREATE TABLE art_order_lookup
 
 CREATE SEQUENCE aol_seq START 1 increment by 1;
 
+CREATE TABLE series 
+( series_id
+, art_id 				INT 			CONSTRAINT nn_series_01 NOT NULL
+, series_name 			VARCHAR(100) 	CONSTRAINT nn_series_02 NOT NULL
+, description 			TEXT 			CONSTRAINT nn_series_03 NOT NULL
+, creation_date    	    DATE     	    CONSTRAINT nn_series_04 NOT NULL
+, created_by		    INT			    CONSTRAINT nn_series_05 NOT NULL
+, last_updated_by	    INT		  	    CONSTRAINT nn_series_06 NOT NULL
+, last_update_date	    DATE 		    CONSTRAINT nn_series_07 NOT NULL
+, CONSTRAINT pk_series_1 PRIMARY KEY(series_id)
+, CONSTRAINT fk_series_1 FOREIGN KEY(art_id) REFERENCES art(art_id)
+);
+
 /*CREATE TABLE transaction 
 ( transaction_id			INT
 , transaction_date			DATE 			CONSTRAINT nn_transaction_01 NOT NULL

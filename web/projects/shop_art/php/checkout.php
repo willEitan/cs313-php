@@ -1,23 +1,19 @@
 <?php
-	session_start();
-	//header("Content-Type: application/json; charset=UTF-8");
-	$cart_json = filter_input(INPUT_POST, 'cs');
-	if ($cart_json == NULL){
-		$cart_json = filter_input(INPUT_GET, 'cs');
+	require "db_connect.php";
+	$action = filter_input(INPUT_POST, 'p');
+	if ($action == NULL) {
+		$action = filter_input(INPUT_GET, 'p');
 	}
-	$_SESSION["log"] = $cart_json;
-	$objects = json_decode($_GET["cs"], false);
-	$_SESSION["obj"] = $objects;
-	foreach ($objects as $obj) {
-		if(!isset($_SESSION['cart'])){
-			$_SESSION['cart'] = array(htmlspecialchars($obj->id) => htmlspecialchars($obj->quantity));
-		} else {
-			$_SESSION['cart'][htmlspecialchars($obj->id)] = htmlspecialchars($obj->quantity);
-		}
+
+	switch ($action) {
+		case 'request':
+			# code...
+			break;
+		
+		case 'purchase':
+			break;
+		default:
+			# code...
+			break;
 	}
-	/* debug
-	print_r($_SESSION["obj"]);
-	print_r($_SESSION["cart"]);*/
-	//with session filled, redirect
-	header('Location: ../php/cart-checkout.php');
 ?>

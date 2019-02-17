@@ -25,7 +25,7 @@
 	<div class="row">
 		<div class="col-75">
 			<div class="container">
-				<form method="post" action="../php/confirmation.php">
+				<form method="post" action="../php/checkout.php?p=purchase">
 					<div class="row">
 						<div class="col-50">
 							<h3>Billing Address</h3>

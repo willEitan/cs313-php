@@ -17,7 +17,7 @@
 	<div class="row">	
 		<div class="col-75">
 			<div class="container">
-				<form method="post" action="confirmation.php">	
+				<form method="post" action="checkout.php?p=request">	
 					<div class="row">
 						<div class="col-50">
 							<h3>The Vision</h3>
@@ -26,7 +26,7 @@
 							<label for="type"> Select Artist </label> 
 							<select>
 								<?php 
-									$statement = $db->query("SELECT ar.pseudonym, ui.first_name, ui.middle_name, ui.last_name FROM artist AS ar JOIN user_info AS ui ON ar.user_id = ui.user_info");
+									$statement = $db->query("SELECT ar.pseudonym, ui.first_name, ui.middle_name, ui.last_name FROM artist AS ar JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id");
 									foreach($statement as $result){
 										if ($result['pseudonym']) {
 											$name = $result['pseudonym'];
