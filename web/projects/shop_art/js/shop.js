@@ -61,6 +61,7 @@ function valEmail () {
   } else {
     document.getElementById("errEmail").innerHTML = error;
     document.getElementById("errEmail").style.display = none;
+  }
 }
 
 
@@ -79,6 +80,7 @@ function valAdr () {
   } else {
     document.getElementById("errAdr").innerHTML = error;
     document.getElementById("errAdr").style.display = none;
+  }
 }
 
 function valCity () {
@@ -96,6 +98,7 @@ function valCity () {
   } else {
     document.getElementById("errCity").innerHTML = error;
     document.getElementById("errCity").style.display = none;
+  }
 }
 
 function valState () {
@@ -113,6 +116,7 @@ function valState () {
   } else {
     document.getElementById("errState").innerHTML = error;
     document.getElementById("errState").style.display = none;
+  }
 }
 
 function valZip () {
@@ -130,6 +134,7 @@ function valZip () {
   } else {
     document.getElementById("errZip").innerHTML = error;
     document.getElementById("errZip").style.display = none;
+  }
 }
 
 function valCname() {
@@ -147,6 +152,7 @@ function valCname() {
   } else {
     document.getElementById("errCname").innerHTML = error;
     document.getElementById("errCname").style.display = none;
+  }
 }
 
 function valCcn () {
@@ -165,6 +171,7 @@ function valCcn () {
   } else {
     document.getElementById("errCnn").innerHTML = error;
     document.getElementById("errCnn").style.display = none;
+  }
 }
 
 function valMonth () {
@@ -182,6 +189,7 @@ function valMonth () {
   } else {
     document.getElementById("errEmonth").innerHTML = error;
     document.getElementById("errEmonth").style.display = none;
+  }
 }
 
 function valYear () {
@@ -199,6 +207,7 @@ function valYear () {
   } else {
     document.getElementById("errEyear").innerHTML = error;
     document.getElementById("errEyear").style.display = none;
+  }
 }
 
 function valCvv () {
