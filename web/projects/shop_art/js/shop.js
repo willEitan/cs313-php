@@ -35,11 +35,11 @@ function valName() {
   if (!field) {
     error = "Must Complete"
     document.getElementById("errName").innerHTML = error;
-    document.getElementById("errName").style.display = inline;
+    document.getElementById("errName").style.display = 'inline';
   } else if (!regex.test(field)) {
     error = "Invalid Name";
     document.getElementById("errName").innerHTML = error;
-    document.getElementById("errName").style.display = inline;
+    document.getElementById("errName").style.display = 'inline';
   } else {
     document.getElementById("errName").innerHTML = error;
     document.getElementById("errName").style.display = none;
@@ -53,11 +53,11 @@ function valEmail () {
   if (!field) {
     error = "Must Complete"
     document.getElementById("errEmail").innerHTML = error;
-    document.getElementById("errEmail").style.display = inline;
+    document.getElementById("errEmail").style.display = 'inline';
   } else if (!regex.test(field)) {
     error = "Invalid Email address";
     document.getElementById("errEmail").innerHTML = error;
-    document.getElementById("errEmail").style.display = inline;
+    document.getElementById("errEmail").style.display = 'inline';
   } else {
     document.getElementById("errEmail").innerHTML = error;
     document.getElementById("errEmail").style.display = none;
@@ -72,11 +72,11 @@ function valAdr () {
   if (!field) {
     error = "Must Complete"
     document.getElementById("errAdr").innerHTML = error;
-    document.getElementById("errAdr").style.display = inline;
+    document.getElementById("errAdr").style.display = 'inline';
   } else if (!regex.test(field)) {
     error = "Invalid Address";
     document.getElementById("errAdr").innerHTML = error;
-    document.getElementById("errAdr").style.display = inline;
+    document.getElementById("errAdr").style.display = 'inline';
   } else {
     document.getElementById("errAdr").innerHTML = error;
     document.getElementById("errAdr").style.display = none;
@@ -90,11 +90,11 @@ function valCity () {
   if (!field) {
     error = "Must Complete"
     document.getElementById("errCity").innerHTML = error;
-    document.getElementById("errCity").style.display = inline;
+    document.getElementById("errCity").style.display = 'inline';
   } else if (!regex.test(field)) {
     error = "Invalid City name";
     document.getElementById("errCity").innerHTML = error;
-    document.getElementById("errCity").style.display = inline;
+    document.getElementById("errCity").style.display = 'inline';
   } else {
     document.getElementById("errCity").innerHTML = error;
     document.getElementById("errCity").style.display = none;
@@ -108,11 +108,11 @@ function valState () {
   if (!field) {
     error = "Must Complete"
     document.getElementById("errState").innerHTML = error;
-    document.getElementById("errState").style.display = inline;
+    document.getElementById("errState").style.display = 'inline';
   } else if (!regex.test(field)) {
     error = "Invalid State must be 2 charecters";
     document.getElementById("errState").innerHTML = error;
-    document.getElementById("errState").style.display = inline;
+    document.getElementById("errState").style.display = 'inline';
   } else {
     document.getElementById("errState").innerHTML = error;
     document.getElementById("errState").style.display = none;
@@ -126,11 +126,11 @@ function valZip () {
   if (!field) {
     error = "Must Complete"
     document.getElementById("errZip").innerHTML = error;
-    document.getElementById("errZip").style.display = inline;
+    document.getElementById("errZip").style.display = 'inline';
   } else if (!regex.test(field)) {
     error = "Invalid Postal Code";
     document.getElementById("errZip").innerHTML = error;
-    document.getElementById("errZip").style.display = inline;
+    document.getElementById("errZip").style.display = 'inline';
   } else {
     document.getElementById("errZip").innerHTML = error;
     document.getElementById("errZip").style.display = none;
@@ -144,11 +144,11 @@ function valCname() {
   if (!field) {
     error = "Must Complete"
     document.getElementById("errCname").innerHTML = error;
-    document.getElementById("errCname").style.display = inline;
+    document.getElementById("errCname").style.display = 'inline';
   } else if (!regex.test(field)) {
     error = "Invalid Name";
     document.getElementById("errCname").innerHTML = error;
-    document.getElementById("errCname").style.display = inline;
+    document.getElementById("errCname").style.display = 'inline';
   } else {
     document.getElementById("errCname").innerHTML = error;
     document.getElementById("errCname").style.display = none;
@@ -163,11 +163,11 @@ function valCcn () {
   if (!field) {
     error = "Must Complete"
     document.getElementById("errCnn").innerHTML = error;
-    document.getElementById("errCnn").style.display = inline;
+    document.getElementById("errCnn").style.display = 'inline';
   } else if (!regex.test(field)) {
     error = "Invalid Credit Card Number";
     document.getElementById("errCnn").innerHTML = error;
-    document.getElementById("errCnn").style.display = inline;
+    document.getElementById("errCnn").style.display = 'inline';
   } else {
     document.getElementById("errCnn").innerHTML = error;
     document.getElementById("errCnn").style.display = none;
@@ -181,11 +181,11 @@ function valMonth () {
   if (!field) {
     error = "Must Complete"
     document.getElementById("errEmonth").innerHTML = error;
-    document.getElementById("errEmonth").style.display = inline;
+    document.getElementById("errEmonth").style.display = 'inline';
   } else if (!regex.test(field)) {
     error = "Invalid Month";
     document.getElementById("errEmonth").innerHTML = error;
-    document.getElementById("errEmonth").style.display = inline;
+    document.getElementById("errEmonth").style.display = 'inline';
   } else {
     document.getElementById("errEmonth").innerHTML = error;
     document.getElementById("errEmonth").style.display = none;
@@ -199,11 +199,11 @@ function valYear () {
   if (!field) {
     error = "Must Complete"
     document.getElementById("errEyear").innerHTML = error;
-    document.getElementById("errEyear").style.display = inline;
+    document.getElementById("errEyear").style.display = 'inline';
   } else if (!regex.test(field)) {
     error = "Invalid Year";
     document.getElementById("errEyear").innerHTML = error;
-    document.getElementById("errEyear").style.display = inline;
+    document.getElementById("errEyear").style.display = 'inline';
   } else {
     document.getElementById("errEyear").innerHTML = error;
     document.getElementById("errEyear").style.display = none;
@@ -217,11 +217,11 @@ function valCvv () {
   if (!field) {
     error = "Must Complete"
     document.getElementById("errCvv").innerHTML = error;
-    document.getElementById("errCvv").style.display = inline;
+    document.getElementById("errCvv").style.display = 'inline';
   } else if (!regex.test(field)) {
     error = "Invalid CVV number must be 3 digits";
     document.getElementById("errCvv").innerHTML = error;
-    document.getElementById("errCvv").style.display = inline;
+    document.getElementById("errCvv").style.display = 'inline';
   } else {
     document.getElementById("errCvv").innerHTML = error;
     document.getElementById("errCvv").style.display = none;
