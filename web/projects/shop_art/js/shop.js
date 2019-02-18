@@ -29,68 +29,80 @@ function includeHTML() {
 
 /*REGEX*/
 function valName() {
-  var feild = document.getElementById("fname");
-  var regex;
-  var error = document.getElementById("errName");
+  var field = document.getElementById("fname");
+  var regex = /(\s?\D{2, 45}\s{1}\D{2, 45}\s?)|(\s?\D{2, 45}\s{1}\D{2, 45}\s{1}((\D{2, 45}\s{1})|(\D{2, 45}))*)/;
+  var error = "Invalid input";
+  if (field == NULL) {
+    error = "Must Complete"
+    document.getElementById("errName").innerHTML = error;
+    document.getElementById("errName").style.display = inline;
+  } else if (!regex.test(field)) {
+    error = "Invalid Name";
+    document.getElementById("errName").innerHTML = error;
+    document.getElementById("errName").style.display = inline;
+  } else {
+    document.getElementById("errName").innerHTML = error;
+    document.getElementById("errName").style.display = none;
+  }
 }
 
 function valEmail () {
-  var feild = document.getElementById("email");
+  var field = document.getElementById("email");
   var regex;
   var error = document.getElementById("errEmail");
 }
 
 
 function valAdr () {
-  var feild = document.getElementById("adr");
+  var field = document.getElementById("adr");
   var regex;
   var error = document.getElementById("errAdr");
 }
 
 function valCity () {
-  var feild = document.getElementById("city");
+  var field = document.getElementById("city");
   var regex;
   var error = document.getElementById("errCity");
 }
 
 function valState () {
-  var feild = document.getElementById("state");
+  var field = document.getElementById("state");
   var regex;
   var error = document.getElementById("errState");
 }
 
 function valZip () {
-  var feild = document.getElementById("zip");
+  var field = document.getElementById("zip");
   var regex;
   var error = document.getElementById("errZip");
 }
 
 function valCname() {
-  var feild = document.getElementById("cname");
+  var field = document.getElementById("cname");
   var regex;
   var error = document.getElementById("errCname");
 }
 
 function valCnn () {
-  var feild = document.getElementById("ccnum");
+  var field = document.getElementById("ccnum");
   var regex;
   var error = document.getElementById("errCnn");
 }
 
 function valMonth () {
-  var feild = document.getElementById("expmonth");
+  var field = document.getElementById("expmonth");
   var regex;
   var error = document.getElementById("errEmonth");
 }
 
 function valYear () {
-  var feild = document.getElementById("expyear");
+  var field = document.getElementById("expyear");
   var regex;
   var error = document.getElementById("errEyear");
 }
 
 function valCvv () {
-  var feild = document.getElementById("cvv");
+  var field = document.getElementById("cvv");
   var regex;
   var error = document.getElementById("errCvv");
 }
@@ -109,5 +121,7 @@ function validate() {
   }*/
   if (valide) {
     document.location.href = "checkout.php?p=purchase";
+  } else {
+    alert("Form invalid. Needed corrections are indicated in red");
   }
 }
