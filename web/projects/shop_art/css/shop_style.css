@@ -218,7 +218,7 @@ label {
 	padding: 12px;
 	border: 1px solid lightgrey;
 	border-radius: 3px;
-	height: 100%;
+	height: 300px;
 }
 
 .btn {
@@ -262,5 +262,6 @@ span.price {
 
 .error-message {
 	color: red;
+	font-style: italic;
 	display: none;
 }
