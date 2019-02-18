@@ -32,7 +32,7 @@ function valName() {
   var field = document.getElementById("fname");
   var regex = /(\s?\D{2, 45}\s{1}\D{2, 45}\s?)|(\s?\D{2, 45}\s{1}\D{2, 45}\s{1}((\D{2, 45}\s{1})|(\D{2, 45}))*)/;
   var error = "Invalid input";
-  if (field == NULL) {
+  if (!field) {
     error = "Must Complete"
     document.getElementById("errName").innerHTML = error;
     document.getElementById("errName").style.display = inline;
@@ -50,7 +50,7 @@ function valEmail () {
   var field = document.getElementById("email");
   var regex = /\w*\@\w*\.[a-z]{3}/;
   var error = "Invalid input";
-  if (field == NULL) {
+  if (!field) {
     error = "Must Complete"
     document.getElementById("errEmail").innerHTML = error;
     document.getElementById("errEmail").style.display = inline;
@@ -69,7 +69,7 @@ function valAdr () {
   var field = document.getElementById("adr");
   var regex = /\d*\s{1}(\w*\#?\s?)*/;
   var error = "Invalid input";
-  if (field == NULL) {
+  if (!field) {
     error = "Must Complete"
     document.getElementById("errAdr").innerHTML = error;
     document.getElementById("errAdr").style.display = inline;
@@ -87,7 +87,7 @@ function valCity () {
   var field = document.getElementById("city");
   var regex = /([A-Za-z]*\s?)*/;
   var error = "Invalid input";
-  if (field == NULL) {
+  if (!field) {
     error = "Must Complete"
     document.getElementById("errCity").innerHTML = error;
     document.getElementById("errCity").style.display = inline;
@@ -105,7 +105,7 @@ function valState () {
   var field = document.getElementById("state");
   var regex = /[A-Z]{2}\s?/;
   var error = "Invalid input";
-  if (field == NULL) {
+  if (!field) {
     error = "Must Complete"
     document.getElementById("errState").innerHTML = error;
     document.getElementById("errState").style.display = inline;
@@ -123,7 +123,7 @@ function valZip () {
   var field = document.getElementById("zip");
   var regex = /\b[0-9]{5}(?:-[0-9]{4})?\b/;
   var error = "Invalid input";
-  if (field == NULL) {
+  if (!field) {
     error = "Must Complete"
     document.getElementById("errZip").innerHTML = error;
     document.getElementById("errZip").style.display = inline;
@@ -141,7 +141,7 @@ function valCname() {
   var field = document.getElementById("cname");
   var regex = /(\s?\D{2, 45}\s{1}\D{2, 45}\s?)|(\s?\D{2, 45}\s{1}\D{2, 45}\s{1}((\D{2, 45}\s{1})|(\D{2, 45}))*)/;;
   var error = "Invalid input";
-  if (field == NULL) {
+  if (!field) {
     error = "Must Complete"
     document.getElementById("errCname").innerHTML = error;
     document.getElementById("errCname").style.display = inline;
@@ -160,7 +160,7 @@ function valCcn () {
   /*code curtosy: https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests*/
   var regex = /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
   var error = "Invalid input";
-  if (field == NULL) {
+  if (!field) {
     error = "Must Complete"
     document.getElementById("errCnn").innerHTML = error;
     document.getElementById("errCnn").style.display = inline;
@@ -178,7 +178,7 @@ function valMonth () {
   var field = document.getElementById("expmonth");
   var regex = /[A-Z]{1}?[a-z]{3,9}\s?/;
   var error = "Invalid input";
-  if (field == NULL) {
+  if (!field) {
     error = "Must Complete"
     document.getElementById("errEmonth").innerHTML = error;
     document.getElementById("errEmonth").style.display = inline;
@@ -196,7 +196,7 @@ function valYear () {
   var field = document.getElementById("expyear");
   var regex = /\d{2}|\d{4}\s?/;
   var error = "Invalid input";
-  if (field == NULL) {
+  if (!field) {
     error = "Must Complete"
     document.getElementById("errEyear").innerHTML = error;
     document.getElementById("errEyear").style.display = inline;
@@ -213,8 +213,8 @@ function valYear () {
 function valCvv () {
   var field = document.getElementById("cvv");
   var regex = /\d{3}\s?/;
-  var error = "Invalid input";
-  if (field == NULL) {
+  var error = "Invlalid input";
+  if (!field) {
     error = "Must Complete"
     document.getElementById("errCvv").innerHTML = error;
     document.getElementById("errCvv").style.display = inline;
