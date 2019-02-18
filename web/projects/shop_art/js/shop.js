@@ -225,6 +225,7 @@ function valCvv () {
   } else {
     document.getElementById("errCvv").innerHTML = error;
     document.getElementById("errCvv").style.display = none;
+  }
 }
 
 function valCheck() {
