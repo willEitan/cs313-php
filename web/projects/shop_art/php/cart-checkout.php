@@ -29,25 +29,25 @@
 					<div class="row">
 						<div class="col-50">
 							<h3>Billing Address</h3>
-							<label for="fname"><i class="fa fa-user"></i> Full Name<em class="error-message" id="errName">Invalid input</em></label>
+							<label for="fname"><em class="error-message" id="errName">Invalid input</em><i class="fa fa-user"></i> Full Name</label>
 							<input type="text" class="text" onblur="valName();" id="fname" name="firstname" placeholder="Michelangelo di Lodovico Buonarroti Simoni">
 							
-							<label for="email"><i class="fa fa-envelope"></i> Email<em class="error-message" id="errEmail">Invalid input</em></label>
+							<label for="email"><em class="error-message" id="errEmail">Invalid input</em><i class="fa fa-envelope"></i> Email</label>
 							<input type="text" class="text" onblur="valEmail();" id="email" name="email" placeholder="michelangelo@sculpt.com">
 							
-							<label for="adr"><i class="fa fa-address-card-o"></i> Address<em class="error-message" id="errAdr">Invalid input</em></label>
+							<label for="adr"><em class="error-message" id="errAdr">Invalid input</em><i class="fa fa-address-card-o"></i> Address</label>
 							<input type="text" class="text" onblur="valAdr();" id="adr" name="address" placeholder="10 david drive">
 							
-							<label for="city"><i class="fa fa-institution"></i> City<em class="error-message" id="errCity">Invalid input</em></label>
+							<label for="city"><em class="error-message" id="errCity">Invalid input</em><i class="fa fa-institution"></i> City</label>
 							<input type="text" class="text" onblur="valCity();" id="city" name="city" placeholder="Capresse">
 							
 							<div class="row">
 								<div class="col-50">
-									<label for="state">State<em class="error-message" id="errState">Invalid input</em></label>
+									<label for="state"><em class="error-message" id="errState">Invalid input</em>State</label>
 									<input type="text" class="text" onblur="valState();" id="state" name="state" placeholder="NY">
 								</div>
 								<div class="col-50">
-									<label for="zip">ZIP<em class="error-message" id="errZip">Invalid input</em></label>
+									<label for="zip"><em class="error-message" id="errZip">Invalid input</em>ZIP</label>
 									<input type="text" class="text" onblur="valZip();"id="zip" name="zip" placeholder="55555">
 								</div>
 							</div>
@@ -61,22 +61,22 @@
 								<i class="fa fa-cc-mastercard" style="color:red;"></i>
 								<i class="fa fa-cc-discover" style="color:orange;"></i>
 							</div>
-							<label for="cname">Name on Card<em class="error-message" id="errCname">Invalid input</em></label>
+							<label for="cname"><em class="error-message" id="errCname">Invalid input</em>Name on Card</label>
 							<input type="text" class="text" onblur="valCname();" id="cname" name="cardname" placeholder="Edgar Degas">
 							
-							<label for="ccnum">Credit Card Number<em class="error-message" id="errCcn">Invalid input</em></label>
+							<label for="ccnum"><em class="error-message" id="errCcn">Invalid input</em>Credit Card Number</label>
 							<input type="text" class="text" onblur="valCcn();" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
 							
-							<label for="expmonth">Exp Month<em class="error-message" id="errEmonth">Invalid input</em></label>
+							<label for="expmonth"><em class="error-message" id="errEmonth">Invalid input</em>Exp Month</label>
 							<input type="text" class="text" onblur="valMonth();" id="expmonth" name="expmonth" placeholder="March">
 							
 							<div class="row">
 								<div class="col-50">
-									<label for="expyear">Exp Year<em class="error-message" id="errEyear">Invalid input</em></label>
+									<label for="expyear"><em class="error-message" id="errEyear">Invalid input</em>Exp Year</label>
 									<input type="text" class="text" onblur="valYear();" id="expyear" name="expyear" placeholder="2019">
 								</div>
 								<div class="col-50">
-									<label for="cvv">CVV<em class="error-message" id="errCvv">Invalid input</em></label>
+									<label for="cvv"><em class="error-message" id="errCvv">Invalid input</em>CVV</label>
 									<input type="text" class="text" onblur="valCvv();" id="cvv" name="cvv" placeholder="123">
 								</div>									
 							</div>
@@ -84,8 +84,8 @@
 
 					</div>
 					<label>
-						<input type="checkbox" checked="checked" onblur="valCheck();" name="sameadr"> Shipping address same billing
-					<em class="error-message" id="errCheck"></em></label>
+						<input type="checkbox" checked="checked" onblur="valCheck();" name="sameadr"><em class="error-message" id="errCheck"></em> Shipping address same billing
+					</label>
 					<input type="submit" onclick="validate();" value="Complete Purchase" class="btn">
 				</form>	
 			</div>
