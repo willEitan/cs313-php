@@ -139,7 +139,7 @@ function valZip () {
 
 function valCname() {
   var field = document.getElementById("cname").value;
-  var regex = /(\s?\D{2, 45}\s{1}\D{2, 45}\s?)|(\s?\D{2, 45}\s{1}\D{2, 45}\s{1}((\D{2, 45}\s{1})|(\D{2, 45}))*)/;;
+  var regex = /(\s?[A-Za-z]{2, 45}\s{1}[A-Za-z]{2, 45}\s?)|(\s?[A-Za-z]{2, 45}\s{1}[A-Za-z]{2, 45}\s{1}(([A-Za-z]{2, 45}\s{1})|([A-Za-z]{2, 45}))*)/;;
   var error = "Invalid input";
   if (!field) {
     error = "Must Complete"
@@ -176,14 +176,14 @@ function valCcn () {
 
 function valMonth () {
   var field = document.getElementById("expmonth").value;
-  var regex = /[A-Z]{1}?[a-z]{3,9}\s?/;
+  var regex = /(([A-Z]{1})?[a-z]{3,9}\s?)|((\0|\1)\d)/;
   var error = "Invalid input";
   if (!field) {
     error = "Must Complete"
     document.getElementById("errEmonth").innerHTML = error;
     document.getElementById("errEmonth").style.display = 'inline';
   } else if (!regex.test(field)) {
-    error = "Invalid Month";
+    error = "Invalid Month may be name or 2 digit number";
     document.getElementById("errEmonth").innerHTML = error;
     document.getElementById("errEmonth").style.display = 'inline';
   } else {
