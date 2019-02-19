@@ -29,7 +29,7 @@ function includeHTML() {
 
 /*REGEX*/
 function valName() {
-  var field = document.getElementById("fname");
+  var field = document.getElementById("fname").value;
   var regex = /(\s?\D{2, 45}\s{1}\D{2, 45}\s?)|(\s?\D{2, 45}\s{1}\D{2, 45}\s{1}((\D{2, 45}\s{1})|(\D{2, 45}))*)/;
   var error = "Invalid input";
   if (!field) {
@@ -42,12 +42,12 @@ function valName() {
     document.getElementById("errName").style.display = 'inline';
   } else {
     document.getElementById("errName").innerHTML = error;
-    document.getElementById("errName").style.display = none;
+    document.getElementById("errName").style.display = 'none';
   }
 }
 
 function valEmail () {
-  var field = document.getElementById("email");
+  var field = document.getElementById("email").value;
   var regex = /\w*\@\w*\.[a-z]{3}/;
   var error = "Invalid input";
   if (!field) {
@@ -60,13 +60,13 @@ function valEmail () {
     document.getElementById("errEmail").style.display = 'inline';
   } else {
     document.getElementById("errEmail").innerHTML = error;
-    document.getElementById("errEmail").style.display = none;
+    document.getElementById("errEmail").style.display = 'none';
   }
 }
 
 
 function valAdr () {
-  var field = document.getElementById("adr");
+  var field = document.getElementById("adr").value;
   var regex = /\d*\s{1}(\w*\#?\s?)*/;
   var error = "Invalid input";
   if (!field) {
@@ -79,12 +79,12 @@ function valAdr () {
     document.getElementById("errAdr").style.display = 'inline';
   } else {
     document.getElementById("errAdr").innerHTML = error;
-    document.getElementById("errAdr").style.display = none;
+    document.getElementById("errAdr").style.display = 'none';
   }
 }
 
 function valCity () {
-  var field = document.getElementById("city");
+  var field = document.getElementById("city").value;
   var regex = /([A-Za-z]*\s?)*/;
   var error = "Invalid input";
   if (!field) {
@@ -97,12 +97,12 @@ function valCity () {
     document.getElementById("errCity").style.display = 'inline';
   } else {
     document.getElementById("errCity").innerHTML = error;
-    document.getElementById("errCity").style.display = none;
+    document.getElementById("errCity").style.display = 'none';
   }
 }
 
 function valState () {
-  var field = document.getElementById("state");
+  var field = document.getElementById("state").value;
   var regex = /[A-Z]{2}\s?/;
   var error = "Invalid input";
   if (!field) {
@@ -115,12 +115,12 @@ function valState () {
     document.getElementById("errState").style.display = 'inline';
   } else {
     document.getElementById("errState").innerHTML = error;
-    document.getElementById("errState").style.display = none;
+    document.getElementById("errState").style.display = 'none';
   }
 }
 
 function valZip () {
-  var field = document.getElementById("zip");
+  var field = document.getElementById("zip").value;
   var regex = /\b[0-9]{5}(?:-[0-9]{4})?\b/;
   var error = "Invalid input";
   if (!field) {
@@ -133,12 +133,12 @@ function valZip () {
     document.getElementById("errZip").style.display = 'inline';
   } else {
     document.getElementById("errZip").innerHTML = error;
-    document.getElementById("errZip").style.display = none;
+    document.getElementById("errZip").style.display = 'none';
   }
 }
 
 function valCname() {
-  var field = document.getElementById("cname");
+  var field = document.getElementById("cname").value;
   var regex = /(\s?\D{2, 45}\s{1}\D{2, 45}\s?)|(\s?\D{2, 45}\s{1}\D{2, 45}\s{1}((\D{2, 45}\s{1})|(\D{2, 45}))*)/;;
   var error = "Invalid input";
   if (!field) {
@@ -151,31 +151,31 @@ function valCname() {
     document.getElementById("errCname").style.display = 'inline';
   } else {
     document.getElementById("errCname").innerHTML = error;
-    document.getElementById("errCname").style.display = none;
+    document.getElementById("errCname").style.display = 'none';
   }
 }
 
 function valCcn () {
-  var field = document.getElementById("ccnum");
+  var field = document.getElementById("ccnum").value;
   /*code curtosy: https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests*/
   var regex = /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
   var error = "Invalid input";
   if (!field) {
     error = "Must Complete"
-    document.getElementById("errCnn").innerHTML = error;
-    document.getElementById("errCnn").style.display = 'inline';
+    document.getElementById("errCcn").innerHTML = error;
+    document.getElementById("errCcn").style.display = 'inline';
   } else if (!regex.test(field)) {
     error = "Invalid Credit Card Number";
-    document.getElementById("errCnn").innerHTML = error;
-    document.getElementById("errCnn").style.display = 'inline';
+    document.getElementById("errCcn").innerHTML = error;
+    document.getElementById("errCcn").style.display = 'inline';
   } else {
-    document.getElementById("errCnn").innerHTML = error;
-    document.getElementById("errCnn").style.display = none;
+    document.getElementById("errCcn").innerHTML = error;
+    document.getElementById("errCcn").style.display = 'none';
   }
 }
 
 function valMonth () {
-  var field = document.getElementById("expmonth");
+  var field = document.getElementById("expmonth").value;
   var regex = /[A-Z]{1}?[a-z]{3,9}\s?/;
   var error = "Invalid input";
   if (!field) {
@@ -188,12 +188,12 @@ function valMonth () {
     document.getElementById("errEmonth").style.display = 'inline';
   } else {
     document.getElementById("errEmonth").innerHTML = error;
-    document.getElementById("errEmonth").style.display = none;
+    document.getElementById("errEmonth").style.display = 'none';
   }
 }
 
 function valYear () {
-  var field = document.getElementById("expyear");
+  var field = document.getElementById("expyear").value;
   var regex = /\d{2}|\d{4}\s?/;
   var error = "Invalid input";
   if (!field) {
@@ -206,12 +206,12 @@ function valYear () {
     document.getElementById("errEyear").style.display = 'inline';
   } else {
     document.getElementById("errEyear").innerHTML = error;
-    document.getElementById("errEyear").style.display = none;
+    document.getElementById("errEyear").style.display = 'none';
   }
 }
 
 function valCvv () {
-  var field = document.getElementById("cvv");
+  var field = document.getElementById("cvv").value;
   var regex = /\d{3}\s?/;
   var error = "Invlalid input";
   if (!field) {
@@ -224,7 +224,7 @@ function valCvv () {
     document.getElementById("errCvv").style.display = 'inline';
   } else {
     document.getElementById("errCvv").innerHTML = error;
-    document.getElementById("errCvv").style.display = none;
+    document.getElementById("errCvv").style.display = 'none';
   }
 }
 
@@ -236,7 +236,7 @@ function validate() {
   var check = document.getElementsByClassName("error-message");
   var valide = true;
   /*foreach(check as c){
-    if (c.style.display != 'none') {
+    if (c.style.display != ''none'') {
       check = false;
     }
   }*/
