@@ -30,7 +30,7 @@ function includeHTML() {
 /*REGEX*/
 function valName() {
   var field = document.getElementById("fname").value;
-  var regex = /(\s?\D{2, 45}\s{1}\D{2, 45}\s?)|(\s?\D{2, 45}\s{1}\D{2, 45}\s{1}((\D{2, 45}\s{1})|(\D{2, 45}))*)/;
+  var regex = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u;
   var error = "Invalid input";
   if (!field) {
     error = "Must Complete"
@@ -176,7 +176,8 @@ function valCcn () {
 
 function valMonth () {
   var field = document.getElementById("expmonth").value;
-  var regex = /(([A-Z]{1})?[a-z]{3,9}\s?)|((\0|\1)\d)/;
+  var regex = /(([A-Z]{1})?[a-z]{3,9}\s?)|((\0\d)|(\1\0)
+  |(\1\1)|(\1\2))/;
   var error = "Invalid input";
   if (!field) {
     error = "Must Complete"

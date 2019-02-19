@@ -106,7 +106,7 @@
 				
 				<?php
 					if ($_SESSION["total_items"] === 0) {
-						echo "<em class='error-message' style='display:block;'>You've not selected any <a href='../php/browse.php'>artwork</a></em>";
+						echo "<em class='error-message' style='display:block;'>You've not selected any <a href='../php/browse.php'>artwork!</a></em>";
 					} else {
 						$total = 0;
 						foreach ($_SESSION["cart"] as $key => $value) {
