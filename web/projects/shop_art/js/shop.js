@@ -176,8 +176,7 @@ function valCcn () {
 
 function valMonth () {
   var field = document.getElementById("expmonth").value;
-  var regex = /(([A-Z]{1})?[a-z]{3,9}\s?)|((\0\d)|([1]\0)
-  |([1][1])|([1][2]))/;
+  var regex = /(([A-Z]{1})?[a-z]{3,9}\s?)|^(0?[1-9]|1[012])$/;
   var error = "Invalid input";
   if (!field) {
     error = "Must Complete"
