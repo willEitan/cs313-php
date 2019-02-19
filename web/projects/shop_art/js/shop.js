@@ -174,7 +174,7 @@ function valCcn () {
     document.getElementById("errCcn").style.display = 'none';
   }
   var dash = '-';
-  document.getElementById("ccnum").value = parsed_field.slice(0, 3) + dash + parsed_field.slice(3, 7) + dash + parsed_field.slice(7, 11) + dash + parsed_field.slice(11, 15);
+  document.getElementById("ccnum").value = parsed_field.slice(0, 4) + dash + parsed_field.slice(4, 8) + dash + parsed_field.slice(8, 12) + dash + parsed_field.slice(12, 16);
 }
 
 function valMonth () {
