@@ -139,7 +139,7 @@ function valZip () {
 
 function valCname() {
   var field = document.getElementById("cname").value;
-  var regex = /(\s?[A-Za-z]{2, 45}\s{1}[A-Za-z]{2, 45}\s?)|(\s?[A-Za-z]{2, 45}\s{1}[A-Za-z]{2, 45}\s{1}(([A-Za-z]{2, 45}\s{1})|([A-Za-z]{2, 45}))*)/;;
+  var regex = /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s?)+$/u;
   var error = "Invalid input";
   if (!field) {
     error = "Must Complete"
@@ -157,10 +157,11 @@ function valCname() {
 
 function valCcn () {
   var field = document.getElementById("ccnum").value;
+  var parsed_field = field.replace('-', '');
   /*code curtosy: https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests*/
   var regex = /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
   var error = "Invalid input";
-  if (!field) {
+  if (!parsed_field) {
     error = "Must Complete"
     document.getElementById("errCcn").innerHTML = error;
     document.getElementById("errCcn").style.display = 'inline';
@@ -172,6 +173,8 @@ function valCcn () {
     document.getElementById("errCcn").innerHTML = error;
     document.getElementById("errCcn").style.display = 'none';
   }
+  var dash = '-';
+  document.getElementById("ccnum").value = parsed_field.slice(0, 3) + dash + parsed_field.slice(3, 7) + dash + parsed_field.slice(7, 11) + dash + parsed_field.slice(11, 15);
 }
 
 function valMonth () {
