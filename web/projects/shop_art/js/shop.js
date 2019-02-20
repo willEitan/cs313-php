@@ -262,6 +262,7 @@ function validate() {
       valide = false;
     }
   }
+  console.log(valide);
   if (document.getElementById("item-error").style.display !== 'none') {
     alert("You must add artwork to your cart before checkout!");
   } else if (valide) {
