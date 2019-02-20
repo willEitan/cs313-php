@@ -113,7 +113,7 @@ function addtocart () {
 }
 
 function valQuantity() {
-  var quantity = document.getElementById("quantity");
+  var quantity = document.getElementById("quantity").value;
   var regex = /^[0-9]+$/;
   var error = "Invalid";
   console.log(quantity);
