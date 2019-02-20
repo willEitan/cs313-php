@@ -112,6 +112,21 @@ function addtocart () {
   xmlhttp.send();  
 }
 
+function valQuantity() {
+  var quantity = document.getElementById("quantity");
+  var regex = /^\d+$/
+  var error = "Invalid";
+  if (!regex.test(quantity)) {
+    error = "Invalid quantity input! Must be positive integer!";
+    alert(error);
+  } else if (quantity < 1) {
+    error = "Quantity may not be less than 1!"
+    alert(error);
+  } else {
+    addtocart();
+  }
+}
+
 function tocart() {
   var url = "cart.php?cs=" + JSON.stringify(cart);
   document.location.href = url;
