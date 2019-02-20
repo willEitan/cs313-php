@@ -132,7 +132,7 @@
 		</div>
 	</div>
 </body>
-<?php
+<!-- <?php
 	include "footer.php";
-?>
+?> -->
 </html>
