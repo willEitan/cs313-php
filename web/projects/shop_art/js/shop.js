@@ -174,8 +174,11 @@ function valCcn () {
     document.getElementById("errCcn").innerHTML = error;
     document.getElementById("errCcn").style.display = 'none';
   }
-  var dash = '-';
-  document.getElementById("ccnum").value = parsed_field.slice(0, 4) + dash + parsed_field.slice(4, 8) + dash + parsed_field.slice(8, 12) + dash + parsed_field.slice(12, 16);
+
+  if (parsed_field.length == 16) {
+    var dash = '-';
+    document.getElementById("ccnum").value = parsed_field.slice(0, 4) + dash + parsed_field.slice(4, 8) + dash + parsed_field.slice(8, 12) + dash + parsed_field.slice(12, 16);
+  }  
 }
 
 function valMonth () {
@@ -260,7 +263,7 @@ function validate() {
     }
   }
   if (document.getElementById("item-error").style.display !== 'none') {
-    alert("You must first select <a href='..php/browse.php'>products</a> before checkout");
+    alert("You must add artwork to your cart before checkout!");
   } else if (valide) {
     document.location.href = "checkout.php?p=purchase";
   } else {
