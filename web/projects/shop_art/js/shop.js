@@ -254,7 +254,7 @@ function validate() {
   //complete final validation and redirect or alert
   var check = document.getElementsByClassName("error-message");
   var valide = true;
-  for(int i = 0; i < check.length; i++){
+  for(var i = 0; i < check.length; i++){
     if (check[i].style.display !== 'none') {
       valide = false;
     }
