@@ -85,7 +85,7 @@ function valAdr () {
 
 function valCity () {
   var field = document.getElementById("city").value;
-  var regex = /([A-Za-z]*\s?)*/;
+  var regex = /^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/;
   var error = "Invalid input";
   if (!field) {
     error = "Must Complete"
