@@ -237,14 +237,31 @@ function valCheck() {
 }
 
 function validate() {
+  //run all val functions. This ensures user did not skip any inputs 
+  valName();
+  valEmail();
+  valAdr();
+  valCity();
+  valState();
+  valZip();
+  valCname();
+  valCcn();
+  valMonth();
+  valYear();
+  valCvv();
+  valCheck();
+
+  //complete final validation and redirect or alert
   var check = document.getElementsByClassName("error-message");
   var valide = true;
-  /*foreach(check as c){
-    if (c.style.display != ''none'') {
-      check = false;
+  for(int i = 0; i < check.length; i++){
+    if (check[i].style.display !== 'none') {
+      valide = false;
     }
-  }*/
-  if (valide) {
+  }
+  if (document.getElementById("item-error").style.display !== 'none') {
+    alert("You must first select <a href='..php/browse.php'>products</a> before checkout");
+  } else if (valide) {
     document.location.href = "checkout.php?p=purchase";
   } else {
     alert("Form invalid. Needed corrections are indicated in red");

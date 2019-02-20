@@ -113,7 +113,6 @@ function addtocart () {
 }
 
 function tocart() {
-  //alert(cart);
   var url = "cart.php?cs=" + JSON.stringify(cart);
   document.location.href = url;
 }

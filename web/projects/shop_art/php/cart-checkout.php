@@ -25,7 +25,7 @@
 	<div class="row">
 		<div class="col-75">
 			<div class="container">
-				<form method="post" action="#">
+				<form method="post" onsubmit="validate(); return false;">
 					<div class="row">
 						<div class="col-50">
 							<h3>Billing Address</h3>
@@ -86,7 +86,7 @@
 					<label>
 						<input type="checkbox" checked="checked" onblur="valCheck();" name="sameadr"> Shipping address same billing <em class="error-message" id="errCheck"></em>
 					</label>
-					<input type="submit" onclick="validate();" value="Complete Purchase" class="btn">
+					<input type="submit" value="Complete Purchase" class="btn">
 				</form>	
 			</div>
 		</div>
@@ -106,7 +106,7 @@
 				
 				<?php
 					if ($_SESSION["total_items"] === 0) {
-						echo "<em class='error-message' style='display:block;'>You've not selected any <a href='../php/browse.php'>artwork!</a></em>";
+						echo "<em class='error-message' id='item-error' style='display:block;'>You've not selected any <a href='../php/browse.php'>artwork!</a></em>";
 					} else {
 						$total = 0;
 						foreach ($_SESSION["cart"] as $key => $value) {
