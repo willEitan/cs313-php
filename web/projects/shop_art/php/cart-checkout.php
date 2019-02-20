@@ -1,10 +1,6 @@
 <?php
 	session_start();
 	require "db_connect.php";
-	print_r($_SESSION["cart"]);
-	/*foreach ($_SESSION["cart"] as $c) {
-		print_r($c);
-	}*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
