@@ -120,7 +120,7 @@ function valQuantity() {
     error = "Invalid quantity input! Must be positive integer!";
     alert(error);
   } else if (quantity < 1) {
-    error = "Quantity may not be less than 1!"
+    error = "Quantity may not be less than 1!";
     alert(error);
   } else {
     addtocart();
