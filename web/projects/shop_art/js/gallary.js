@@ -114,7 +114,7 @@ function addtocart () {
 
 function valQuantity() {
   var quantity = document.getElementById("quantity");
-  var regex = /^\d+$/
+  var regex = /^[0-9]+$/
   var error = "Invalid";
   if (!regex.test(quantity)) {
     error = "Invalid quantity input! Must be positive integer!";
