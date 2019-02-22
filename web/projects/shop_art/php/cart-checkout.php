@@ -124,6 +124,7 @@
 							}
 						}
 						unset($value);
+						$_SESSION['total'] = $total;
 					}
 				?>
 				<hr style="border: 1px solid;">
