@@ -14,8 +14,9 @@
 		case 'purchase':
 
 			$name = htmlspecialchars($_POST['fname']);
-			$first;
-			$last;
+			$name_parts = explode(' ', $name);
+			$first = $name_parts[0];
+			$last = $name_parts[sizeof($name_parts)-1];
 			$email = htmlspecialchars($_POST['email']);
 			$adr = htmlspecialchars($_POST['adr']);
 			$city = htmlspecialchars($_POST['city']);
