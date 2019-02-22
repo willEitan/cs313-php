@@ -12,15 +12,14 @@
 			break;
 		
 		case 'purchase':
-			print_r($_POST);
+
 			$name = filter_input(INPUT_POST, "fname", FILTER_SANITIZE_SPECIAL_CHARS);
 			$name_parts = explode(' ', $name);
 			$first = $name_parts[0];
 			$last = $name_parts[sizeof($name_parts)-1];
-			$email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+			$email = filter_var(INPUT_POST, "email"], FILTER_SANITIZE_EMAIL);
 			$adr = filter_input(INPUT_GET, "adr", FILTER_SANITIZE_SPECIAL_CHARS);
-			$city = $_POST["city"];
-			//$city = filter_input(INPUT_POST, "city", FILTER_SANITIZE_SPECIAL_CHARS);
+			$city = filter_input(INPUT_POST, "city", FILTER_SANITIZE_SPECIAL_CHARS);
 			$state = filter_input(INPUT_POST, "state", FILTER_SANITIZE_STRING);
 			$zip = filter_input(INPUT_POST, "zip", FILTER_SANITIZE_NUMBER_INT);
 
@@ -30,7 +29,7 @@
 			$month = hash("sha256", filter_input(INPUT_POST, "expmonth", FILTER_SANITIZE_SPECIAL_CHARS));
 			$year = hash("sha256", filter_input(INPUT_POST, "expyear", FILTER_SANITIZE_NUMBER_INT));
 
-			//echo "name:$name first:$first last:$last email:$email adr:$adr city:$city state:$state zip:$zip cname:$cname ccn:$ccn cvv:$cvv month:$month year:$year";
+			echo "name:$name first:$first last:$last email:$email adr:$adr city:$city state:$state zip:$zip cname:$cname ccn:$ccn cvv:$cvv month:$month year:$year";
 			
 			$user_info = $db->query("INSERT INTO user_info (user_info_id, first_name, last_name, email, is_artist, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval(ui_seq, {$first}, {$last}, {$email}, FALSE, current_date, 1001, 1001, current_date))");
 			$address = $db->query("INSERT INTO address (address_id, street_address, city, state, postal_code, user_info_id, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval(ad_seq), {$adr}, {$city}, {$state}, {$zip}, {$pdo->lastInsertId(ui_seq)}, current_date, 1001, 1001, current_date");
