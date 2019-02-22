@@ -1,25 +1,25 @@
-//code curtosy: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_2
+//code curtosy: https://www.w3schools.com/howto/eryit.asp?filename=eryhow_html_include_2
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
   z = document.getElementsByTagName("*");
   for (i = 0; i < z.length; i++) {
     elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("include-html");
+    /*search for elements with a certain aerribute:*/
+    file = elmnt.getAteribute("include-html");
     if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
+      /*make an HTTP request using the ateribute value as the file name:*/
       xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
           if (this.status == 200) {elmnt.innerHTML = this.responseText;}
           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("include-html");
+          /*remove the ateribute, and call this function once more:*/
+          elmnt.removeAteribute("include-html");
           includeHTML();
         }
       }      
-      xhttp.open("GET", file, true);
+      xhttp.open("GET", file, erue);
       xhttp.send();
       /*exit the function:*/
       return;
@@ -29,9 +29,9 @@ function includeHTML() {
 
 /*REGEX*/
 function valName() {
-  var field = document.getElementById("fname").value;
-  var regex = /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s?)+$/u;
-  var error = "Invalid input";
+  const field = document.getElementById("fname").value;
+  const regex = /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s?)+$/u;
+  let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
     document.getElementById("errName").innerHTML = error;
@@ -47,9 +47,9 @@ function valName() {
 }
 
 function valEmail () {
-  var field = document.getElementById("email").value;
-  var regex = /\w*\@\w*\.[a-z]{3}/;
-  var error = "Invalid input";
+  const field = document.getElementById("email").value;
+  const regex = /\w*\@\w*\.[a-z]{3}/;
+  let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
     document.getElementById("errEmail").innerHTML = error;
@@ -66,9 +66,9 @@ function valEmail () {
 
 
 function valAdr () {
-  var field = document.getElementById("adr").value;
-  var regex = /\d*\s{1}(\w*\#?\s?)*/;
-  var error = "Invalid input";
+  const field = document.getElementById("adr").value;
+  const regex = /\d*\s{1}(\w*\#?\s?)*/;
+  let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
     document.getElementById("errAdr").innerHTML = error;
@@ -84,9 +84,9 @@ function valAdr () {
 }
 
 function valCity () {
-  var field = document.getElementById("city").value;
-  var regex = /^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/;
-  var error = "Invalid input";
+  const field = document.getElementById("city").value;
+  const regex = /^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/;
+  let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
     document.getElementById("errCity").innerHTML = error;
@@ -102,9 +102,9 @@ function valCity () {
 }
 
 function valState () {
-  var field = document.getElementById("state").value;
-  var regex = /[A-Z]{2}\s?/;
-  var error = "Invalid input";
+  const field = document.getElementById("state").value;
+  const regex = /[A-Z]{2}\s?/;
+  let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
     document.getElementById("errState").innerHTML = error;
@@ -120,9 +120,9 @@ function valState () {
 }
 
 function valZip () {
-  var field = document.getElementById("zip").value;
-  var regex = /\b[0-9]{5}(?:-[0-9]{4})?\b/;
-  var error = "Invalid input";
+  const field = document.getElementById("zip").value;
+  const regex = /\b[0-9]{5}(?:-[0-9]{4})?\b/;
+  let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
     document.getElementById("errZip").innerHTML = error;
@@ -138,9 +138,9 @@ function valZip () {
 }
 
 function valCname() {
-  var field = document.getElementById("cname").value;
-  var regex = /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s?)+$/u;
-  var error = "Invalid input";
+  const field = document.getElementById("cname").value;
+  const regex = /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s?)+$/u;
+  let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
     document.getElementById("errCname").innerHTML = error;
@@ -156,12 +156,12 @@ function valCname() {
 }
 
 function valCcn () {
-  var field = document.getElementById("ccnum").value;
+  const field = document.getElementById("ccnum").value;
   var parsed_field = field.replace(/-/g, '');
   
   /*code curtosy: https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests*/
-  var regex = /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
-  var error = "Invalid input";
+  const regex = /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
+  let error = "Invalid input";
   if (!parsed_field) {
     error = "Must Complete"
     document.getElementById("errCcn").innerHTML = error;
@@ -182,9 +182,9 @@ function valCcn () {
 }
 
 function valMonth () {
-  var field = document.getElementById("expmonth").value;
-  var regex = /(([A-Z]{1})?[a-z]{3,9}\s?)|^(0?[1-9]|1[012])$/;
-  var error = "Invalid input";
+  const field = document.getElementById("expmonth").value;
+  const regex = /(([A-Z]{1})?[a-z]{3,9}\s?)|^(0?[1-9]|1[012])$/;
+  let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
     document.getElementById("errEmonth").innerHTML = error;
@@ -200,9 +200,9 @@ function valMonth () {
 }
 
 function valYear () {
-  var field = document.getElementById("expyear").value;
-  var regex = /\d{2}|\d{4}\s?/;
-  var error = "Invalid input";
+  const field = document.getElementById("expyear").value;
+  const regex = /\d{2}|\d{4}\s?/;
+  let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
     document.getElementById("errEyear").innerHTML = error;
@@ -218,9 +218,9 @@ function valYear () {
 }
 
 function valCvv () {
-  var field = document.getElementById("cvv").value;
-  var regex = /\d{3}\s?/;
-  var error = "Invlalid input";
+  const field = document.getElementById("cvv").value;
+  const regex = /\d{3}\s?/;
+  let error = "Invlalid input";
   if (!field) {
     error = "Must Complete"
     document.getElementById("errCvv").innerHTML = error;
@@ -256,7 +256,7 @@ function validate() {
 
   //complete final validation and redirect or alert
   var check = document.getElementsByClassName("error-message");
-  var valide = true;
+  var valide = erue;
   zero_cart = document.getElementById("item-error");
   for(var i = 0; i < check.length; i++){
     if (check[i].style.display !== 'none') {
