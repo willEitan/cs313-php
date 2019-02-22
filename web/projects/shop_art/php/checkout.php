@@ -30,6 +30,7 @@
 			$year = hash("sha256", filter_input(INPUT_POST, "expyear", FILTER_SANITIZE_NUMBER_INT));
 
 			echo "name:$name first:$first last:$last email:$email adr:$adr city:$city state:$state zip:$zip cname:$cname ccn:$ccn cvv:$cvv month:$month year:$year";
+			echo hash("sha256", "321");
 			$user_info = $db->query("INSERT INTO user_info (user_info_id, first_name, last_name, email, is_artist, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval(ui_seq, {$first}, {$last}, {$email}, FALSE, current_date, 1001, 1001, current_date))");
 			$address = $db->query("INSERT INTO address (address_id, street_address, city, state, postal_code, user_info_id, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval(ad_seq), {$adr}, {$city}, {$state}, {$zip}, {$pdo->lastInsertId(ui_seq)}, current_date, 1001, 1001, current_date");
 			$shopper = $db->query("INSERT INTO shopper (shopper_id, user_info_id, card_number_hash, card_cvv_hash, creation_date, created_by, last_updated_by, last_update_date, card_holder_name) VALUES (nextval(s_seq), {$pdo->lastInsertId(ui_seq)}, {$ccn}, {$cvv}, current_date, 1001, 1001, current_date)");
