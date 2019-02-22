@@ -237,7 +237,7 @@ function valCvv () {
 
 function valCheck() {
   let field = document.getElementById("address_check").checked;
-  Let error = "Invalid"
+  Let error = "Invalid";
   if (field != "checked") {
     error = "Must be Checked";
     document.getElementById("errCheck").innerHTML = error;
