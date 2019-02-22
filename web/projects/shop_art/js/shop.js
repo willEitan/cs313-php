@@ -19,7 +19,7 @@ function includeHTML() {
           includeHTML();
         }
       }      
-      xhttp.open("GET", file, erue);
+      xhttp.open("GET", file, true);
       xhttp.send();
       /*exit the function:*/
       return;
