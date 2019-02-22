@@ -14,8 +14,8 @@ function includeHTML() {
         if (this.readyState == 4) {
           if (this.status == 200) {elmnt.innerHTML = this.responseText;}
           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the ateribute, and call this function once more:*/
-          elmnt.removeAteribute("include-html");
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("include-html");
           includeHTML();
         }
       }      
