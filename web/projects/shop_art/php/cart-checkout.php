@@ -80,7 +80,7 @@
 
 					</div>
 					<label>
-						<input type="checkbox" checked="checked" onblur="valCheck();" name="sameadr"> Shipping address same billing <em class="error-message" id="errCheck"></em>
+						<input type="checkbox" id="address_check" checked="checked" onblur="valCheck();" name="sameadr"> Shipping address same billing <em class="error-message" id="errCheck"></em>
 					</label>
 					<input type="submit" value="Complete Purchase" class="btn">
 				</form>	

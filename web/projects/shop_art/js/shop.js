@@ -236,7 +236,17 @@ function valCvv () {
 }
 
 function valCheck() {
-
+  let field = document.getElementById("address_check").checked;
+  Let error = "Invalid"
+  if (field != "checked") {
+    error = "Must be Checked";
+    document.getElementById("errCheck").innerHTML = error;
+    document.getElementById("errCheck").style.display = 'inline';
+  } else {
+    error = "";
+    document.getElementById("errCheck").innerHTML = error;
+    document.getElementById("errCheck").style.display = 'none';
+  }
 }
 
 function validate() {
