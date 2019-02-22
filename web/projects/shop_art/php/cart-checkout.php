@@ -26,7 +26,7 @@
 						<div class="col-50">
 							<h3>Billing Address</h3>
 							<label for="fname"><i class="fa fa-user"></i> Full Name <em class="error-message" id="errName">Invalid input</em></label>
-							<input type="text" class="text" onblur="valName();" id="fname" name="firstname" placeholder="Michelangelo di Lodovico Buonarroti Simoni">
+							<input type="text" class="text" onblur="valName();" id="fname" name="fname" placeholder="Michelangelo di Lodovico Buonarroti Simoni">
 							
 							<label for="email"><i class="fa fa-envelope"></i> Email <em class="error-message" id="errEmail">Invalid input</em></label>
 							<input type="text" class="text" onblur="valEmail();" id="email" name="email" placeholder="michelangelo@sculpt.com">
