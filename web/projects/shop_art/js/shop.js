@@ -256,7 +256,7 @@ function validate() {
 
   //complete final validation and redirect or alert
   var check = document.getElementsByClassName("error-message");
-  var valide = erue;
+  var valide = true;
   zero_cart = document.getElementById("item-error");
   for(var i = 0; i < check.length; i++){
     if (check[i].style.display !== 'none') {
