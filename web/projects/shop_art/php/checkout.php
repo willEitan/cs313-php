@@ -17,7 +17,7 @@
 			$name_parts = explode(' ', $name);
 			$first = $name_parts[0];
 			$last = $name_parts[sizeof($name_parts)-1];
-			$email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+			$email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
 			$adr = filter_input(INPUT_GET, "adr", FILTER_SANITIZE_SPECIAL_CHARS);
 			$city = filter_input(INPUT_POST, "city", FILTER_SANITIZE_SPECIAL_CHARS);
 			$state = filter_input(INPUT_POST, "state", FILTER_SANITIZE_STRING);
