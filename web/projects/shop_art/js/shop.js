@@ -259,13 +259,13 @@ function validate() {
   var valide = true;
   zero_cart = document.getElementById("item-error");
   for(var i = 0; i < check.length; i++){
-    if (check[i].style.display !== 'none') {
+    if (check[i].style.display != 'none') {
       valide = false;
     }
   }
   console.log(valide);
   if (zero_cart) {
-    if (zero_cart.style.display !== 'none') {
+    if (zero_cart.style.display != 'none') {
     alert("You must add artwork to your cart before checkout!");
     } 
   } else if (valide) {
