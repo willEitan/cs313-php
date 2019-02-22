@@ -244,7 +244,7 @@ INSERT INTO art
 ( nextval('art_seq')
 , (SELECT artist_id FROM artist WHERE picture = '..\artwork\sarah.jpg')
 , (SELECT art_type_id FROM art_type WHERE name = 'Water Color')
-, '..\artwork\ocean.jpg'
+, '..\artwork\Ocean.jpg'
 , 'Ocean'
 , 20.00
 , current_date
@@ -332,7 +332,7 @@ INSERT INTO art
 ( nextval('art_seq')
 , (SELECT artist_id FROM artist WHERE picture = '..\artwork\sarah.jpg')
 , (SELECT art_type_id FROM art_type WHERE name = 'Water Color')
-, '..\artwork\Unseen_protection.jpg'
+, '..\artwork\Unseen_Protection.jpg'
 , 'Unseen Protection'
 , 20.00
 , current_date
