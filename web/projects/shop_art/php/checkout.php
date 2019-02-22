@@ -18,14 +18,14 @@
 			$first = $name_parts[0];
 			$last = $name_parts[sizeof($name_parts)-1];
 			$email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-			$adr = filter_input(INPUT_POST, "adr", FILTER_SANITIZE_SPECIAL_CHARS);
+			$adr = filter_input(INPUT_GET, "adr", FILTER_SANITIZE_SPECIAL_CHARS);
 			$city = filter_input(INPUT_POST, "city", FILTER_SANITIZE_SPECIAL_CHARS);
 			$state = filter_input(INPUT_POST, "state", FILTER_SANITIZE_STRING);
 			$zip = filter_input(INPUT_POST, "zip", FILTER_SANITIZE_NUMBER_INT);
 
 			$cname = filter_input(INPUT_POST, "cname", FILTER_SANITIZE_SPECIAL_CHARS);
 			$ccn = hash("sha256", filter_input(INPUT_POST, "ccnum", FILTER_SANITIZE_NUMBER_INT));
-			$cvv = hash ("sha256", filter_input(INPUT_POST, "cvv", FILTER_SANITIZE_NUMBER_INT));
+			$cvv = hash ("sha256", "filter_input(INPUT_POST, 'cvv', FILTER_SANITIZE_NUMBER_INT)");
 			$month = hash("sha256", filter_input(INPUT_POST, "expmonth", FILTER_SANITIZE_SPECIAL_CHARS));
 			$year = hash("sha256", filter_input(INPUT_POST, "expyear", FILTER_SANITIZE_NUMBER_INT));
 
