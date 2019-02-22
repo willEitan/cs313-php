@@ -29,7 +29,7 @@ function includeHTML() {
 
 /*REGEX*/
 function valName() {
-  let field = document.getElementById("fname").value;
+  const field = document.getElementById("fname").value;
   let regex = /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s?)+$/u;
   let error = "Invalid input";
   if (!field) {
@@ -47,7 +47,7 @@ function valName() {
 }
 
 function valEmail () {
-  let field = document.getElementById("email").value;
+  const field = document.getElementById("email").value;
   let regex = /\w*\@\w*\.[a-z]{3}/;
   let error = "Invalid input";
   if (!field) {
@@ -66,7 +66,7 @@ function valEmail () {
 
 
 function valAdr () {
-  let field = document.getElementById("adr").value;
+  const field = document.getElementById("adr").value;
   let regex = /\d*\s{1}(\w*\#?\s?)*/;
   let error = "Invalid input";
   if (!field) {
@@ -84,7 +84,7 @@ function valAdr () {
 }
 
 function valCity () {
-  let field = document.getElementById("city").value;
+  const field = document.getElementById("city").value;
   let regex = /^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/;
   let error = "Invalid input";
   if (!field) {
@@ -102,7 +102,7 @@ function valCity () {
 }
 
 function valState () {
-  let field = document.getElementById("state").value;
+  const field = document.getElementById("state").value;
   let regex = /[A-Z]{2}\s?/;
   let error = "Invalid input";
   if (!field) {
@@ -120,7 +120,7 @@ function valState () {
 }
 
 function valZip () {
-  let field = document.getElementById("zip").value;
+  const field = document.getElementById("zip").value;
   let regex = /\b[0-9]{5}(?:-[0-9]{4})?\b/;
   let error = "Invalid input";
   if (!field) {
@@ -138,7 +138,7 @@ function valZip () {
 }
 
 function valCname() {
-  let field = document.getElementById("cname").value;
+  const field = document.getElementById("cname").value;
   let regex = /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s?)+$/u;
   let error = "Invalid input";
   if (!field) {
@@ -156,7 +156,7 @@ function valCname() {
 }
 
 function valCcn () {
-  let field = document.getElementById("ccnum").value;
+  const field = document.getElementById("ccnum").value;
   var parsed_field = field.replace(/-/g, '');
   
   /*code curtosy: https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests*/
@@ -182,7 +182,7 @@ function valCcn () {
 }
 
 function valMonth () {
-  let field = document.getElementById("expmonth").value;
+  const field = document.getElementById("expmonth").value;
   let regex = /(([A-Z]{1})?[a-z]{3,9}\s?)|^(0?[1-9]|1[012])$/;
   let error = "Invalid input";
   if (!field) {
@@ -200,7 +200,7 @@ function valMonth () {
 }
 
 function valYear () {
-  let field = document.getElementById("expyear").value;
+  const field = document.getElementById("expyear").value;
   let regex = /\d{2}|\d{4}\s?/;
   let error = "Invalid input";
   if (!field) {
@@ -218,7 +218,7 @@ function valYear () {
 }
 
 function valCvv () {
-  let field = document.getElementById("cvv").value;
+  const field = document.getElementById("cvv").value;
   let regex = /\d{3}\s?/;
   let error = "Invlalid input";
   if (!field) {
@@ -236,8 +236,8 @@ function valCvv () {
 }
 
 function valCheck() {
-  let field = document.getElementById("address_check").checked;
-  Let error = "Invalid";
+  const field = document.getElementById("address_check").checked;
+  let error = "Invalid";
   if (field != "checked") {
     error = "Must be Checked";
     document.getElementById("errCheck").innerHTML = error;
