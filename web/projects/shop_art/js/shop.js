@@ -279,9 +279,9 @@ function validate() {
     if (zero_cart.style.display !== 'none') {
     alert("You must add artwork to your cart before checkout!");
     } 
-  } else if (valide) {
-    document.location.href = "checkout.php?p=purchase";
-  } else {
+  } else if (!valide) {
     alert("Form invalid. Needed corrections are indicated in red");
   }
+
+  return valide;
 }
