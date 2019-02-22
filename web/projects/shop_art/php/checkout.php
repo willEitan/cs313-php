@@ -24,10 +24,10 @@
 			$zip = filter_input(INPUT_POST, "zip", FILTER_SANITIZE_NUMBER_INT);
 
 			$cname = filter_input(INPUT_POST, "cname", FILTER_SANITIZE_SPECIAL_CHARS);
-			$ccn = hash('sha256', filter_input(INPUT_POST, "ccnum", FILTER_SANITIZE_NUMBER_INT));
-			$cvv = hash ('sha256', filter_input(INPUT_POST, "cvv", FILTER_SANITIZE_NUMBER_INT));
-			$month = hash('sha256', filter_input(INPUT_POST, "expmonth", FILTER_SANITIZE_SPECIAL_CHARS));
-			$year = hash('sha256', filter_input(INPUT_POST, "expyear", FILTER_SANITIZE_NUMBER_INT));
+			$ccn = hash("sha256", filter_input(INPUT_POST, "ccnum", FILTER_SANITIZE_NUMBER_INT));
+			$cvv = hash ("sha256", filter_input(INPUT_POST, "cvv", FILTER_SANITIZE_NUMBER_INT));
+			$month = hash("sha256", filter_input(INPUT_POST, "expmonth", FILTER_SANITIZE_SPECIAL_CHARS));
+			$year = hash("sha256", filter_input(INPUT_POST, "expyear", FILTER_SANITIZE_NUMBER_INT));
 
 			echo "name:$name first:$first last:$last email:$email adr:$adr city:$city state:$state zip:$zip cname:$cname ccn:$ccn cvv:$cvv month:$month year:$year";
 			$user_info = $db->query("INSERT INTO user_info (user_info_id, first_name, last_name, email, is_artist, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval(ui_seq, {$first}, {$last}, {$email}, FALSE, current_date, 1001, 1001, current_date))");
