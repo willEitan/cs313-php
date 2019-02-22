@@ -260,7 +260,7 @@ function validate() {
   zero_cart = document.getElementById("item-error");
   for(var i = 0; i < check.length; i++){
     if (check[i].style.display != 'none') {
-      console.log(i);
+      console.log(check[i]);
       valide = false;
     }
   }
