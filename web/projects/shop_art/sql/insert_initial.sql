@@ -229,3 +229,151 @@ INSERT INTO art
 , 1001
 , 1001
 , current_date);
+
+INSERT INTO art 
+( art_id
+, artist_id
+, art_type_id
+, image
+, image_title
+, price
+, creation_date
+, created_by
+, last_updated_by
+, last_update_date) VALUES
+( nextval('art_seq')
+, (SELECT artist_id FROM artist WHERE picture = '..\artwork\sarah.jpg')
+, (SELECT art_type_id FROM art_type WHERE name = 'Water Color')
+, '..\artwork\ocean.jpg'
+, 'Ocean'
+, 20.00
+, current_date
+, 1001
+, 1001
+, current_date);
+
+INSERT INTO art 
+( art_id
+, artist_id
+, art_type_id
+, image
+, image_title
+, price
+, creation_date
+, created_by
+, last_updated_by
+, last_update_date) VALUES
+( nextval('art_seq')
+, (SELECT artist_id FROM artist WHERE picture = '..\artwork\sarah.jpg')
+, (SELECT art_type_id FROM art_type WHERE name = 'Water Color')
+, '..\artwork\Facing_the_Mist.jpg'
+, 'Facing the Mist'
+, 20.00
+, current_date
+, 1001
+, 1001
+, current_date);
+
+INSERT INTO art 
+( art_id
+, artist_id
+, art_type_id
+, image
+, image_title
+, price
+, creation_date
+, created_by
+, last_updated_by
+, last_update_date) VALUES
+( nextval('art_seq')
+, (SELECT artist_id FROM artist WHERE picture = '..\artwork\sarah.jpg')
+, (SELECT art_type_id FROM art_type WHERE name = 'Water Color')
+, '..\artwork\Hedgehog.jpg'
+, 'Hedgehog'
+, 20.00
+, current_date
+, 1001
+, 1001
+, current_date);
+
+INSERT INTO art 
+( art_id
+, artist_id
+, art_type_id
+, image
+, image_title
+, price
+, creation_date
+, created_by
+, last_updated_by
+, last_update_date) VALUES
+( nextval('art_seq')
+, (SELECT artist_id FROM artist WHERE picture = '..\artwork\sarah.jpg')
+, (SELECT art_type_id FROM art_type WHERE name = 'Water Color')
+, '..\artwork\Light_of_a_Prayer.jpg'
+, 'Light of a Prayer'
+, 25.00
+, current_date
+, 1001
+, 1001
+, current_date);
+
+INSERT INTO art 
+( art_id
+, artist_id
+, art_type_id
+, image
+, image_title
+, price
+, creation_date
+, created_by
+, last_updated_by
+, last_update_date) VALUES
+( nextval('art_seq')
+, (SELECT artist_id FROM artist WHERE picture = '..\artwork\sarah.jpg')
+, (SELECT art_type_id FROM art_type WHERE name = 'Water Color')
+, '..\artwork\Unseen_protection.jpg'
+, 'Unseen Protection'
+, 20.00
+, current_date
+, 1001
+, 1001
+, current_date);
+
+INSERT INTO series
+( series_id
+, art_id
+, series_name
+, description
+, creation_date
+, created_by
+, last_updated_by
+, last_update_date
+) VALUES
+( nextval('sr_seq')
+, (SELECT art_id FROM art WHERE image_title = 'Light of a Prayer')
+, 'Light'
+, 'I wanted to paint a girl painted as the wick of a candle and I wanted her to be wrapped in light as she prays. This picture shows the light that emulates from people who pray to God. I wanted to show the power that prayer has in chasing darkness away.'
+, current_date
+, 1001
+, 1001
+, current_date);
+
+INSERT INTO series
+( series_id
+, art_id
+, series_name
+, description
+, creation_date
+, created_by
+, last_updated_by
+, last_update_date
+) VALUES
+( nextval('sr_seq')
+, (SELECT art_id FROM art WHERE image_title = 'Unseen Protection')
+, 'Light'
+, 'I have a personal strength in family history and I wanted to share it through art. I believe that our ancestors protect us from evil and in doing so we glow as they stand close to each one of us.'
+, current_date
+, 1001
+, 1001
+, current_date);

@@ -105,12 +105,14 @@ CREATE TABLE shopper
 , user_info_id		    INT			    CONSTRAINT nn_shopper_01 NOT NULL
 , address_id		    INT			    CONSTRAINT nn_shopper_02 NOT NULL
 , card_type_hash	    VARCHAR(1024)   
-, card_number_hash	    VARCHAR(1024)   
-, card_ccv_hash		    VARCHAR(1024)   
-, creation_date    	    DATE     	    CONSTRAINT nn_shopper_06 NOT NULL
-, created_by		    INT			    CONSTRAINT nn_shopper_07 NOT NULL
-, last_updated_by	    INT		  	    CONSTRAINT nn_shopper_08 NOT NULL
-, last_update_date	    DATE 		    CONSTRAINT nn_shopper_09 NOT NULL
+, card_number_hash	    VARCHAR(1024)   CONSTRAINT nn_shopper_03 NOT NULL
+, card_cvv_hash		    VARCHAR(1024)   CONSTRAINT nn_shopper_04 NOT NULL
+, card_exp_month_hash   VARCHAR(1024)   CONSTRAINT nn_shopper_05 NOT NULL
+, card_exp_year_hash    VARCHAR(1024) 	CONSTRAINT nn_shopper_06 NOT NULL 
+, creation_date    	    DATE     	    CONSTRAINT nn_shopper_07 NOT NULL
+, created_by		    INT			    CONSTRAINT nn_shopper_08 NOT NULL
+, last_updated_by	    INT		  	    CONSTRAINT nn_shopper_09 NOT NULL
+, last_update_date	    DATE 		    CONSTRAINT nn_shopper_10 NOT NULL
 , CONSTRAINT pk_shopper_1   PRIMARY KEY(shopper_id)
 , CONSTRAINT fk_shopper_1   FOREIGN KEY(user_info_id) REFERENCES user_info(user_info_id)
 , CONSTRAINT fk_shopper_2   FOREIGN KEY(address_id) REFERENCES address(address_id)
@@ -118,45 +120,45 @@ CREATE TABLE shopper
 
 CREATE SEQUENCE s_seq START 1 increment by 1;
 
-CREATE TABLE orders
-( orders_id 			INT 
-, shopper_id 			INT 			CONSTRAINT nn_orders_01 NOT NULL
-, ship_to_address_id 	INT 			CONSTRAINT nn_orders_02 NOT NULL
-, total 				REAL 			CONSTRAINT nn_orders_03 NOT NULL
-, paid 					BOOLEAN 		CONSTRAINT nn_orders_04 NOT NULL 
-, payment_method_type   VARCHAR(80) 	CONSTRAINT nn_orders_05 NOT NULL		
-, creation_date    	    DATE     	    CONSTRAINT nn_orders_06 NOT NULL
-, created_by		    INT			    CONSTRAINT nn_orders_07 NOT NULL
-, last_updated_by	    INT		  	    CONSTRAINT nn_orders_08 NOT NULL
-, last_update_date	    DATE 		    CONSTRAINT nn_orders_09 NOT NULL
-, CONSTRAINT pk_orders_1  PRIMARY KEY(orders_id)
-, CONSTRAINT fk_orders_1  FOREIGN KEY(shopper_id) REFERENCES shopper(shopper_id)
-, CONSTRAINT fk_orders_2  FOREIGN KEY(ship_to_address_id) REFERENCES address(address_id)
+CREATE TABLE purchase_order 
+( purchase_order_id 	INT 
+, shopper_id 			INT 			CONSTRAINT nn_purchase_order_01 NOT NULL
+, ship_to_address_id 	INT 			CONSTRAINT nn_purchase_order_02 NOT NULL
+, total 				REAL 			CONSTRAINT nn_purchase_order_03 NOT NULL
+, paid 					BOOLEAN 		CONSTRAINT nn_purchase_order_04 NOT NULL
+, payment_method_type   VARCHAR(80) 	CONSTRAINT nn_purchase_order_05 NOT NULL
+, creation_date    	    DATE     	    CONSTRAINT nn_purchase_order_06 NOT NULL
+, created_by		    INT			    CONSTRAINT nn_purchase_order_07 NOT NULL
+, last_updated_by	    INT		  	    CONSTRAINT nn_purchase_order_08 NOT NULL
+, last_update_date	    DATE 		    CONSTRAINT nn_purchase_order_09 NOT NULL
+, CONSTRAINT pk_purchase_order_1  PRIMARY KEY(purchase_order_id)
+, CONSTRAINT fk_purchase_order_1  FOREIGN KEY(shopper_id) REFERENCES shopper(shopper_id)
+, CONSTRAINT fk_purchase_order_2  FOREIGN KEY(ship_to_address_id) REFERENCES address(address_id)
 );
 
-CREATE SEQUENCE o_seq START 1 increment by 1;
+CREATE SEQUENCE po_seq START 1 increment by 1;
 
-CREATE TABLE art_order_lookup 
-( art_order_lookup_id   INT
-, order_id			    INT			    CONSTRAINT nn_art_order_lookup_01 NOT NULL
-, art_id 			    INT			    CONSTRAINT nn_art_order_lookup_02 NOT NULL
-, item_quantity		    INT 		    CONSTRAINT nn_art_order_lookup_03 NOT NULL
-, creation_date    	    DATE 	        CONSTRAINT nn_art_order_lookup_04 NOT NULL
-, created_by		    INT			    CONSTRAINT nn_art_order_lookup_05 NOT NULL
-, last_updated_by	    INT			    CONSTRAINT nn_art_order_lookup_06 NOT NULL
-, last_update_date	    DATE 		    CONSTRAINT nn_art_order_lookup_07 NOT NULL
-, CONSTRAINT pk_art_order_lookup_1  PRIMARY KEY(art_order_lookup_id)
-, CONSTRAINT fk_art_order_lookup_1  FOREIGN KEY(order_id) REFERENCES orders(orders_id)
-, CONSTRAINT fk_art_order_lookup_2  FOREIGN KEY(art_id)	  REFERENCES art(art_id)
+CREATE TABLE art_purchase_order_lookup 
+( art_purchase_order_lookup_id   INT
+, purchase_order_id			    INT			    CONSTRAINT nn_art_purchase_order_lookup_01 NOT NULL
+, art_id 			    INT			    CONSTRAINT nn_art_purchase_order_lookup_02 NOT NULL
+, item_quantity		    INT 		    CONSTRAINT nn_art_purchase_order_lookup_03 NOT NULL
+, creation_date    	    DATE 	        CONSTRAINT nn_art_purchase_order_lookup_04 NOT NULL
+, created_by		    INT			    CONSTRAINT nn_art_purchase_order_lookup_05 NOT NULL
+, last_updated_by	    INT			    CONSTRAINT nn_art_purchase_order_lookup_06 NOT NULL
+, last_update_date	    DATE 		    CONSTRAINT nn_art_purchase_order_lookup_07 NOT NULL
+, CONSTRAINT pk_art_purchase_order_lookup_1  PRIMARY KEY(art_purchase_order_lookup_id)
+, CONSTRAINT fk_art_purchase_order_lookup_1  FOREIGN KEY(purchase_order_id) REFERENCES purchase_order(purchase_order_id)
+, CONSTRAINT fk_art_purchase_order_lookup_2  FOREIGN KEY(art_id)	  REFERENCES art(art_id)
 );
 
 CREATE SEQUENCE aol_seq START 1 increment by 1;
 
 CREATE TABLE series 
-( series_id
-, art_id 				INT 			CONSTRAINT nn_series_01 NOT NULL
-, series_name 			VARCHAR(100) 	CONSTRAINT nn_series_02 NOT NULL
-, description 			TEXT 			CONSTRAINT nn_series_03 NOT NULL
+( series_id 		    INT
+, art_id 			    INT 			CONSTRAINT nn_series_01 NOT NULL
+, series_name 		    VARCHAR(100) 	CONSTRAINT nn_series_02 NOT NULL
+, description 		    TEXT 			CONSTRAINT nn_series_03 NOT NULL
 , creation_date    	    DATE     	    CONSTRAINT nn_series_04 NOT NULL
 , created_by		    INT			    CONSTRAINT nn_series_05 NOT NULL
 , last_updated_by	    INT		  	    CONSTRAINT nn_series_06 NOT NULL
@@ -165,6 +167,8 @@ CREATE TABLE series
 , CONSTRAINT fk_series_1 FOREIGN KEY(art_id) REFERENCES art(art_id)
 );
 
+CREATE SEQUENCE sr_seq START 1 increment by 1;
+
 /*CREATE TABLE transaction 
 ( transaction_id			INT
 , transaction_date			DATE 			CONSTRAINT nn_transaction_01 NOT NULL
@@ -172,7 +176,7 @@ CREATE TABLE series
 , transaction_amount		REAL			CONSTRAINT nn_transaction_03 NOT NULL
 , payment_method_type  		VARCHAR(30)		CONSTRAINT nn_transaction_04 NOT NULL
 , accounts_payable_number 	VARCHAR(1024)	CONSTRAINT nn_transaction_05 NOT NULL
-, cart_id					INT				CONSTRAINT nn_transaction_06 NOT NULL
+, purchase_order_id					INT				CONSTRAINT nn_transaction_06 NOT NULL
 , creation_ts    			TIMESTAMP     	CONSTRAINT nn_transaction_07 NOT NULL
 , created_by				INT				CONSTRAINT nn_transaction_08 NOT NULL
 , last_updated_by	    	INT				CONSTRAINT nn_transaction_09 NOT NULL
