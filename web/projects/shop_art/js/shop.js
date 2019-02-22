@@ -166,7 +166,7 @@ function valCcn () {
     error = "Must Complete"
     document.getElementById("errCcn").innerHTML = error;
     document.getElementById("errCcn").style.display = 'inline';
-  } else if (!regex.test(field)) {
+  } else if (!regex.test(parsed_field)) {
     error = "Invalid Credit Card Number";
     document.getElementById("errCcn").innerHTML = error;
     document.getElementById("errCcn").style.display = 'inline';
