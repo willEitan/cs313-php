@@ -30,7 +30,7 @@ function includeHTML() {
 /*REGEX*/
 function valName() {
   const field = document.getElementById("fname").value;
-  let regex = /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s?)+$/u;
+  const regex = /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s?)+$/u;
   let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
@@ -48,7 +48,7 @@ function valName() {
 
 function valEmail () {
   const field = document.getElementById("email").value;
-  let regex = /\w*\@\w*\.[a-z]{3}/;
+  const regex = /\w*\@\w*\.[a-z]{3}/;
   let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
@@ -67,7 +67,7 @@ function valEmail () {
 
 function valAdr () {
   const field = document.getElementById("adr").value;
-  let regex = /\d*\s{1}(\w*\#?\s?)*/;
+  const regex = /\d*\s{1}(\w*\#?\s?)*/;
   let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
@@ -85,7 +85,7 @@ function valAdr () {
 
 function valCity () {
   const field = document.getElementById("city").value;
-  let regex = /^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/;
+  const regex = /^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/;
   let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
@@ -103,7 +103,7 @@ function valCity () {
 
 function valState () {
   const field = document.getElementById("state").value;
-  let regex = /[A-Z]{2}\s?/;
+  const regex = /[A-Z]{2}\s?/;
   let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
@@ -121,7 +121,7 @@ function valState () {
 
 function valZip () {
   const field = document.getElementById("zip").value;
-  let regex = /\b[0-9]{5}(?:-[0-9]{4})?\b/;
+  const regex = /\b[0-9]{5}(?:-[0-9]{4})?\b/;
   let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
@@ -139,7 +139,7 @@ function valZip () {
 
 function valCname() {
   const field = document.getElementById("cname").value;
-  let regex = /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s?)+$/u;
+  const regex = /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+\s?)+$/u;
   let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
@@ -160,7 +160,7 @@ function valCcn () {
   var parsed_field = field.replace(/-/g, '');
   
   /*code curtosy: https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests*/
-  let regex = /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
+  const regex = /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
   let error = "Invalid input";
   if (!parsed_field) {
     error = "Must Complete"
@@ -183,7 +183,7 @@ function valCcn () {
 
 function valMonth () {
   const field = document.getElementById("expmonth").value;
-  let regex = /(([A-Z]{1})?[a-z]{3,9}\s?)|^(0?[1-9]|1[012])$/;
+  const regex = /(([A-Z]{1})?[a-z]{3,9}\s?)|^(0?[1-9]|1[012])$/;
   let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
@@ -201,7 +201,7 @@ function valMonth () {
 
 function valYear () {
   const field = document.getElementById("expyear").value;
-  let regex = /\d{2}|\d{4}\s?/;
+  const regex = /\d{2}|\d{4}\s?/;
   let error = "Invalid input";
   if (!field) {
     error = "Must Complete"
@@ -219,7 +219,7 @@ function valYear () {
 
 function valCvv () {
   const field = document.getElementById("cvv").value;
-  let regex = /\d{3}\s?/;
+  const regex = /\d{3}\s?/;
   let error = "Invlalid input";
   if (!field) {
     error = "Must Complete"
@@ -238,7 +238,7 @@ function valCvv () {
 function valCheck() {
   const field = document.getElementById("address_check").checked;
   let error = "Invalid";
-  if (field != "checked") {
+  if (!field) {
     error = "Must be Checked";
     document.getElementById("errCheck").innerHTML = error;
     document.getElementById("errCheck").style.display = 'inline';
