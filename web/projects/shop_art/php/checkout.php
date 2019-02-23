@@ -99,6 +99,7 @@
 					$query = $db->prepare("SELECT art_id, image, image_title, price FROM art WHERE art_id = '$key' ORDER BY image_title");
 					//$query->bindvalue(':key', $key, PDO::PARAM_INT);
 					$results = $query->fetch(PDO::FETCH_ASSOC);
+					echo "<script>console.log('$key');</script>";
 					echo "<script>console.log('$results');</script>";
 					if ($results) {
 						echo "<script>console.log('prepared lookup');</script>";
