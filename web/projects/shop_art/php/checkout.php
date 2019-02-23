@@ -79,8 +79,8 @@
 				echo "<script>console.log('address inserted');</script>";
 
 				//insertion into shopper table
-				$shopper = $db->prepare("INSERT INTO shopper (shopper_id, user_info_id, address_id, card_number_hash, card_cvv_hash, card_exp_month_hash, card_exp_year_hash, creation_date, created_by, last_updated_by, last_update_date, card_holder_name) VALUES (nextval('s_seq'), {$db->lastInsertId('ad_seq')}, {$db->lastInsertId('ui_seq')}, :cnn, :cvv, :month, :year, current_date, 1001, 1001, current_date, :cname)");
-				$shopper->bindvalue(':cnn', $cnn, PDO::PARAM_STR);
+				$shopper = $db->prepare("INSERT INTO shopper (shopper_id, user_info_id, address_id, card_number_hash, card_cvv_hash, card_exp_month_hash, card_exp_year_hash, creation_date, created_by, last_updated_by, last_update_date, card_holder_name) VALUES (nextval('s_seq'), {$db->lastInsertId('ad_seq')}, {$db->lastInsertId('ui_seq')}, :ccn, :cvv, :month, :year, current_date, 1001, 1001, current_date, :cname)");
+				$shopper->bindvalue(':ccn', $ccn, PDO::PARAM_STR);
 				$shopper->bindvalue(':cvv', $cvv, PDO::PARAM_STR);
 				$shopper->bindvalue(':month', $month, PDO::PARAM_STR);
 				$shopper->bindvalue(':year', $year, PDO::PARAM_STR);
