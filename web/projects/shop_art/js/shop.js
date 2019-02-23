@@ -285,3 +285,132 @@ function validate() {
 
   return valide;
 }
+
+//functions specific to request form
+function valArt(){
+  const field = document.getElementById("art-name").value;
+  const regex = /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]\s?)+$/u;
+  let error = "Invalid Input";
+  if (!field) {
+    error = "Required";
+    document.getElementById("errAName").innerHTML = error;
+    document.getElementById("errAName").style.display = 'inline';
+  } else if (!regex.test(field)){
+    error = "Required";
+    document.getElementById("errAName").innerHTML = error;
+    document.getElementById("errAName").style.display = 'inline';
+  } else {  
+    error = "";
+    document.getElementById("errAName").innerHTML = error;
+    document.getElementById("errAName").style.display = 'none';
+  }
+}
+
+function valArtist() {
+  const field = document.getElementById("artist").value;
+  let error = "Invalid";
+  if (!field) {
+    error = "Must Select";
+    document.getElementById("errArtist").innerHTML = error;
+    document.getElementById("errArtist").style.display = 'inline';
+  } else {
+    error = "";
+    document.getElementById("errArtist").innerHTML = error;
+    document.getElementById("errArtist").style.display = 'none';
+  }
+}
+
+function valType() {
+  const field = document.getElementById("type").value;
+  let error = "Invalid";
+  if (!field) {
+    error = "Must Select";
+    document.getElementById("errType").innerHTML = error;
+    document.getElementById("errType").style.display = 'inline';
+  } else {
+    error = "";
+    document.getElementById("errType").innerHTML = error;
+    document.getElementById("errType").style.display = 'none';
+  }
+}
+
+function valDesc() {
+  const field = document.getElementById("request-description").value;
+  let error = "Invalid Input";
+  if (!field) {
+    error = "Must provide";
+    document.getElementById("errDesc").innerHTML = error;
+    document.getElementById("errDesc").style.display = 'inline';
+  } else {
+    error = "";
+    document.getElementById("errDesc").innerHTML = error;
+    document.getElementById("errDesc").style.display = 'none';
+  }
+}
+
+function valLegal() {
+  const field = document.getElementById("legal").checked;
+  let error = "Invalid";
+  if (!field) {
+    error = "Must be Checked";
+    document.getElementById("errLegal").innerHTML = error;
+    document.getElementById("errLegal").style.display = 'inline';
+  } else {
+    error = "";
+    document.getElementById("errLegal").innerHTML = error;
+    document.getElementById("errLegal").style.display = 'none';
+  }
+}
+
+function valFee() {
+  const field = document.getElementById("address_check").checked;
+  let error = "Invalid";
+  if (!field) {
+    error = "Must be Checked";
+    document.getElementById("errFee").innerHTML = error;
+    document.getElementById("errFee").style.display = 'inline';
+  } else {
+    error = "";
+    document.getElementById("errFee").innerHTML = error;
+    document.getElementById("errFee").style.display = 'none';
+  }
+}
+
+//final validation
+function valRequest() {
+  valName();
+  valEmail();
+  valAdr();
+  valCity();
+  valState();
+  valZip();
+  valCname();
+  valCcn();
+  valMonth();
+  valYear();
+  valCvv();
+  valArt();
+  valArtist();
+  valType();
+  valDesc();
+  valCheck();
+  valLegal();
+  valFee();
+
+  //complete final validation and redirect or alert
+  var check = document.getElementsByClassName("error-message");
+  var valide = true;
+  
+  for(var i = 0; i < check.length; i++){
+    if (check[i].style.display !== 'none') {
+      console.log(check[i]);
+      valide = false;
+    }
+  }
+  
+  if (!valide) {
+    alert("Form invalid. Needed corrections are indicated in red");
+  }
+
+  return valide;
+}

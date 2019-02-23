@@ -70,10 +70,12 @@ CREATE TABLE art_request
 , artist_id			    INT 		    CONSTRAINT nn_art_request_01 NOT NULL
 , art_type_id 			INT 		    CONSTRAINT nn_art_request_02 NOT NULL
 , shopper_id 		    INT			    CONSTRAINT nn_art_request_03 NOT NULL
-, creation_date    	    DATE 	        CONSTRAINT nn_art_request_04 NOT NULL
-, created_by		    INT			    CONSTRAINT nn_art_request_05 NOT NULL
-, last_updated_by	    INT			    CONSTRAINT nn_art_request_06 NOT NULL
-, last_update_date	    DATE 		    CONSTRAINT nn_art_request_07 NOT NULL
+, description 			TEXT 			CONSTRAINT nn_art_request_04 NOT NULL
+, status 				VARCHAR(80) 	CONSTRAINT nn_art_request_05 NOT NULL
+, creation_date    	    DATE 	        CONSTRAINT nn_art_request_06 NOT NULL
+, created_by		    INT			    CONSTRAINT nn_art_request_07 NOT NULL
+, last_updated_by	    INT			    CONSTRAINT nn_art_request_08 NOT NULL
+, last_update_date	    DATE 		    CONSTRAINT nn_art_request_09 NOT NULL
 , CONSTRAINT pk_art_request_1  PRIMARY KEY(art_request_id)
 , CONSTRAINT fk_art_request_1  FOREIGN KEY(artist_id)   REFERENCES artist(artist_id)
 , CONSTRAINT fk_art_request_2  FOREIGN KEY(art_type_id) REFERENCES art_type(art_type_id)
