@@ -17,8 +17,8 @@
 			$name_parts = explode(' ', $name);
 			$first = $name_parts[0];
 			$last = $name_parts[sizeof($name_parts)-1];
-			$email = filter_var(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-			$adr = filter_input(INPUT_GET, "adr", FILTER_SANITIZE_SPECIAL_CHARS);
+			$email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+			$adr = filter_input(INPUT_POST, "adr", FILTER_SANITIZE_SPECIAL_CHARS);
 			$city = filter_input(INPUT_POST, "city", FILTER_SANITIZE_SPECIAL_CHARS);
 			$state = filter_input(INPUT_POST, "state", FILTER_SANITIZE_STRING);
 			$zip = filter_input(INPUT_POST, "zip", FILTER_SANITIZE_NUMBER_INT);
@@ -63,7 +63,7 @@
 				$user_info = $db->prepare("INSERT INTO user_info (user_info_id, first_name, last_name, email, is_artist, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval(ui_seq, :first, :last, :email, FALSE, current_date, 1001, 1001, current_date))");
 				$user_info->bindvalue(':first', $first, PDO::PARAM_STR);
 				$user_info->bindvalue(':last', $last, PDO::PARAM_STR);
-				$user_info->bindvalue(':email', $eamil, PDO::PARAM_STR);
+				$user_info->bindvalue(':email', $email, PDO::PARAM_STR);
 				$user_info->execute();
 				echo "<script>console.log('user_info inserted');</script>";
 
