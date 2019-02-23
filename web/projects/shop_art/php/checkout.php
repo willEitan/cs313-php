@@ -92,11 +92,11 @@
 				$purchase_order = $db->prepare("INSERT INTO purchase_order (purchase_order_id, shopper_id, ship_to_address_id, total, paid, payment_method_type, creation_date, created_by, last_updated_by, last_update_date, status) VALUES (nextval('po_seq'), {$db->lastInsertId('s_seq')}, {$db->lastInsertId('ad_seq')}, :total, FALSE, 'CREDIT', current_date, 1001, 1001, current_date, 'Processing')");
 				$purchase_order->bindvalue(':total', $_SESSION['total'], PDO::PARAM_INT);
 				$purchase_order->execute();
-				echo "<script>console.log('purchase order inseted');</script>";
+				echo "<script>console.log('purchase order inserted');</script>";
 
 				//insertion into lookup table
-				$query = $db->prepare("SELECT art_id, image, image_title, price FROM art WHERE art_id = ':key' ORDER BY image_title");
 				foreach ($_SESSION["cart"] as $key => $value) {
+					$query = $db->prepare("SELECT art_id, image, image_title, price FROM art WHERE art_id = ':key' ORDER BY image_title");
 					$query->bindvalue(':key', $key, PDO::PARAM_INT);
 					$results = $query->fetch(PDO::FETCH_ASSOC);
 
