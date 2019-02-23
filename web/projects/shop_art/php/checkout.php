@@ -79,13 +79,14 @@
 				echo "<script>console.log('address inserted');</script>";
 
 				//insertion into shopper table
-				$shopper = $db->prepare("INSERT INTO shopper (shopper_id, user_info_id, card_number_hash, card_cvv_hash, card_exp_month_hash, card_exp_year_hash, creation_date, created_by, last_updated_by, last_update_date, card_holder_name) VALUES (nextval('s_seq'), {$db->lastInsertId('ui_seq')}, :cnn, :cvv, :month, :year, current_date, 1001, 1001, current_date, :cname)");
+				$shopper = $db->prepare("INSERT INTO shopper (shopper_id, user_info_id, address_id, card_number_hash, card_cvv_hash, card_exp_month_hash, card_exp_year_hash, creation_date, created_by, last_updated_by, last_update_date, card_holder_name) VALUES (nextval('s_seq'), {$db->lastInsertId('ad_seq')}, {$db->lastInsertId('ui_seq')}, :cnn, :cvv, :month, :year, current_date, 1001, 1001, current_date, :cname)");
 				$shopper->bindvalue(':cnn', $cnn, PDO::PARAM_STR);
 				$shopper->bindvalue(':cvv', $cvv, PDO::PARAM_STR);
 				$shopper->bindvalue(':month', $month, PDO::PARAM_STR);
 				$shopper->bindvalue(':year', $year, PDO::PARAM_STR);
 				$shopper->bindvalue(':cname', $cname, PDO::PARAM_STR);
 				$shopper->execute();
+				echo "<script>console.log('shopper inserted');</script>";
 
 				//insertion into purchase_order table
 				$purchase_order = $db->prepare("INSERT INTO purchase_order (purchase_order_id, shopper_id, ship_to_address_id, total, paid, payment_method_type, creation_date, created_by, last_updated_by, last_update_date, status) VALUES (nextval('o_seq'), {$db->lastInsertId('s_seq')}, {$db->lastInsertId('ad_seq')}, :total, FALSE, 'CREDIT', current_date, 1001, 1001, current_date, 'Processing')");
