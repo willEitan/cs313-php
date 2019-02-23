@@ -31,16 +31,16 @@
 
 			echo "name:$name first:$first last:$last email:$email adr:$adr city:$city state:$state zip:$zip cname:$cname ccn:$ccn cvv:$cvv month:$month year:$year";
 			
-			$is_previous_insert = $db->prepare("SELECT shopper_id FROM shopper WHERE card_number_hash = ':ccn' AND card_holder_name = ':cname'");
-			$is_previous_insert->bindvalue(':ccn', $ccn, PDO::PARAM_STR);
-			$is_previous_insert->bindvalue(':cname', $cname, PDO::PARAM_STR);
+			$is_previous_insert = $db->prepare("SELECT shopper_id FROM shopper WHERE card_number_hash = '{$ccn}' AND card_holder_name = '{$cname}'");
+			//$is_previous_insert->bindvalue(':ccn', $ccn, PDO::PARAM_STR);
+			//$is_previous_insert->bindvalue(':cname', $cname, PDO::PARAM_STR);
 			echo "<script>console.log('prepared');</script>";
 
 			if ($is_previous_insert->fetchAll(PDO::FETCH_ASSOC)) {
 			echo "<script>console.log('is_previous_insert');</script>";
-				$purchase_order = $db->prepare("INSERT INTO purchase_order (purchase_order_id, shopper_id, ship_to_address_id, total, paid, payment_method_type, creation_date, created_by, last_updated_by, last_update_date, status) VALUES (nextval(o_seq), (SELECT shopper_id FROM shopper WHERE card_number_hash = :ccn AND card_holder_name = :cname, (SELECT address_id WHERE street_address = :adr AND  postal_code = :zip), :total, FALSE, CREDIT, current_date, 1001, 1001, current_date, 'Processing')");
-				$purchase_order->bindvalue(':ccn', $ccn, PDO::PARAM_STR);
-				$purchase_order->bindvalue(':cname', $cname, PDO::PARAM_STR);
+				$purchase_order = $db->prepare("INSERT INTO purchase_order (purchase_order_id, shopper_id, ship_to_address_id, total, paid, payment_method_type, creation_date, created_by, last_updated_by, last_update_date, status) VALUES (nextval(o_seq), (SELECT shopper_id FROM shopper WHERE card_number_hash = '{$ccn}' AND card_holder_name = '{$cname}'), (SELECT address_id WHERE street_address = ':adr' AND  postal_code = ':zip'), :total, FALSE, 'CREDIT', current_date, 1001, 1001, current_date, 'Processing')");
+			//	$purchase_order->bindvalue(':ccn', $ccn, PDO::PARAM_STR);
+			//	$purchase_order->bindvalue(':cname', $cname, PDO::PARAM_STR);
 				$purchase_order->bindvalue(':adr', $adr, PDO::PARAM_STR);
 				$purchase_order->bindvalue(':zip', $zip, PDO::PARAM_INT);
 				$purchase_order->bindvalue(':total', $_SESSION["total"], PDO::PARAM_INT);
@@ -86,7 +86,7 @@
 				$shopper->execute();
 
 				//insertion into purchase_order table
-				$purchase_order = $db->prepare("INSERT INTO purchase_order (purchase_order_id, shopper_id, ship_to_address_id, total, paid, payment_method_type, creation_date, created_by, last_updated_by, last_update_date, status) VALUES (nextval(o_seq), {$pdo->lastInsertId(s_seq)}, {$pdo->lastInsertId(ad_seq)}, :total, FALSE, CREDIT, current_date, 1001, 1001, current_date, 'Processing')");
+				$purchase_order = $db->prepare("INSERT INTO purchase_order (purchase_order_id, shopper_id, ship_to_address_id, total, paid, payment_method_type, creation_date, created_by, last_updated_by, last_update_date, status) VALUES (nextval(o_seq), {$pdo->lastInsertId(s_seq)}, {$pdo->lastInsertId(ad_seq)}, :total, FALSE, 'CREDIT', current_date, 1001, 1001, current_date, 'Processing')");
 				$purchase_order->bindvalue(':total', $_SESSION['total'], PDO::PARAM_INT);
 				$purchase_order->execute();
 				echo "<script>console.log('purchase order inseted');</script>";
