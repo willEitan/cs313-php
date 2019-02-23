@@ -38,7 +38,7 @@
 
 			if ($is_previous_insert->fetchAll(PDO::FETCH_ASSOC)) {
 			echo "<script>console.log('is_previous_insert');</script>";
-				$purchase_order = $db->prepare("INSERT INTO purchase_order (purchase_order_id, shopper_id, ship_to_address_id, total, paid, payment_method_type, creation_date, created_by, last_updated_by, last_update_date, status) VALUES (nextval('o_seq'), (SELECT shopper_id FROM shopper WHERE card_number_hash = '{$ccn}' AND card_holder_name = '{$cname}'), (SELECT address_id WHERE street_address = ':adr' AND  postal_code = ':zip'), :total, FALSE, 'CREDIT', current_date, 1001, 1001, current_date, 'Processing')");
+				$purchase_order = $db->prepare("INSERT INTO purchase_order (purchase_order_id, shopper_id, ship_to_address_id, total, paid, payment_method_type, creation_date, created_by, last_updated_by, last_update_date, status) VALUES (nextval('po_seq'), (SELECT shopper_id FROM shopper WHERE card_number_hash = '{$ccn}' AND card_holder_name = '{$cname}'), (SELECT address_id WHERE street_address = ':adr' AND  postal_code = ':zip'), :total, FALSE, 'CREDIT', current_date, 1001, 1001, current_date, 'Processing')");
 			//	$purchase_order->bindvalue(':ccn', $ccn, PDO::PARAM_STR);
 			//	$purchase_order->bindvalue(':cname', $cname, PDO::PARAM_STR);
 				$purchase_order->bindvalue(':adr', $adr, PDO::PARAM_STR);
@@ -52,7 +52,7 @@
 					$results = $query->fetch(PDO::FETCH_ASSOC);
 
 					if ($results) {
-						$lookup = $db->prepare("INSERT INTO art_purchase_order_lookup (art_purchase_order_lookup_id, purchase_order_id, art_id, item_quantity, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('aol_seq'), {$db->lastInsertId('o_seq')}, :key, :value)");
+						$lookup = $db->prepare("INSERT INTO art_purchase_order_lookup (art_purchase_order_lookup_id, purchase_order_id, art_id, item_quantity, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('aol_seq'), {$db->lastInsertId('po_seq')}, :key, :value)");
 						$lookup->bindvalue(':key', $key, PDO::PARAM_INT);
 						$lookup->bindvalue(':value', $value, PDO::PARAM_INT);
 						$lookup->execute();
@@ -89,7 +89,7 @@
 				echo "<script>console.log('shopper inserted');</script>";
 
 				//insertion into purchase_order table
-				$purchase_order = $db->prepare("INSERT INTO purchase_order (purchase_order_id, shopper_id, ship_to_address_id, total, paid, payment_method_type, creation_date, created_by, last_updated_by, last_update_date, status) VALUES (nextval('o_seq'), {$db->lastInsertId('s_seq')}, {$db->lastInsertId('ad_seq')}, :total, FALSE, 'CREDIT', current_date, 1001, 1001, current_date, 'Processing')");
+				$purchase_order = $db->prepare("INSERT INTO purchase_order (purchase_order_id, shopper_id, ship_to_address_id, total, paid, payment_method_type, creation_date, created_by, last_updated_by, last_update_date, status) VALUES (nextval('po_seq'), {$db->lastInsertId('s_seq')}, {$db->lastInsertId('ad_seq')}, :total, FALSE, 'CREDIT', current_date, 1001, 1001, current_date, 'Processing')");
 				$purchase_order->bindvalue(':total', $_SESSION['total'], PDO::PARAM_INT);
 				$purchase_order->execute();
 				echo "<script>console.log('purchase order inseted');</script>";
@@ -101,7 +101,7 @@
 					$results = $query->fetch(PDO::FETCH_ASSOC);
 
 					if ($results) {
-						$lookup = $db->prepare("INSERT INTO art_purchase_order_lookup (art_purchase_order_lookup_id, purchase_order_id, art_id, item_quantity, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('aol_seq'), {$db->lastInsertId('o_seq')}, :key, :value)");
+						$lookup = $db->prepare("INSERT INTO art_purchase_order_lookup (art_purchase_order_lookup_id, purchase_order_id, art_id, item_quantity, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('aol_seq'), {$db->lastInsertId('po_seq')}, :key, :value)");
 						$lookup->bindvalue(':key', $key, PDO::PARAM_INT);
 						$lookup->bindvalue(':value', $value, PDO::PARAM_INT);
 						$lookup->execute();
