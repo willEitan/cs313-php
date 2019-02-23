@@ -20,4 +20,5 @@
 	print_r($_SESSION["cart"]);*/
 	//with session filled, redirect
 	header('Location: ../php/cart-checkout.php');
+	die();
 ?>
