@@ -52,7 +52,7 @@
 					$results = $query->fetch(PDO::FETCH_ASSOC);
 
 					if ($results) {
-						$lookup = $db->prepare("INSERT INTO art_purchase_order_lookup (art_purchase_order_lookup_id, purchase_order_id, art_id, item_quantity, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('aol_seq'), {$db->lastInsertId('o_seq')}, :key, :value) ");
+						$lookup = $db->prepare("INSERT INTO art_purchase_order_lookup (art_purchase_order_lookup_id, purchase_order_id, art_id, item_quantity, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('aol_seq'), {$db->lastInsertId('o_seq')}, :key, :value)");
 						$lookup->bindvalue(':key', $key, PDO::PARAM_INT);
 						$lookup->bindvalue(':value', $value, PDO::PARAM_INT);
 						$lookup->execute();
@@ -68,9 +68,9 @@
 				$user_info->bindvalue(':email', $email, PDO::PARAM_STR);
 				$user_info->execute();
 				echo "<script>console.log('user_info inserted');</script>";
-				echo "<br>" . $db->lastInsertId('ui_seq');
+				
 				//insertion into address table
-				$address = $db->prepare("INSERT INTO address (address_id, street_address, city, state, postal_code, user_info_id, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('ad_seq'), :adr, :city, :state, :zip, {$db->lastInsertId('ui_seq')}, current_date, 1001, 1001, current_date");
+				$address = $db->prepare("INSERT INTO address (address_id, street_address, city, state, postal_code, user_info_id, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('ad_seq'), :adr, :city, :state, :zip, {$db->lastInsertId('ui_seq')}, current_date, 1001, 1001, current_date)");
 				$address->bindvalue(':adr', $adr, PDO::PARAM_STR);
 				$address->bindvalue(':city', $city, PDO::PARAM_STR);
 				$address->bindvalue(':state', $state, PDO::PARAM_STR);
@@ -100,7 +100,7 @@
 					$results = $query->fetch(PDO::FETCH_ASSOC);
 
 					if ($results) {
-						$lookup = $db->prepare("INSERT INTO art_purchase_order_lookup (art_purchase_order_lookup_id, purchase_order_id, art_id, item_quantity, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('aol_seq'), {$db->lastInsertId('o_seq')}, :key, :value) ");
+						$lookup = $db->prepare("INSERT INTO art_purchase_order_lookup (art_purchase_order_lookup_id, purchase_order_id, art_id, item_quantity, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('aol_seq'), {$db->lastInsertId('o_seq')}, :key, :value)");
 						$lookup->bindvalue(':key', $key, PDO::PARAM_INT);
 						$lookup->bindvalue(':value', $value, PDO::PARAM_INT);
 						$lookup->execute();
