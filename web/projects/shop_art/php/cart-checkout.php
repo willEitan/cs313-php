@@ -32,7 +32,7 @@
 							<input type="text" class="text" onblur="valEmail();" id="email" name="email" placeholder="michelangelo@sculpt.com">
 							
 							<label for="adr"><i class="fa fa-address-card-o"></i> Address <em class="error-message" id="errAdr">Invalid input</em></label>
-							<input type="text" class="text" onblur="valAdr();" id="adr" name="address" placeholder="10 david drive">
+							<input type="text" class="text" onblur="valAdr();" id="adr" name="adr" placeholder="10 david drive">
 							
 							<label for="city"><i class="fa fa-institution"></i> City <em class="error-message" id="errCity">Invalid input</em></label>
 							<input type="text" class="text" onblur="valCity();" id="city" name="city" placeholder="Capresse">

@@ -60,7 +60,7 @@
 			} else {
 				echo "<script>console.log('new insert');</script>";
 				//insertion into user_info table
-				$user_info = $db->prepare("INSERT INTO user_info (user_info_id, first_name, last_name, email, is_artist, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval(ui_seq), :first, :last, :email, FALSE, current_date, 1001, 1001, current_date))");
+				$user_info = $db->prepare("INSERT INTO user_info (user_info_id, first_name, last_name, email, is_artist, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval(ui_seq), :first, :last, :email, FALSE, current_date, 1001, 1001, current_date)");
 				$user_info->bindvalue(':first', $first, PDO::PARAM_STR);
 				$user_info->bindvalue(':last', $last, PDO::PARAM_STR);
 				$user_info->bindvalue(':email', $email, PDO::PARAM_STR);
