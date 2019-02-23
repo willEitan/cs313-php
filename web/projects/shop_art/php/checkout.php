@@ -101,6 +101,7 @@
 					$results = $query->fetch(PDO::FETCH_ASSOC);
 					echo "<script>console.log('$results');</script>";
 					if ($results) {
+						echo "<script>console.log('prepared lookup');</script>";
 						$lookup = $db->prepare("INSERT INTO art_purchase_order_lookup (art_purchase_order_lookup_id, purchase_order_id, art_id, item_quantity, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('aol_seq'), {$db->lastInsertId('po_seq')}, $key, $value)");
 						//$lookup->bindvalue(':key', $key, PDO::PARAM_INT);
 						//$lookup->bindvalue(':value', $value, PDO::PARAM_INT);
