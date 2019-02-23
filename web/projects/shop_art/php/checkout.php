@@ -96,8 +96,8 @@
 
 				//insertion into lookup table
 				foreach ($_SESSION["cart"] as $key => $value) {
-					$query = $db->prepare("SELECT art_id, image, image_title, price FROM art WHERE art_id = ':key' ORDER BY image_title");
-					$query->bindvalue(':key', $key, PDO::PARAM_INT);
+					$query = $db->prepare("SELECT art_id, image, image_title, price FROM art WHERE art_id = $key ORDER BY image_title");
+					//$query->bindvalue(':key', $key, PDO::PARAM_INT);
 					$results = $query->fetch(PDO::FETCH_ASSOC);
 					echo "<script>console.log('$key');</script>";
 					if ($results) {
