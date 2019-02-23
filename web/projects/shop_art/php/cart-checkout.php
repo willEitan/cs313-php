@@ -58,7 +58,7 @@
 								<i class="fa fa-cc-discover" style="color:orange;"></i>
 							</div>
 							<label for="cname">Name on Card <em class="error-message" id="errCname">Invalid input</em></label>
-							<input type="text" class="text" onblur="valCname();" id="cname" name="cardname" placeholder="Edgar Degas">
+							<input type="text" class="text" onblur="valCname();" id="cname" name="cname" placeholder="Edgar Degas">
 							
 							<label for="ccnum">Credit Card Number <em class="error-message" id="errCcn">Invalid input</em></label>
 							<input type="text" class="text" onblur="valCcn();" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
