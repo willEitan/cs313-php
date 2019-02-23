@@ -99,11 +99,11 @@
 					$query = $db->prepare("SELECT art_id, image, image_title, price FROM art WHERE art_id = $key ORDER BY image_title");
 					//$query->bindvalue(':key', $key, PDO::PARAM_INT);
 					$results = $query->fetch(PDO::FETCH_ASSOC);
-					echo "<script>console.log('$key');</script>";
+					echo "<script>console.log('$results');</script>";
 					if ($results) {
-						$lookup = $db->prepare("INSERT INTO art_purchase_order_lookup (art_purchase_order_lookup_id, purchase_order_id, art_id, item_quantity, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('aol_seq'), {$db->lastInsertId('po_seq')}, :key, :value)");
-						$lookup->bindvalue(':key', $key, PDO::PARAM_INT);
-						$lookup->bindvalue(':value', $value, PDO::PARAM_INT);
+						$lookup = $db->prepare("INSERT INTO art_purchase_order_lookup (art_purchase_order_lookup_id, purchase_order_id, art_id, item_quantity, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('aol_seq'), {$db->lastInsertId('po_seq')}, $key, $value)");
+						//$lookup->bindvalue(':key', $key, PDO::PARAM_INT);
+						//$lookup->bindvalue(':value', $value, PDO::PARAM_INT);
 						$lookup->execute();
 						echo "<script>console.log('lookup inserted');</script>";
 					}
