@@ -139,10 +139,11 @@ section {
 	/*position: absolute;
 	z-index: 1;*/
 	margin: auto;
+	padding: 15px;
 	display: block;
 	float: right;
 	font-family: serif;
-	font-size: 30px;
+	font-size: 18px;
 }
 
 #quantity {
