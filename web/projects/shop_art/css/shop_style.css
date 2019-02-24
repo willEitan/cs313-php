@@ -137,12 +137,12 @@ section {
 /*Sidebar styling*/
 .art-integrals {
 	position: absolute;
+	margin: auto;
 	z-index: 2;
 	display: block;
 	float: right;
 	font-family: serif;
 	font-size: 30px;
-	padding: 3px;
 }
 
 #quantity {
