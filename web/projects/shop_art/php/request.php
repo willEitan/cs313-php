@@ -24,7 +24,7 @@
 					<input type="text" class="text" name="art-name" id="art-name" onblur="valArt();" placeholder="David">
 					<label for="artist"> Select Artist </label> <em class="error-message" id="errArtist">Invalid input</em>
 					<select class="text" id="artist" onblur="valArtist();"><option> </option>
-						<?php 
+						<!-- <?php 
 							$statement = $db->query("SELECT ar.pseudonym, ui.first_name, ui.middle_name, ui.last_name FROM artist AS ar JOIN user_info AS ui ON ar.user_info_id = ui.user_info_id");
 							//name parsing 
 							foreach($statement as $result){
@@ -39,7 +39,8 @@
 								}
 								echo "<option class='choose-artist'>{$name}</option>";
 							}
-						?>
+						?> -->
+						<option>Sarah Tenney</option>
 					</select>
 					<label for="type"> Select Art Type </label> <em class="error-message" id="errType">Invalid input</em>
 					<select class="text" id="type" onblur="valType();">

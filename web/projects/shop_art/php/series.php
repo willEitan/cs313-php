@@ -14,8 +14,10 @@
 <body>
 	<div include-html="../html/nav.html"></div>
 	<script>includeHTML();</script><br>
-	<h3>Coming soon!</h3>
-
+	<!-- <h3>Coming soon!</h3> -->
+	<?php
+		$sesires = $db->query("SELECT * FROM series");
+	?>
 </body>
 <!-- <?php
 	include "footer.php";
