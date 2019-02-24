@@ -144,12 +144,11 @@ section {
 	float: right;
 	font-family: serif;
 	font-size: 18px;
+	font-style: italic;
 }
 
 #quantity {
-	position: relative;
-	float: right;
-	width: 35%;
+	width: 100%;
 }
 
 #addtocart {
@@ -197,7 +196,7 @@ section {
   border-radius: 3px;
 }
 
-.text {
+.text, textarea {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
