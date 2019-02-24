@@ -30,7 +30,7 @@
 			$rows = $confirmation->fetchAll(PDO::FETCH_ASSOC);
 
 			if ($rows){
-				echo "<h3> Thank you $rows['first_name'] $rows['last_name'] for <a href='../php/browse.php'>shopping</a>!</h3>";
+				echo "<h3> Thank you" . $rows[0]['first_name'] . " " . $rows[0]['last_name'] . "for <a href='../php/browse.php'>shopping</a>!</h3>";
 				//echo "Your $rows['name'] art request is $rows['status'] and will be shipped to:<br>";
 			}
 			unset($_SESSION);
