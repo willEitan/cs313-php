@@ -39,6 +39,7 @@
 
 			if ($is_previous_insert->fetchAll(PDO::FETCH_ASSOC)) {
 				echo "<script>console.log('is_previous_insert');</script>";
+				$_SESSION['shopper'] = $is_previous_insert;
 
 				//insertion into art_request
 				$art_request = $db->prepare("INSERT INTO art_request (art_request_id, artist_id, art_type_id, shopper_id, description, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('ar_seq'), (SELECT a.artist_id AS a FROM artist JOIN user_info AS u ON u.user_info_id = a.user_info_id WHERE (u.first_name = :af AND u.last_name = :al) OR (a.pseudonym = :artist)),(SELECT art_type_id FROM art_type WHERE name = :at), (SELECT shopper_id AS s FROM shopper JOIN user_info AS u ON u.user_info_id = s.user_info_id WHERE u.first_name = :first AND u.last_name = :last), :desc, current_date, 1001, 1001, current_date)");
@@ -79,6 +80,7 @@
 				$shopper->bindvalue(':cname', $cname, PDO::PARAM_STR);
 				$shopper->execute();
 				echo "<script>console.log('shopper inserted');</script>";
+				$_SESSION['shopper'] = $db->lastInsertId('s_seq');
 
 				//insertion into art_request
 				$art_request = $db->prepare("INSERT INTO art_request (art_request_id, artist_id, art_type_id, shopper_id, description, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('ar_seq'), (SELECT a.artist_id AS a FROM artist JOIN user_info AS u ON u.user_info_id = a.user_info_id WHERE (u.first_name = :af AND u.last_name = :al) OR (a.pseudonym = :artist))  /,(SELECT art_type_id FROM art_type WHERE name = :at), {$db->lastInsertId('s_seq')}, :desc, current_date, 1001, 1001, current_date)");

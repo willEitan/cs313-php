@@ -33,7 +33,7 @@
 	<p class="art-integrals" id="artist"></p>
 	<p class="art-integrals" id="price"></p>
 	<p class="art-integrals" id="dprice"></p>
-	<br><input class="art-integrals" id="quantity" type="text" value="1" name=""><br>
+	<br>Quantity <input class="art-integrals" id="quantity" type="text" value="1" name=""><br>
 	<button onclick="valQuantity();" id="addtocart" value="Add to Cart" class="btn" name="Add to Cart">Add to Cart</button>
 </div>
 
