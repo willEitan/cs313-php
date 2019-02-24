@@ -34,7 +34,7 @@
 	<p class="art-integrals" id="price"></p>
 	<p class="art-integrals" id="dprice"></p>
 	<br><input id="quantity" type="text" value="1" name=""><br>
-	<button onclick="valQuantity();" id="addtocart" value="Add to Cart" name="Add to Cart">Add to Cart</button>
+	<button onclick="valQuantity();" id="addtocart" value="Add to Cart" class="btn" name="Add to Cart">Add to Cart</button>
 </div>
 
 <script type="text/javascript" src="../js/gallary.js"></script>

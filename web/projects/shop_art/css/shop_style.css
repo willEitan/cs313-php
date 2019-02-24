@@ -137,6 +137,7 @@ section {
 /*Sidebar styling*/
 .art-integrals {
 	position: relative;
+	display: block;
 	float: right;
 	font-family: serif;
 	font-size: 14px;
