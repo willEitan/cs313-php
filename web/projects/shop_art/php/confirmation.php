@@ -24,7 +24,7 @@
 	switch ($action) {
 		case 'request':
 			# code...
-			$confirmation = $db->query("SELECT rq.description, rq.status, ad.street_address, ad.city, ad.state, ad.postal_code, u.first_name, u.last_name, at.name, ui.first_name, ui.middle_name, ui.last_name FROM art_request AS rq JOIN art_type AS at ON rq.art_type_id = at.art_type_id JOIN shopper AS s ON rq.shopper_id = s.shopper_id WHERE s.shopper_id = '{$_SESSION['shopper']}' JOIN user_ino AS ui ON s.user_info_id = ui.user_info_id");
+			$confirmation = $db->query("SELECT art_request.description, art_request.status, address.street_address, address.city, address.state, address.postal_code, user_info.first_name, user_info.last_name, art_type.name FROM art_request, address, user_info, art_type JOIN shopper ON user_info.user_info_id = shopper.user_info_id WHERE shopper.shopper_id = '{$_SESSION['shopper']}' JOIN user_ino AS ui ON s.user_info_id = ui.user_info_id");
 			
 			//$user = $db->query("SELECT u.first_name, u.middle_name, u.last_name FROM user_info AS u JOIN shopper AS s on user_info_id = s.user_info_id WHERE s.user_info_id = ")
 			$rows = $confirmation->fetchAll(PDO::FETCH_ASSOC);
