@@ -28,7 +28,7 @@
 			
 			//$user = $db->query("SELECT u.first_name, u.middle_name, u.last_name FROM user_info AS u JOIN shopper AS s on user_info_id = s.user_info_id WHERE s.user_info_id = ")
 			$rows = $confirmation->fetchAll(PDO::FETCH_ASSOC);
-
+			echo "rows: " . $rows;
 			if ($rows){
 				echo "<h3> Thank you" . $rows[0]['first_name'] . " " . $rows[0]['last_name'] . "for <a href='../php/browse.php'>shopping</a>!</h3>";
 				//echo "Your $rows['name'] art request is $rows['status'] and will be shipped to:<br>";
