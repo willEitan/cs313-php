@@ -81,7 +81,7 @@
 				echo "<script>console.log('shopper inserted');</script>";
 
 				//insertion into art_request
-				$art_request = $db->prepare("INSERT INTO art_request (art_request_id, artist_id, art_type_id, shopper_id, description, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('ar_seq'), (SELECT a.artist_id AS a FROM artist JOIN user_info AS u ON u.user_info_id = a.user_info_id WHERE (u.first_name = ':af' AND u.last_name = ':al') OR a.pseudonym = ':artist'),(SELECT art_type_id FROM art_type WHERE name = ':at'), {$db->lastInsertId('s_seq')}, ':desc', current_date, 1001, 1001, current_date)");
+				$art_request = $db->prepare("INSERT INTO art_request (art_request_id, artist_id, art_type_id, shopper_id, description, creation_date, created_by, last_updated_by, last_update_date) VALUES (nextval('ar_seq'), (SELECT a.artist_id AS a FROM artist JOIN user_info AS u ON u.user_info_id = a.user_info_id WHERE (u.first_name = ':af' AND u.last_name = ':al') OR (a.pseudonym = ':artist'))  /,(SELECT art_type_id FROM art_type WHERE name = ':at'), {$db->lastInsertId('s_seq')}, ':desc', current_date, 1001, 1001, current_date)");
 				$art_request->bindvalue(':af', $af, PDO::PARAM_STR);
 				$art_request->bindvalue(':al', $al, PDO::PARAM_STR);
 				$art_request->bindvalue(':artist', $artist, PDO::PARAM_STR);
