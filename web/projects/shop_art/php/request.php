@@ -52,7 +52,7 @@
 						?>
 					</select>
 					<label for="desc"> Describe the artwork you envision in detail </label> <em class="error-message" id="errDesc">Invalid input</em>
-					<input type="textarea" class="textarea" name="request-description" id="request-description" onblur="valDesc();">
+					<input type="textarea" class="textarea" row="6" col="50" name="request-description" id="request-description" onblur="valDesc();">
 				</div>
 			</div>
 			<div class="col-75">

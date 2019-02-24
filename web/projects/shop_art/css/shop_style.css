@@ -136,9 +136,9 @@ section {
 
 /*Sidebar styling*/
 .art-integrals {
-	position: absolute;
+	/*position: absolute;
+	z-index: 1;*/
 	margin: auto;
-	z-index: 2;
 	display: block;
 	float: right;
 	font-family: serif;
