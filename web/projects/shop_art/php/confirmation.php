@@ -24,12 +24,14 @@
 	switch ($action) {
 		case 'request':
 			# code...
-			$confirmation = $db->query("SELECT rq.description, rq.status, ad.street_address, ad.city, ad.state, ad.postal_code, u.first_name, u.last_name, at.name, ui.first_name, ui.middle_name, ui.last_name FROM art_request AS rq JOIN art_type AS at ON rq.art_type_id = at.art_type_id JOIN shopper AS s ON rq.shopper_id = s.shopper_id WHERE s.shopper_id = $_SESSION['shopper'] JOIN user_ino AS ui ON s.user_info_id = ui.user_info_id");
+			$confirmation = $db->query("SELECT rq.description, rq.status, ad.street_address, ad.city, ad.state, ad.postal_code, u.first_name, u.last_name, at.name, ui.first_name, ui.middle_name, ui.last_name FROM art_request AS rq JOIN art_type AS at ON rq.art_type_id = at.art_type_id JOIN shopper AS s ON rq.shopper_id = s.shopper_id WHERE s.shopper_id = '{$_SESSION['shopper']}' JOIN user_ino AS ui ON s.user_info_id = ui.user_info_id");
+			
+			//$user = $db->query("SELECT u.first_name, u.middle_name, u.last_name FROM user_info AS u JOIN shopper AS s on user_info_id = s.user_info_id WHERE s.user_info_id = ")
 			$rows = $confirmation->fetchAll(PDO::FETCH_ASSOC);
 
 			if ($rows){
 				echo "<h3> Thank you $rows['first_name'] $rows['last_name'] for <a href='../php/browse.php'>shopping</a>!</h3>";
-				echo "Your $rows['name'] art request is $rows['status'] and will be shipped to:<br>";
+				//echo "Your $rows['name'] art request is $rows['status'] and will be shipped to:<br>";
 			}
 			unset($_SESSION);
 			session_destroy();
